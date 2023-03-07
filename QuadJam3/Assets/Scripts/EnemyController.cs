@@ -15,11 +15,11 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float _gizmoDirectionLength = 0.0f;
 
     // Dependencies
-    private Rigidbody2D _rb = null;
+    private Rigidbody _rb = null;
     private GameObject _player = null;
     private PlayerController _pController = null;
 
-    private Vector2 _moveDirection = Vector2.zero;
+    private Vector3 _moveDirection = Vector3.zero;
 
     private State _currentState;
 
@@ -39,13 +39,13 @@ public class EnemyController : MonoBehaviour
         // This line is needed to avoid a weird bug where the enemy would attack the player once,
         // straight after the enemy is first spawned in. 
         // This could be fixed by adding an additional "Idle" state, but this is just a quick fix for now.
-        _moveDirection = CalculateMoveDirection();
+        _moveDirection = new Vector3(CalculateMoveDirection().x, 0.0f, CalculateMoveDirection().z);
         _currentState = State.Moving;
     }
 
     private void Update()
     {
-        _moveDirection = CalculateMoveDirection();
+        _moveDirection = new Vector3(CalculateMoveDirection().x, 0.0f, CalculateMoveDirection().z);
         _attackTimer += Time.deltaTime;
 
         HandleStates();
@@ -53,7 +53,7 @@ public class EnemyController : MonoBehaviour
 
     private void FixedUpdate() => HandleMovement();
 
-    private Vector2 CalculateMoveDirection()
+    private Vector3 CalculateMoveDirection()
     {
         return _player.transform.position - transform.position;
     }
@@ -66,7 +66,7 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-            _rb.velocity = Vector2.zero;
+            _rb.velocity = Vector3.zero;
             HandleAttack();
         }
     }
@@ -99,7 +99,7 @@ public class EnemyController : MonoBehaviour
         }
 
         _player = GameObject.FindGameObjectWithTag("Player");
-        if (_player == null)
+        if (!_player)
         {
             Debug.LogError("[EnemyController] Failed to find Player gameobject");
             return;
