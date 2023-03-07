@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] int maxHearts = 5;
     [SerializeField] float attackOffset = 10f;
     [SerializeField] float attackRange = 30f;
+    [SerializeField] public float knockback = 1f;
+    [SerializeField] float playerGravity = 5f;
     int currentHearts;
 
     [Header("Roll")]
@@ -94,33 +96,33 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-            switch (state)
-            {
-                case State.Normal:
-                    Move();
+        rb.AddForce(new Vector3(0, -1f, 0) * playerGravity);
 
-                    // Jetpack
-                    switch (engineIsOn)
-                    {
-                        case true:
-                            rb.AddForce(new Vector3(0f, jetForce, 0f), ForceMode.Force);
-                            break;
+        switch (state)
+        {
+            case State.Normal:
+                Move();
 
-                        case false:
-                            rb.AddForce(new Vector3(0f, 0f, 0f), ForceMode.Force);
-                            break;
-                    }
+                // Jetpack
+                switch (engineIsOn)
+                {
+                    case true:
+                        rb.AddForce(new Vector3(0f, jetForce, 0f), ForceMode.Force);
+                        break;
+
+                    case false:
+                        rb.AddForce(new Vector3(0f, 0f, 0f), ForceMode.Force);
+                        break;
+                }
 
                 break;
-            
-                //roll
-                case State.Rolling:
-                    rb.velocity = rollDirection * rollSpeed;
-                
+
+            //roll
+            case State.Rolling:
+                rb.velocity = rollDirection * rollSpeed;
+
                 break;
-            }
-
-
+        }
     }
 
     void HandleMovement()
@@ -152,12 +154,14 @@ public class PlayerController : MonoBehaviour
             Vector3 attackPosition = transform.position + mouseDirection * attackOffset;
             Vector3 attackDirection = mouseDirection;
 
-            //Enemy targetEnemy = Enemy.GetClosestEnemy(attackPosition, attackRange);                   //talk through this w/ Callum. How to pass him knockback vector?
+            //Enemy targetEnemy = Enemy.GetClosestEnemy(attackPosition, attackRange);                   
             //if (targetEnemy != null)                                                                  //if we can get a list of enemies AND minerals then I can handle minerals here too
             //{
             //    //have an enemy, attack :)
             //    attackDirection = targetEnemy.GetPosition() - transform.position.normalized;          //switch direction to be enemy direction (for knockback) rather than 
-            //    targetEnemy.Knockback(transform.position);                                            //rename this to whatever Callum's damage enemy function 
+            //    targetEnemy.Knockback(transform.position);                                            //rename this to whatever Callum's damage enemy function
+            //    enemyController = otherGameObject.GetComponent<EnemyController>();
+            //    enemyController.TakeDamage(knocback);
             //}
 
             moveDirection = Vector3.zero;
