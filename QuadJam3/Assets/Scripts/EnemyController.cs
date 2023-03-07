@@ -123,4 +123,19 @@ public class EnemyController : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawRay(transform.position, _moveDirection.normalized * _stoppingDistance);
     }
+
+    public void TakeDamage(float knockbackAmount)
+    {
+        _health--;
+
+        // TODO: Implement knockback
+
+        Debug.Log("[EnemyController]: Damage Taken\nCurrent Health: " + _health);
+
+        if (_health < 1)
+        {
+            // Just destroying the gameobject for now, will probably add something else later
+            Destroy(gameObject);
+        }
+    }
 }
