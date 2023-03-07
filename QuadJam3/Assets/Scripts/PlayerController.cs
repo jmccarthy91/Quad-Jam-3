@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -8,10 +7,10 @@ public class PlayerController : MonoBehaviour
 
     [Header("Stats")]
     [SerializeField] float moveSpeed = 15f;
-    [SerializeField] float maxHearts = 5f;
+    [SerializeField] int maxHearts = 5;
     [SerializeField] float attackOffset = 10f;
     [SerializeField] float attackRange = 30f;
-    float currentHearts;
+    int currentHearts;
 
     [Header("Roll")]
     [SerializeField] float rollSpeedMax = 150f;
@@ -209,7 +208,7 @@ public class PlayerController : MonoBehaviour
         }
     }
     
-    private void onHitPlayer()
+    private void OnHitPlayer()
     {
         currentHearts -= 1;
         if (currentHearts >= 0)
@@ -220,8 +219,6 @@ public class PlayerController : MonoBehaviour
         {
             FindObjectOfType<GameManager>().EndGame();
         }
-        
-        
     }
 
     IEnumerator Invulnerability()                                               // will want to turn this on when I take damage
