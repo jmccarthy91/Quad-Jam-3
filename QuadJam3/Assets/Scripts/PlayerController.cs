@@ -37,9 +37,9 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody rb;
     
-    Vector2 moveDirection;
-    Vector2 rollDirection;
-    Vector2 lastMoveDirection;
+    Vector3 moveDirection;
+    Vector3 rollDirection;
+    Vector3 lastMoveDirection;
     State state;
 
 
@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour
                     switch (engineIsOn)
                     {
                         case true:
-                            rb.AddForce(new Vector3(0f, jetForce, 0.0f), ForceMode.Force);
+                            rb.AddForce(new Vector3(0f, jetForce, 0f), ForceMode.Force);
                             break;
 
                         case false:
@@ -127,11 +127,11 @@ public class PlayerController : MonoBehaviour
     {
         // get keyboard inputs
         float xDirection = Input.GetAxisRaw("Horizontal");
-        float yDirection = Input.GetAxisRaw("Vertical");
-        moveDirection = new Vector2(xDirection, yDirection).normalized;
+        float zDirection = Input.GetAxisRaw("Vertical");
+        moveDirection = new Vector3(xDirection, 0f, zDirection).normalized;
         
         //set a last move direction so we roll even when no directions are pressed
-        if (xDirection != 0 || yDirection != 0)
+        if (xDirection != 0 || zDirection != 0)
         {
             lastMoveDirection = moveDirection;
         }
@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         // use inputs to move
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        rb.velocity = new Vector3(moveDirection.x * moveSpeed, 0f, moveDirection.z * moveSpeed);
     }
 
     void HandleAttack()
