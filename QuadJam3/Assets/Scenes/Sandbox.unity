@@ -483,6 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af7c8b50f243234c879f55cef70bf6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inGameTime: 0
 --- !u!4 &1339675023
 Transform:
   m_ObjectHideFlags: 0
@@ -537,7 +538,7 @@ MonoBehaviour:
   attackOffset: 10
   attackRange: 30
   rollSpeedMax: 75
-  jetForce: 40
+  jetForce: 400
   fire: {fileID: 488630404}
   iFramesDuration: 0
   numFlashes: 0

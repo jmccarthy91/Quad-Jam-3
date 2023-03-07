@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        EventManager.current.onHitPlayer += onHitPlayer;
+        // EventManager.current.onHitPlayer += onHitPlayer;
 
         state = State.Normal;
 
@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
                     switch (engineIsOn)
                     {
                         case true:
-                            rb.AddForce(new Vector3(0f, 0f, jetForce), ForceMode.Force);
+                            rb.AddForce(new Vector3(0f, jetForce, 0.0f), ForceMode.Force);
                             break;
 
                         case false:
@@ -176,7 +176,7 @@ public class PlayerController : MonoBehaviour
             fire.SetActive(true);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
             engineIsOn = false;
             fire.SetActive(false);
