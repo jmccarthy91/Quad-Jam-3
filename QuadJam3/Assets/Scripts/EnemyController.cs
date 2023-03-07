@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -21,16 +22,10 @@ public class EnemyController : MonoBehaviour
 
     private Vector3 _moveDirection = Vector3.zero;
 
-    private State _currentState;
-
+    private float _playerDistance = 0.0f;
     private float _attackTimer = 0.0f;
 
-    private enum State
-    {
-        Moving,
-        Attacking,
-        Knockback
-    }
+    private bool _shouldMove = true;
 
     private void Awake()
     {
@@ -38,43 +33,62 @@ public class EnemyController : MonoBehaviour
 
         // This line is needed to avoid a weird bug where the enemy would attack the player once,
         // straight after the enemy is first spawned in. 
-        // This could be fixed by adding an additional "Idle" state, but this is just a quick fix for now.
         _moveDirection = new Vector3(CalculateMoveDirection().x, 0.0f, CalculateMoveDirection().z);
-        _currentState = State.Moving;
+        _playerDistance = _moveDirection.magnitude;
+        
+        _shouldMove = true;
     }
 
     private void Update()
     {
         _moveDirection = new Vector3(CalculateMoveDirection().x, 0.0f, CalculateMoveDirection().z);
+        _playerDistance = CalculatePlayerDistance();
         _attackTimer += Time.deltaTime;
 
-        HandleStates();
+        if (_playerDistance <= _stoppingDistance)
+        {
+            HandleAttack();
+        }
+
+        // This is just for testing
+        // Applying knockback should be done from the player script
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            StartCoroutine(AppleKnockback(25.0f));
+        }
     }
 
     private void FixedUpdate() => HandleMovement();
 
     private Vector3 CalculateMoveDirection()
     {
-        return _player.transform.position - transform.position;
+        return (_player.transform.position - transform.position);
     }
+
+    private float CalculatePlayerDistance() => _moveDirection.magnitude;
 
     private void HandleMovement()
     {
-        if (_moveDirection.magnitude > _stoppingDistance)
+        if (_playerDistance > _stoppingDistance && _shouldMove)
         {
             _rb.velocity = _moveDirection.normalized * _moveSpeed * Time.fixedDeltaTime;
         }
-        else
+        else if (_playerDistance <= _stoppingDistance)
         {
             _rb.velocity = Vector3.zero;
-            HandleAttack();
         }
     }
 
-    private void HandleStates()
+    private IEnumerator AppleKnockback(float amount)
     {
-        if (_moveDirection.magnitude <= _stoppingDistance)
-            _currentState = State.Attacking;
+        _shouldMove = false;
+
+        _rb.velocity = Vector3.zero;
+        _rb.AddForce(-_moveDirection.normalized * amount, ForceMode.Impulse);
+
+        yield return new WaitForSeconds(0.25f);
+
+        _shouldMove = true;
     }
 
     private void HandleAttack()
@@ -84,8 +98,6 @@ public class EnemyController : MonoBehaviour
 
         _pController.TakeDamage();
         _attackTimer = 0.0f;
-
-        _currentState = State.Moving;
 
         Debug.Log("[EnemyController]: Attacked player");
     }
@@ -127,10 +139,9 @@ public class EnemyController : MonoBehaviour
     public void TakeDamage(float knockbackAmount)
     {
         _health--;
-
-        // TODO: Implement knockback
-
         Debug.Log("[EnemyController]: Damage Taken\nCurrent Health: " + _health);
+
+        StartCoroutine(AppleKnockback(knockbackAmount));
 
         if (_health < 1)
         {
