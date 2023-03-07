@@ -28,7 +28,8 @@ public class EnemyController : MonoBehaviour
     private enum State
     {
         Moving,
-        Attacking
+        Attacking,
+        Knockback
     }
 
     private void Awake()
@@ -39,6 +40,7 @@ public class EnemyController : MonoBehaviour
         // straight after the enemy is first spawned in. 
         // This could be fixed by adding an additional "Idle" state, but this is just a quick fix for now.
         _moveDirection = CalculateMoveDirection();
+        _currentState = State.Moving;
     }
 
     private void Update()
@@ -71,9 +73,7 @@ public class EnemyController : MonoBehaviour
 
     private void HandleStates()
     {
-        if (_rb.velocity != Vector2.zero)
-            _currentState = State.Moving;
-        else if (_moveDirection.magnitude <= _stoppingDistance)
+        if (_moveDirection.magnitude <= _stoppingDistance)
             _currentState = State.Attacking;
     }
 
@@ -84,6 +84,8 @@ public class EnemyController : MonoBehaviour
 
         _pController.TakeDamage();
         _attackTimer = 0.0f;
+
+        _currentState = State.Moving;
 
         Debug.Log("[EnemyController]: Attacked player");
     }
