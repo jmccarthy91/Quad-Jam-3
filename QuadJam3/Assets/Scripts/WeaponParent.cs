@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class WeaponParent : MonoBehaviour
 {
-    public Vector2 PointerPosition { get; set; }
-
+    //this script moves the weapon around the player
     private void Update()
     {
-        transform.right = (PointerPosition - (Vector2)transform.position).normalized;
+        
+        Vector3 mousePosition = MouseSingleton.GetMouseWorldPosition();
+        transform.right = (mousePosition - (Vector3)transform.position).normalized;
     }
 }
