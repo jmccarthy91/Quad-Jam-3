@@ -25,49 +25,34 @@ public class EventManager : MonoBehaviour
     public event Action onHitPlayer;
     public void HitPlayer()
     {
-        if (onHitPlayer != null)
-        {
-            onHitPlayer();
-        }
+        onHitPlayer?.Invoke();
     }
 
     //when the player hits a mineral deposit
     public event Action onMineralHit;
     public void MineralHit()
     {
-        if (onMineralHit != null)
-        {
-            onMineralHit();
-        }
+        onMineralHit?.Invoke();
     }
 
     //when a mineral deposit is mined out
     public event Action onMineralMined;
     public void MineralMined()
     {
-        if (onMineralMined != null)
-        {
-            onMineralMined();
-        }
+        onMineralMined?.Invoke();
     }
 
     //when boots get upgraded
     public event Action onBootsLevel;
     public void BootsLevel()
     {
-        if (onBootsLevel != null)
-        {
-            onBootsLevel();
-        }
+        onBootsLevel?.Invoke();
     }
 
     //when mining pick gets upgraded
     public event Action onPickLevel;
     public void PickLevel()
     {
-        if (onPickLevel != null)
-        {
-            onPickLevel();
-        }
+        onPickLevel?.Invoke();
     }
 }

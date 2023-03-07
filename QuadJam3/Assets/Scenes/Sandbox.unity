@@ -369,6 +369,7 @@ MonoBehaviour:
   _moveSpeed: 100
   _stoppingDistance: 2
   _health: 5
+  _attackCooldown: 2
   _enableDebug: 1
   _gizmoDirectionLength: 5
 --- !u!4 &496463526

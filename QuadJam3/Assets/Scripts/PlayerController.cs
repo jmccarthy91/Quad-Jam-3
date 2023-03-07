@@ -208,9 +208,12 @@ public class PlayerController : MonoBehaviour
         }
     }
     
-    private void OnHitPlayer()
+    public void TakeDamage()
     {
         currentHearts -= 1;
+
+        Debug.Log("[PlayerController]: Took damage.\nRemaining health: " + currentHearts);
+
         if (currentHearts >= 0)
         {
             Invulnerability();

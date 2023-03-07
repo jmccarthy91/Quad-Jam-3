@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -8,6 +9,7 @@ public class EnemyController : MonoBehaviour
 
     [Header("Stats")]
     [SerializeField] private int _health = 0;
+    [SerializeField] private float _attackCooldown = 0.0f;
 
     [Header("Debug")]
     [SerializeField] private bool _enableDebug = false;
@@ -21,6 +23,8 @@ public class EnemyController : MonoBehaviour
 
     private State _currentState;
 
+    private float _attackTimer = 0.0f;
+
     private enum State
     {
         Moving,
@@ -30,12 +34,19 @@ public class EnemyController : MonoBehaviour
     private void Awake()
     {
         GetDependencies();
+
+        // This line is needed to avoid a weird bug where the enemy would attack the player once,
+        // straight after the enemy is first spawned in. 
+        // This could be fixed by adding an additional "Idle" state, but this is just a quick fix for now.
+        _moveDirection = CalculateMoveDirection();
     }
 
     private void Update()
     {
         _moveDirection = CalculateMoveDirection();
-        HandleStateChanges();
+        _attackTimer += Time.deltaTime;
+
+        HandleStates();
     }
 
     private void FixedUpdate() => HandleMovement();
@@ -54,19 +65,33 @@ public class EnemyController : MonoBehaviour
         else
         {
             _rb.velocity = Vector2.zero;
+            HandleAttack();
         }
     }
 
-    private void HandleStateChanges()
+    private void HandleStates()
     {
         if (_rb.velocity != Vector2.zero)
-        {
             _currentState = State.Moving;
-        }
-        else
-        {
+        else if (_moveDirection.magnitude <= _stoppingDistance)
             _currentState = State.Attacking;
+    }
+
+    private void HandleAttack()
+    {
+        if (_attackTimer < _attackCooldown)
+            return;
+
+        if (!_player.TryGetComponent(out PlayerController pController))
+        {
+            Debug.LogError("[EnemyController]: Failed to fetch PlayerController.cs");
+            return;
         }
+
+        pController.TakeDamage();
+        _attackTimer = 0.0f;
+
+        Debug.Log("[EnemyController]: Attacked player");
     }
 
     private void GetDependencies()
