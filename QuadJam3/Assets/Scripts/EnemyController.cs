@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -18,6 +17,7 @@ public class EnemyController : MonoBehaviour
     // Dependencies
     private Rigidbody2D _rb = null;
     private GameObject _player = null;
+    private PlayerController _pController = null;
 
     private Vector2 _moveDirection = Vector2.zero;
 
@@ -82,13 +82,7 @@ public class EnemyController : MonoBehaviour
         if (_attackTimer < _attackCooldown)
             return;
 
-        if (!_player.TryGetComponent(out PlayerController pController))
-        {
-            Debug.LogError("[EnemyController]: Failed to fetch PlayerController.cs");
-            return;
-        }
-
-        pController.TakeDamage();
+        _pController.TakeDamage();
         _attackTimer = 0.0f;
 
         Debug.Log("[EnemyController]: Attacked player");
@@ -96,15 +90,23 @@ public class EnemyController : MonoBehaviour
 
     private void GetDependencies()
     {
-        if (!TryGetComponent<Rigidbody2D>(out _rb))
+        if (!TryGetComponent(out _rb))
         {
             Debug.LogError("[EnemyController]: Failed to find Rigidbody2D component");
+            return;
         }
 
         _player = GameObject.FindGameObjectWithTag("Player");
         if (_player == null)
         {
             Debug.LogError("[EnemyController] Failed to find Player gameobject");
+            return;
+        }
+
+        if (!_player.TryGetComponent(out _pController))
+        {
+            Debug.LogError("[EnemyController]: Failed to fetch PlayerController.cs");
+            return;
         }
     }
 
