@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -139,7 +139,616 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 496
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c4c3be581c92e49a2c30dfd8653dcd
+      internalID: -50073844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_1
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 496
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83d816fc649fd542b2158b7b730a9fb
+      internalID: 1524284362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_2
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 496
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae0bee6d586c5c40bc9a912009fa7cd
+      internalID: 1900378182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_3
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 496
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf9ac1a5d325b24fb038ecf940f4921
+      internalID: -1568733878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_4
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 496
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed6f79234e2f3d4ab4637dd4cc65d44
+      internalID: 1561532573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_5
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 496
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 550767fe3e2fa7a449fe8c3bb12db27a
+      internalID: -1524019811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 372
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f4632b4e15d30a46948bdbf3d11645d
+      internalID: -777372408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_7
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 372
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04ccc005af7fc343930b9fdd7183885
+      internalID: -509863490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_8
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 372
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aca04c9a8928064199d2a49fd48da45
+      internalID: -459727438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_9
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 372
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fcd80c9ba2af474ca1b829b50e723b6
+      internalID: -896127396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_10
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 372
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db90519de08e0ff488a100351cf4f24f
+      internalID: -1707307386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_11
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 372
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb8daab90fca354fa9127e0c4a4bd13
+      internalID: 1754636200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 248
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66afc42a9644c4645b69014c629974cf
+      internalID: -118081296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_13
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 248
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ed831a9cb7016459b06374d0dbe129
+      internalID: 1336725927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_14
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 248
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2975a30aa05c7be42a1c6a10294c89b5
+      internalID: -374719544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_15
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 248
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 953e6f59065fb7246a2631b801b9bbab
+      internalID: 500379595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_16
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 248
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86b0afa050ecb7439196303f04f9ecc
+      internalID: -1150777834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_17
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 248
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe9203261bf33841bccc62a50551995
+      internalID: -1108040957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 124
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddceb88c317f2e746bef745689160974
+      internalID: -1153344356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_19
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 124
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55261d33f59ac724996c466db5c8ea71
+      internalID: -1981828808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_20
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 124
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b5a88755acf5b41b8a8be2c1f60f47
+      internalID: -986014267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_21
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 124
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5be14c6c839c1499a0957307f8ae51
+      internalID: 1946124966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_22
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 124
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5141693557fbb048a20ab5f8c384367
+      internalID: 239625569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_23
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 124
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549d9718d2deb3f42b6979645cbe6fb7
+      internalID: -614932237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f02df24c55ece049a3132e0d7125453
+      internalID: -2084577216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_25
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 0
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7aa8a2b5f62966438d1d88065b6c606
+      internalID: 15649637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_26
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 0
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1267ffd4253bbc5419f3e3d043e2d3bb
+      internalID: -1372509490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_27
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 0
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4931cef7e937ea040808781ef661ce74
+      internalID: 190235333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-mine-attack-29frames_28
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 0
+        width: 116
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6876f3080e51a41aecc2d587993c0b
+      internalID: 1232416863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -150,7 +759,36 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pickaxe-mine-attack-29frames_10: -1707307386
+      pickaxe-mine-attack-29frames_26: -1372509490
+      pickaxe-mine-attack-29frames_20: -986014267
+      pickaxe-mine-attack-29frames_13: 1336725927
+      pickaxe-mine-attack-29frames_6: -777372408
+      pickaxe-mine-attack-29frames_24: -2084577216
+      pickaxe-mine-attack-29frames_15: 500379595
+      pickaxe-mine-attack-29frames_21: 1946124966
+      pickaxe-mine-attack-29frames_0: -50073844
+      pickaxe-mine-attack-29frames_11: 1754636200
+      pickaxe-mine-attack-29frames_2: 1900378182
+      pickaxe-mine-attack-29frames_3: -1568733878
+      pickaxe-mine-attack-29frames_19: -1981828808
+      pickaxe-mine-attack-29frames_28: 1232416863
+      pickaxe-mine-attack-29frames_16: -1150777834
+      pickaxe-mine-attack-29frames_4: 1561532573
+      pickaxe-mine-attack-29frames_7: -509863490
+      pickaxe-mine-attack-29frames_18: -1153344356
+      pickaxe-mine-attack-29frames_22: 239625569
+      pickaxe-mine-attack-29frames_5: -1524019811
+      pickaxe-mine-attack-29frames_8: -459727438
+      pickaxe-mine-attack-29frames_17: -1108040957
+      pickaxe-mine-attack-29frames_23: -614932237
+      pickaxe-mine-attack-29frames_12: -118081296
+      pickaxe-mine-attack-29frames_27: 190235333
+      pickaxe-mine-attack-29frames_1: 1524284362
+      pickaxe-mine-attack-29frames_14: -374719544
+      pickaxe-mine-attack-29frames_9: -896127396
+      pickaxe-mine-attack-29frames_25: 15649637
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
