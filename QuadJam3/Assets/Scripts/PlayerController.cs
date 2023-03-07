@@ -218,7 +218,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-
+            FindObjectOfType<GameManager>().EndGame();
         }
         
         

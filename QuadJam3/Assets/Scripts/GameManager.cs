@@ -1,18 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    bool gameHasEnded = false;
+    public float inGameTime;
+    float gameTimeToRealTime = 525600;      // # of minutes in a year, 1 minute of real time = 1 year of in game time
+
+    public void EndGame()
     {
-        
+        if(gameHasEnded == false)
+        {
+            gameHasEnded = true;
+            Debug.Log("GAME OVER");
+            //show game over screen
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
+        inGameTime = Time.time * gameTimeToRealTime;
+    }
+
+    void Restart()
+    {
+        SceneManager.LoadScene("Sandbox");               //may need to rename this or move to scene manager
     }
 }
