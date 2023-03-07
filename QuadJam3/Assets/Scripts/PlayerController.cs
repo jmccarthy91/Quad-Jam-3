@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] int numFlashes = 3;
     SpriteRenderer spriteRenderer;
 
-
     enum State
     {
         Normal,
@@ -51,6 +50,8 @@ public class PlayerController : MonoBehaviour
         
         rb = GetComponent<Rigidbody>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        EventManager.current.onHitPlayer += onHitPlayer;
 
         state = State.Normal;
 
@@ -206,6 +207,21 @@ public class PlayerController : MonoBehaviour
             Physics.IgnoreLayerCollision(10, 11, false);
             state = State.Normal;
         }
+    }
+    
+    private void onHitPlayer()
+    {
+        currentHearts -= 1;
+        if (currentHearts >= 0)
+        {
+            Invulnerability();
+        }
+        else
+        {
+
+        }
+        
+        
     }
 
     IEnumerator Invulnerability()                                               // will want to turn this on when I take damage
