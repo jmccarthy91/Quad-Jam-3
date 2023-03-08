@@ -11,6 +11,9 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private int _health = 0;
     [SerializeField] private float _attackCooldown = 0.0f;
 
+    [Header("Other")]
+    [SerializeField] private GameObject _heartObject = null;
+
     [Header("Debug")]
     [SerializeField] private bool _enableDebug = false;
     [SerializeField] private float _gizmoDirectionLength = 0.0f;
@@ -54,7 +57,7 @@ public class EnemyController : MonoBehaviour
         // Applying knockback should be done from the player script
         if (Input.GetKeyDown(KeyCode.K))
         {
-            StartCoroutine(AppleKnockback(25.0f));
+            TakeDamage(10.0f);
         }
     }
 
@@ -145,8 +148,13 @@ public class EnemyController : MonoBehaviour
 
         if (_health < 1)
         {
-            // Just destroying the gameobject for now, will probably add something else later
+            DropHeart();
             Destroy(gameObject);
         }
+    }
+
+    private void DropHeart()
+    {
+        Instantiate(_heartObject, transform.position, transform.rotation);
     }
 }

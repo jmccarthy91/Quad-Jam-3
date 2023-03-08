@@ -27,6 +27,8 @@ public class MouseSingleton : MonoBehaviour
         return vec;
     }
 
+    public static Vector2 GetMouseWheelValue() => Input.mouseScrollDelta;
+
     public static Vector3 GetMouseWorldPositionWithZ()
     {
         return GetMouseWorldPositionWithZ(Input.mousePosition, Camera.main);
