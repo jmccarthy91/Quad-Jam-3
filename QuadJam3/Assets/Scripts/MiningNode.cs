@@ -15,10 +15,16 @@ public class MiningNode : MonoBehaviour
     {
         _health--;
         Debug.Log("[MiningNode]: Mineral hit\tRemaining health: " + _health);
+
+        if (_health < 1)
+        {
+            EventManager.Current.MineralMined();
+        }
     }
 
     private void Mined()
     {
         // ...
+        Debug.Log("[MineralNode]: Mineral Mined.");
     }
 }
