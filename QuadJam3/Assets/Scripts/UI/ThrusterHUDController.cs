@@ -57,12 +57,12 @@ public class ThrusterHUDController : MonoBehaviour
         thrusterMeter.localScale = new Vector3(tankFill, 1f, 1f);
     }
 
-    void DrainFuel(int timeMs)
+    void DrainFuel(float timeMs)
     {
         tankFill -= ( 1f / (timeMs / (Time.fixedDeltaTime * 1000)) );
     }
 
-    void RefillFuel(int timeMs)
+    void RefillFuel(float timeMs)
     {
         tankFill += ( 1f / (timeMs / (Time.fixedDeltaTime * 1000)) );
     }
