@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour
     [Header("Stats")]
     [SerializeField] float moveSpeed = 15f;
     [SerializeField] int maxHearts = 5;
-    [SerializeField] float attackOffset = 10f;
-    [SerializeField] float attackRange = 30f;
+    [SerializeField] float attackRange = 3f;
+    [SerializeField] float attackOffset = 3f;
     [SerializeField] public float knockback = 1f;
     [SerializeField] float playerGravity = 5f;
     int currentHearts;
@@ -29,6 +29,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float iFramesDuration = 1f;
     [SerializeField] int numFlashes = 3;
     SpriteRenderer spriteRenderer;
+    
+    [Header("Components")]
+    public Rigidbody rb;
+    public Animator animator;
+    public Transform attackPoint;                                       //Callum, this is the part I can't figure out
+    public LayerMask enemyLayers;
+    public LayerMask mineralLayers;
+    public EnemyController enemyController;
 
     enum State
     {
@@ -37,7 +45,6 @@ public class PlayerController : MonoBehaviour
         Attacking,
     }
 
-    public Rigidbody rb;
     
     Vector3 moveDirection;
     Vector3 rollDirection;
@@ -51,6 +58,7 @@ public class PlayerController : MonoBehaviour
         
         rb = GetComponent<Rigidbody>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        enemyController = GameObject.Find("Enemy").GetComponent<EnemyController>();
 
         // EventManager.current.onHitPlayer += onHitPlayer;
 
@@ -149,27 +157,36 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector3 mousePosition = MouseSingleton.GetMouseWorldPosition();
-            Vector3 mouseDirection = (mousePosition - transform.position).normalized;
-            Vector3 attackPosition = transform.position + mouseDirection * attackOffset;
-            Vector3 attackDirection = mouseDirection;
+            // play attack animation and set state to attacking until animation finishes
+            animator.SetTrigger("Attack");
+            //state = State.Attacking;
+            //characterBase.PlayAttackAnimation(attackDirection, () => state = State.Normal);
 
-            // Call EventManager.Current.MineralHit() to damage a mining node
+            // detect enemies AND MINERALS in range
+            Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
+            Collider[] hitMinerals = Physics.OverlapSphere(attackPoint.position, attackRange, mineralLayers);
 
-            //Enemy targetEnemy = Enemy.GetClosestEnemy(attackPosition, attackRange);                   
-            //if (targetEnemy != null)                                                                  //if we can get a list of enemies AND minerals then I can handle minerals here too
-            //{
-            //    //have an enemy, attack :)
-            //    attackDirection = targetEnemy.GetPosition() - transform.position.normalized;          //switch direction to be enemy direction (for knockback) rather than 
-            //    targetEnemy.Knockback(transform.position);                                            //rename this to whatever Callum's damage enemy function
-            //    enemyController = otherGameObject.GetComponent<EnemyController>();
-            //    enemyController.TakeDamage(knocback);
-            //}
+            //damage them
+            foreach (Collider enemy in hitEnemies)
+            {
+                Debug.Log("We hit " + enemy.name);
+                enemyController.TakeDamage(knockback);
 
-            moveDirection = Vector3.zero;
-            Debug.Log("" + attackDirection);
-            //state = State.Attacking;                                                                  // using attacking state purely for animation 5:30ish here https://www.youtube.com/watch?v=AXkaqW3E9OI
-            //characterBase.PlayAttackAnimation(attackDirection, () => state = State.Normal);                 // end attack state with animation
+            }
+
+            foreach (Collider mineral in hitMinerals)
+            {
+                Debug.Log("We hit " + mineral.name);
+                EventManager.Current.MineralHit();
+            }
+
+            // @Callum, I think the below is close to getting attackPoint in the way I want using attackOffset, but I don't think it's working properly in 3D:
+
+            //Vector3 mousePosition = MouseSingleton.GetMouseWorldPosition();
+            //Vector3 mouseDirection = (mousePosition - transform.position).normalized;
+            //Vector3 attackPosition = transform.position + mouseDirection * attackOffset;
+            //Vector3 attackDirection = mouseDirection;
+
         }
     }
 

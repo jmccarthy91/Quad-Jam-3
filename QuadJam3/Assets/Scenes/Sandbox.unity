@@ -261,7 +261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 438570777}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -542,7 +542,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 765398192}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -1180,7 +1180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1431490871}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MiningNodeSpawnPositions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1339,8 +1339,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 20
   maxHearts: 5
-  attackOffset: 10
   attackRange: 30
+  attackOffset: 3
   knockback: 1
   playerGravity: 400
   rollSpeedMax: 75
@@ -1349,6 +1349,15 @@ MonoBehaviour:
   iFramesDuration: 0
   numFlashes: 0
   rb: {fileID: 1575648827}
+  animator: {fileID: 1575648829}
+  attackPoint: {fileID: 0}
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 2048
+  mineralLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  enemyController: {fileID: 0}
 --- !u!212 &1575648821
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1544,7 +1553,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1959807285}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
