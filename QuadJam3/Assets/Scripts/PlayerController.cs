@@ -6,61 +6,66 @@ public class PlayerController : MonoBehaviour
     // Used a lot of this guy's tutorials: https://www.youtube.com/watch?v=AXkaqW3E9OI
 
     [Header("Stats")]
-    [SerializeField] float moveSpeed = 15f;
-    [SerializeField] int maxHearts = 5;
-    [SerializeField] float attackRange = 3f;
-    [SerializeField] float attackOffset = 3f;
+    [SerializeField] private float moveSpeed = 15f;
+    [SerializeField] private int maxHearts = 5;
+    [SerializeField] private float attackRange = 3f;
+    [SerializeField] private float attackOffset = 3f;
     [SerializeField] public float knockback = 1f;
-    [SerializeField] float playerGravity = 5f;
-    public int currentHearts;
+    [SerializeField] private float playerGravity = 5f;
+    private int currentHearts;
 
     [Header("Roll")]
-    [SerializeField] float rollSpeedMax = 150f;
-    float rollSpeedMinimum = 50f;
-    float rollSpeedDropMultiplier = 5f;
-    float rollSpeed;
+    [SerializeField] private float rollSpeedMax = 150f;
+    private float rollSpeedMinimum = 50f;
+    private float rollSpeedDropMultiplier = 5f;
+    private float rollSpeed;
 
     [Header("Jetpack")]
-    [SerializeField] float jetForce = 40f;      //jetpack tutorials https://www.youtube.com/watch?v=gJilpepn3gw
+    [SerializeField] private float jetForce = 40f;      //jetpack tutorials https://www.youtube.com/watch?v=gJilpepn3gw
+    [SerializeField] private float _jetpackUseLimit = 0.0f;
     [SerializeField] private GameObject fire;
     private bool engineIsOn; 
 
     [Header("iframes")]
-    [SerializeField] float iFramesDuration = 1f;
-    [SerializeField] int numFlashes = 3;
-    SpriteRenderer spriteRenderer;
+    [SerializeField] private float iFramesDuration = 1f;
+    [SerializeField] private int numFlashes = 3;
+    private SpriteRenderer spriteRenderer;
     
     [Header("Components")]
-    public Rigidbody rb;
-    public Animator animator;
-    public Transform attackPoint;                                       //Callum, this is the part I can't figure out
-    public LayerMask enemyLayers;
-    public LayerMask mineralLayers;
-    public EnemyController enemyController;
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Transform attackPoint;       //Callum, this is the part I can't figure out
+    [SerializeField] private LayerMask enemyLayers;
+    [SerializeField] private LayerMask mineralLayers;
+    [SerializeField] private Transform _spawnPoint;
 
-    enum State
+    [Header("Other")]
+    [SerializeField] private float _groundCheckLength = 0.0f;
+
+    private enum State
     {
         Normal,
         Rolling,
         Attacking,
     }
 
-    
-    Vector3 moveDirection;
-    Vector3 rollDirection;
-    Vector3 lastMoveDirection;
-    State state;
+    private Vector3 moveDirection;
+    private Vector3 rollDirection;
+    private Vector3 lastMoveDirection;
+    private State state;
 
+    private float _jetpackTimer = 0.0f;
+
+    private bool _isGrounded = false;
 
     private void Awake()
     {
         currentHearts = maxHearts;
+
+        Respawn();
         
         rb = GetComponent<Rigidbody>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        enemyController = GameObject.Find("Enemy").GetComponent<EnemyController>();
-
-        // EventManager.current.onHitPlayer += onHitPlayer;
 
         state = State.Normal;
 
@@ -68,32 +73,26 @@ public class PlayerController : MonoBehaviour
         fire.SetActive(false);
     }
 
-    void Update()
+    private void Update()
     {
-        //FaceMouse();
+        CheckGrounded();
 
         switch (state)
         {
             case State.Normal:
-
                 // move WASD
                 HandleMovement();
-
                 // attack on mouse
                 HandleAttack();
-
                 // jetpack on spacebar
                 HandleJetpack();
-
                 // initiate roll on left shift
                 InitiateRoll();
-
                 break;
                         
                 // roll & end roll
             case State.Rolling:
                 Roll();
-                
                 break;
 
             //case State.Attacking                                                      //if needed later for animations
@@ -102,9 +101,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        rb.AddForce(new Vector3(0, -1f, 0) * playerGravity);
+        rb.AddForce(Vector3.down * playerGravity);
 
         switch (state)
         {
@@ -128,12 +127,11 @@ public class PlayerController : MonoBehaviour
             //roll
             case State.Rolling:
                 rb.velocity = rollDirection * rollSpeed;
-
                 break;
         }
     }
 
-    void HandleMovement()
+    private void HandleMovement()
     {
         // get keyboard inputs
         float xDirection = Input.GetAxisRaw("Horizontal");
@@ -147,18 +145,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Move()
+    private void Move()
     {
         // use inputs to move
         rb.velocity = new Vector3(moveDirection.x * moveSpeed, 0f, moveDirection.z * moveSpeed);
     }
 
-    void HandleAttack()
+    private void HandleAttack()
     {
         if (Input.GetMouseButtonDown(0))
         {
             // play attack animation and set state to attacking until animation finishes
-            animator.SetTrigger("Attack");
+            // animator.SetTrigger("Attack");
             //state = State.Attacking;
             //characterBase.PlayAttackAnimation(attackDirection, () => state = State.Normal);
 
@@ -169,15 +167,19 @@ public class PlayerController : MonoBehaviour
             //damage them
             foreach (Collider enemy in hitEnemies)
             {
-                Debug.Log("We hit " + enemy.name);
-                enemyController.TakeDamage(knockback);
-
+                if (enemy)
+                {
+                    enemy.GetComponent<EnemyController>().TakeDamage(knockback);
+                }
             }
 
             foreach (Collider mineral in hitMinerals)
             {
-                Debug.Log("We hit " + mineral.name);
-                EventManager.Current.MineralHit();
+                if (mineral)
+                {
+                    MiningNode node = mineral.GetComponent<MiningNode>();
+                    node.Hit();
+                }
             }
 
             // @Callum, I think the below is close to getting attackPoint in the way I want using attackOffset, but I don't think it's working properly in 3D:
@@ -190,9 +192,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void HandleJetpack()
+    private void HandleJetpack()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && _jetpackTimer < _jetpackUseLimit)
         {
             engineIsOn = true;
             fire.SetActive(true);
@@ -205,7 +207,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void InitiateRoll()
+    private void InitiateRoll()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -215,7 +217,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Roll()
+    private void Roll()
     {
         //set invulnerable
         Physics.IgnoreLayerCollision(10, 11, true);
@@ -247,7 +249,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator Invulnerability()                                               // will want to turn this on when I take damage
+    private IEnumerator Invulnerability()                                               // will want to turn this on when I take damage
     {
         Physics.IgnoreLayerCollision(10, 11, true);
         
@@ -273,4 +275,33 @@ public class PlayerController : MonoBehaviour
     //    transform.up = direction;
     //}
 
+    private void Respawn()
+    {
+        gameObject.SetActive(false);
+        transform.position = _spawnPoint.position;
+        gameObject.SetActive(true);
+    }
+
+    private void CheckGrounded()
+    {
+        _isGrounded = Physics.Raycast(transform.position, Vector3.down, _groundCheckLength);
+
+        if (!_isGrounded)
+        {
+            _jetpackTimer += Time.deltaTime;
+        }
+        else
+        {
+            _jetpackTimer = 0.0f;
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawRay(transform.position, Vector3.down * _groundCheckLength);
+    }
 } 

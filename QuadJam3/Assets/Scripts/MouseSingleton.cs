@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MouseSingleton : MonoBehaviour
@@ -26,6 +24,8 @@ public class MouseSingleton : MonoBehaviour
         vec.z = 0f;
         return vec;
     }
+
+    public static Vector3 GetMousePosition() => Input.mousePosition;
 
     public static Vector2 GetMouseWheelValue() => Input.mouseScrollDelta;
 

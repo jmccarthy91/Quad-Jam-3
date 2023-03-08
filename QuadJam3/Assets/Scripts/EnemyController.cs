@@ -87,7 +87,8 @@ public class EnemyController : MonoBehaviour
         _shouldMove = false;
 
         _rb.velocity = Vector3.zero;
-        _rb.AddForce(-_moveDirection.normalized * amount, ForceMode.Impulse);
+        _rb.AddForce(-_moveDirection.normalized * amount * Time.fixedDeltaTime,
+            ForceMode.Impulse);
 
         yield return new WaitForSeconds(0.25f);
 
@@ -141,10 +142,10 @@ public class EnemyController : MonoBehaviour
 
     public void TakeDamage(float knockbackAmount)
     {
+        StartCoroutine(AppleKnockback(knockbackAmount));
+
         _health--;
         Debug.Log("[EnemyController]: Damage Taken\nCurrent Health: " + _health);
-
-        StartCoroutine(AppleKnockback(knockbackAmount));
 
         if (_health < 1)
         {
