@@ -1,4 +1,5 @@
 using System.Collections;
+using System.IO;
 using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -159,11 +160,6 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) && _jetpackTimer < _bootUseLimit)
         {
-            if(!engineIsOn)
-            {
-              HUDEventsManager.EventsHUD.OnJetpackStarted(_jetpackUseLimit);
-            }
-
             engineIsOn = true;
 
             _jetpackTimer += Time.deltaTime;
@@ -187,17 +183,8 @@ public class PlayerController : MonoBehaviour
         _shouldMove = false;
 
         _rb.velocity = Vector2.zero;
-
-        if (direction.x < transform.position.x)
-        {
-            _rb.AddForce(new Vector2(-direction.x * _knockbackAmount, 5.0f),
+        _rb.AddForce(new Vector2(Mathf.Sign(transform.position.x - direction.x) * _knockbackAmount, 5.0f),
             ForceMode2D.Impulse);
-        }
-        else
-        {
-            _rb.AddForce(new Vector2(direction.x * _knockbackAmount, 5.0f),
-            ForceMode2D.Impulse);
-        }
 
         yield return new WaitForSeconds(0.25f);
 
@@ -234,8 +221,7 @@ public class PlayerController : MonoBehaviour
     {
         currentHearts -= 1;
 
-        HUDEventsManager.EventsHUD.OnHealthChange(currentHearts);
-        Debug.Log("[PlayerController]: Took damage.\nRemaining health: " + currentHearts);
+        // Debug.Log("[PlayerController]: Took damage.\nRemaining health: " + currentHearts);
 
         StartCoroutine(AppleKnockback(enemyPos));
 
@@ -278,7 +264,6 @@ public class PlayerController : MonoBehaviour
         else
         {
             _jetpackTimer = 0.0f;
-            HUDEventsManager.EventsHUD.OnJetpackEnded(3.0f); // 3 sec from 0 to 100%
         }
     }
 

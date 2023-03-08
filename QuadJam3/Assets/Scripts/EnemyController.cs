@@ -102,7 +102,7 @@ public class EnemyController : MonoBehaviour
         _pController.TakeDamage(transform.position);
         _attackTimer = 0.0f;
 
-        Debug.Log("[EnemyController]: Attacked player");
+        // Debug.Log("[EnemyController]: Attacked player");
     }
 
     private void GetDependencies()
@@ -144,7 +144,7 @@ public class EnemyController : MonoBehaviour
         StartCoroutine(AppleKnockback(knockbackAmount));
 
         _health--;
-        Debug.Log("[EnemyController]: Damage Taken\nCurrent Health: " + _health);
+        // Debug.Log("[EnemyController]: Damage Taken\nCurrent Health: " + _health);
 
         if (_health < 1)
         {
