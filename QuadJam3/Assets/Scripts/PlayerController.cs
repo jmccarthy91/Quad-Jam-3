@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float attackOffset = 3f;
     [SerializeField] public float knockback = 1f;
     [SerializeField] float playerGravity = 5f;
-    int currentHearts;
+    public int currentHearts;
 
     [Header("Roll")]
     [SerializeField] float rollSpeedMax = 150f;
