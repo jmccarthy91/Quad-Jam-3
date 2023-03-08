@@ -196,6 +196,11 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && _jetpackTimer < _jetpackUseLimit)
         {
+            if(!engineIsOn)
+            {
+              HUDEventsManager.EventsHUD.OnJetpackStarted(_jetpackUseLimit);
+            }
+
             engineIsOn = true;
             fire.SetActive(true);
         }
@@ -237,6 +242,7 @@ public class PlayerController : MonoBehaviour
     {
         currentHearts -= 1;
 
+        HUDEventsManager.EventsHUD.OnHealthChange(currentHearts);
         Debug.Log("[PlayerController]: Took damage.\nRemaining health: " + currentHearts);
 
         if (currentHearts >= 0)
@@ -293,6 +299,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             _jetpackTimer = 0.0f;
+            HUDEventsManager.EventsHUD.OnJetpackEnded(3.0f); // 3 sec from 0 to 100%
         }
     }
 
