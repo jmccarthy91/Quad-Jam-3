@@ -154,6 +154,8 @@ public class PlayerController : MonoBehaviour
             Vector3 attackPosition = transform.position + mouseDirection * attackOffset;
             Vector3 attackDirection = mouseDirection;
 
+            // Call EventManager.Current.MineralHit() to damage a mining node
+
             //Enemy targetEnemy = Enemy.GetClosestEnemy(attackPosition, attackRange);                   
             //if (targetEnemy != null)                                                                  //if we can get a list of enemies AND minerals then I can handle minerals here too
             //{

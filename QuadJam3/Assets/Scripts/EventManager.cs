@@ -1,58 +1,41 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
     //used this tutorial: https://www.youtube.com/watch?v=gx0Lt4tCDE0&t=346s
 
-    public static EventManager current;
+    public static EventManager Current;
 
     void Awake()
     {
-        if (current != null && current != this)
+        if (Current != null && Current != this)
         {
             Destroy(this);
         }
         else
         {
-            current = this;
+            Current = this;
         }
     }
 
     //when an enemy hits the player
-    public event Action onHitPlayer;
-    public void HitPlayer()
-    {
-        onHitPlayer?.Invoke();
-    }
+    public event Action OnHitPlayer;
+    public void HitPlayer() => OnHitPlayer?.Invoke();
 
     //when the player hits a mineral deposit
-    public event Action onMineralHit;
-    public void MineralHit()
-    {
-        onMineralHit?.Invoke();
-    }
+    public event Action OnMineralHit;
+    public void MineralHit() => OnMineralHit?.Invoke();
 
     //when a mineral deposit is mined out
-    public event Action onMineralMined;
-    public void MineralMined()
-    {
-        onMineralMined?.Invoke();
-    }
+    public event Action OnMineralMined;
+    public void MineralMined() => OnMineralMined?.Invoke();
 
     //when boots get upgraded
-    public event Action onBootsLevel;
-    public void BootsLevel()
-    {
-        onBootsLevel?.Invoke();
-    }
+    public event Action OnBootsLevel;
+    public void BootsLevel() => OnBootsLevel?.Invoke();
 
     //when mining pick gets upgraded
-    public event Action onPickLevel;
-    public void PickLevel()
-    {
-        onPickLevel?.Invoke();
-    }
+    public event Action OnPickLevel;
+    public void PickLevel() => OnPickLevel?.Invoke();
 }
