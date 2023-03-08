@@ -6,6 +6,7 @@ public class EnemyController : MonoBehaviour
     [Header("Movement Data")]
     [SerializeField] private float _moveSpeed = 0.0f;
     [SerializeField] private float _stoppingDistance = 0.0f;
+    [SerializeField] private float _knockbackUp = 0.0f;
 
     [Header("Stats")]
     [SerializeField] private int _health = 0;
@@ -13,17 +14,17 @@ public class EnemyController : MonoBehaviour
 
     [Header("Other")]
     [SerializeField] private GameObject _heartObject = null;
+    [SerializeField] private GameObject _player = null;
 
     [Header("Debug")]
     [SerializeField] private bool _enableDebug = false;
     [SerializeField] private float _gizmoDirectionLength = 0.0f;
 
     // Dependencies
-    private Rigidbody _rb = null;
-    private GameObject _player = null;
+    private Rigidbody2D _rb = null;
     private PlayerController _pController = null;
 
-    private Vector3 _moveDirection = Vector3.zero;
+    private Vector2 _moveDirection = Vector2.zero;
 
     private float _playerDistance = 0.0f;
     private float _attackTimer = 0.0f;
@@ -34,9 +35,7 @@ public class EnemyController : MonoBehaviour
     {
         GetDependencies();
 
-        // This line is needed to avoid a weird bug where the enemy would attack the player once,
-        // straight after the enemy is first spawned in. 
-        _moveDirection = new Vector3(CalculateMoveDirection().x, 0.0f, CalculateMoveDirection().z);
+        _moveDirection = new Vector2(CalculateMoveDirection().x, 0.0f);
         _playerDistance = _moveDirection.magnitude;
         
         _shouldMove = true;
@@ -44,7 +43,7 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
-        _moveDirection = new Vector3(CalculateMoveDirection().x, 0.0f, CalculateMoveDirection().z);
+        _moveDirection = new Vector2(CalculateMoveDirection().x, 0.0f);
         _playerDistance = CalculatePlayerDistance();
         _attackTimer += Time.deltaTime;
 
@@ -57,13 +56,13 @@ public class EnemyController : MonoBehaviour
         // Applying knockback should be done from the player script
         if (Input.GetKeyDown(KeyCode.K))
         {
-            TakeDamage(10.0f);
+            TakeDamage(500.0f);
         }
     }
 
     private void FixedUpdate() => HandleMovement();
 
-    private Vector3 CalculateMoveDirection()
+    private Vector2 CalculateMoveDirection()
     {
         return (_player.transform.position - transform.position);
     }
@@ -74,11 +73,11 @@ public class EnemyController : MonoBehaviour
     {
         if (_playerDistance > _stoppingDistance && _shouldMove)
         {
-            _rb.velocity = _moveDirection.normalized * _moveSpeed * Time.fixedDeltaTime;
+            _rb.velocity = new Vector2(_moveDirection.x * _moveSpeed * Time.fixedDeltaTime, _rb.velocity.y);
         }
         else if (_playerDistance <= _stoppingDistance)
         {
-            _rb.velocity = Vector3.zero;
+            _rb.velocity = Vector2.zero;
         }
     }
 
@@ -86,9 +85,9 @@ public class EnemyController : MonoBehaviour
     {
         _shouldMove = false;
 
-        _rb.velocity = Vector3.zero;
-        _rb.AddForce(-_moveDirection.normalized * amount * Time.fixedDeltaTime,
-            ForceMode.Impulse);
+        _rb.velocity = Vector2.zero;
+        _rb.AddForce(new Vector2(-_moveDirection.x * amount * Time.fixedDeltaTime, _knockbackUp),
+            ForceMode2D.Impulse);
 
         yield return new WaitForSeconds(0.25f);
 
@@ -97,10 +96,10 @@ public class EnemyController : MonoBehaviour
 
     private void HandleAttack()
     {
-        if (_attackTimer < _attackCooldown)
+        if (_attackTimer < _attackCooldown || !_pController.IsGrounded())
             return;
 
-        _pController.TakeDamage();
+        _pController.TakeDamage(transform.position);
         _attackTimer = 0.0f;
 
         Debug.Log("[EnemyController]: Attacked player");

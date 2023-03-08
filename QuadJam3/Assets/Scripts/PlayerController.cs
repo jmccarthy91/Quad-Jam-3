@@ -1,46 +1,48 @@
 using System.Collections;
+using UnityEditor.Timeline;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
-    // Used a lot of this guy's tutorials: https://www.youtube.com/watch?v=AXkaqW3E9OI
+    // Used a lot of this guy's tutorials: https://www.youtube.com/watch?v=AXkaqW3E9OI4
 
     [Header("Stats")]
     [SerializeField] private float moveSpeed = 15f;
     [SerializeField] private int maxHearts = 5;
     [SerializeField] private float attackRange = 3f;
     [SerializeField] private float attackOffset = 3f;
-    [SerializeField] public float knockback = 1f;
-    [SerializeField] private float playerGravity = 5f;
+    [SerializeField] public float _knockbackAmount = 1f;
     private int currentHearts;
 
     [Header("Roll")]
     [SerializeField] private float rollSpeedMax = 150f;
     private float rollSpeedMinimum = 50f;
     private float rollSpeedDropMultiplier = 5f;
-    private float rollSpeed;
+    private float rollSpeed = 0.0f;
 
-    [Header("Jetpack")]
-    [SerializeField] private float jetForce = 40f;      //jetpack tutorials https://www.youtube.com/watch?v=gJilpepn3gw
-    [SerializeField] private float _jetpackUseLimit = 0.0f;
-    [SerializeField] private GameObject fire;
+    [Header("Boots")]
+    [SerializeField] private float _bootForce = 40f;      //jetpack tutorials https://www.youtube.com/watch?v=gJilpepn3gw
+    [SerializeField] private float _bootUseForce = 0.0f;
+    [SerializeField] private float _bootUseLimit = 0.0f;
     private bool engineIsOn; 
 
     [Header("iframes")]
     [SerializeField] private float iFramesDuration = 1f;
     [SerializeField] private int numFlashes = 3;
-    private SpriteRenderer spriteRenderer;
     
     [Header("Components")]
-    [SerializeField] private Rigidbody rb;
     [SerializeField] private Animator animator;
     [SerializeField] private Transform attackPoint;       //Callum, this is the part I can't figure out
     [SerializeField] private LayerMask enemyLayers;
     [SerializeField] private LayerMask mineralLayers;
     [SerializeField] private Transform _spawnPoint;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
 
     [Header("Other")]
     [SerializeField] private float _groundCheckLength = 0.0f;
+    [SerializeField] private LayerMask _floorLayer;
 
     private enum State
     {
@@ -49,28 +51,29 @@ public class PlayerController : MonoBehaviour
         Attacking,
     }
 
-    private Vector3 moveDirection;
-    private Vector3 rollDirection;
-    private Vector3 lastMoveDirection;
+    private Rigidbody2D _rb = null;
+
+    private Vector2 moveDirection;
+    private Vector2 rollDirection;
+    private Vector2 lastMoveDirection;
     private State state;
 
     private float _jetpackTimer = 0.0f;
+    private float _cachedDir = 0.0f;
 
     private bool _isGrounded = false;
+    private bool _shouldMove = true;
+
 
     private void Awake()
     {
         currentHearts = maxHearts;
-
-        Respawn();
         
-        rb = GetComponent<Rigidbody>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        _rb = GetComponent<Rigidbody2D>();
 
         state = State.Normal;
 
         engineIsOn = false;
-        fire.SetActive(false);
     }
 
     private void Update()
@@ -94,52 +97,42 @@ public class PlayerController : MonoBehaviour
             case State.Rolling:
                 Roll();
                 break;
-
-            //case State.Attacking                                                      //if needed later for animations
-            //    HandleAttack();                                                       //lets us spam attacks, may not want! if we remove this line then we attack @ speed of animation
-            //    break;
         }
     }
 
     private void FixedUpdate()
     {
-        rb.AddForce(Vector3.down * playerGravity);
-
         switch (state)
         {
             case State.Normal:
                 Move();
 
-                // Jetpack
-                switch (engineIsOn)
+                if (engineIsOn)
                 {
-                    case true:
-                        rb.AddForce(new Vector3(0f, jetForce, 0f), ForceMode.Force);
-                        break;
-
-                    case false:
-                        rb.AddForce(new Vector3(0f, 0f, 0f), ForceMode.Force);
-                        break;
+                        _rb.AddForce(new Vector3(0f, _bootForce), ForceMode2D.Force);
                 }
-
                 break;
 
-            //roll
             case State.Rolling:
-                rb.velocity = rollDirection * rollSpeed;
+                _rb.velocity = rollDirection * rollSpeed * Time.fixedDeltaTime;
                 break;
         }
     }
 
     private void HandleMovement()
     {
-        // get keyboard inputs
         float xDirection = Input.GetAxisRaw("Horizontal");
-        float zDirection = Input.GetAxisRaw("Vertical");
-        moveDirection = new Vector3(xDirection, 0f, zDirection).normalized;
-        
+        moveDirection = new Vector2(xDirection, 0f).normalized;
+
+        if (xDirection == -1f)
+            _cachedDir = -1f;
+        else if (xDirection == 1)
+            _cachedDir = 1f;
+
+        _spriteRenderer.flipX = moveDirection.x < 0;
+
         //set a last move direction so we roll even when no directions are pressed
-        if (xDirection != 0 || zDirection != 0)
+        if (xDirection != 0)
         {
             lastMoveDirection = moveDirection;
         }
@@ -147,8 +140,8 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        // use inputs to move
-        rb.velocity = new Vector3(moveDirection.x * moveSpeed, 0f, moveDirection.z * moveSpeed);
+        if (_shouldMove)
+            _rb.velocity = new Vector2(moveDirection.x * moveSpeed * Time.fixedDeltaTime, _rb.velocity.y);
     }
 
     private void HandleAttack()
@@ -159,52 +152,51 @@ public class PlayerController : MonoBehaviour
             // animator.SetTrigger("Attack");
             //state = State.Attacking;
             //characterBase.PlayAttackAnimation(attackDirection, () => state = State.Normal);
-
-            // detect enemies AND MINERALS in range
-            Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
-            Collider[] hitMinerals = Physics.OverlapSphere(attackPoint.position, attackRange, mineralLayers);
-
-            //damage them
-            foreach (Collider enemy in hitEnemies)
-            {
-                if (enemy)
-                {
-                    enemy.GetComponent<EnemyController>().TakeDamage(knockback);
-                }
-            }
-
-            foreach (Collider mineral in hitMinerals)
-            {
-                if (mineral)
-                {
-                    MiningNode node = mineral.GetComponent<MiningNode>();
-                    node.Hit();
-                }
-            }
-
-            // @Callum, I think the below is close to getting attackPoint in the way I want using attackOffset, but I don't think it's working properly in 3D:
-
-            //Vector3 mousePosition = MouseSingleton.GetMouseWorldPosition();
-            //Vector3 mouseDirection = (mousePosition - transform.position).normalized;
-            //Vector3 attackPosition = transform.position + mouseDirection * attackOffset;
-            //Vector3 attackDirection = mouseDirection;
-
         }
     }
 
     private void HandleJetpack()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && _jetpackTimer < _jetpackUseLimit)
+        if (Input.GetKey(KeyCode.Space) && _jetpackTimer < _bootUseLimit)
         {
             engineIsOn = true;
-            fire.SetActive(true);
-        }
 
-        if (Input.GetKeyUp(KeyCode.Space))
+            _jetpackTimer += Time.deltaTime;
+
+            if (_jetpackTimer >= _bootUseLimit)
+            {
+                _jetpackTimer = 0.0f;
+            }
+        }
+        else
         {
             engineIsOn = false;
-            fire.SetActive(false);
         }
+    }
+
+    private IEnumerator AppleKnockback(Vector2 direction)
+    {
+        if (!_isGrounded)
+            yield return null;
+
+        _shouldMove = false;
+
+        _rb.velocity = Vector2.zero;
+
+        if (direction.x < transform.position.x)
+        {
+            _rb.AddForce(new Vector2(-direction.x * _knockbackAmount, 5.0f),
+            ForceMode2D.Impulse);
+        }
+        else
+        {
+            _rb.AddForce(new Vector2(direction.x * _knockbackAmount, 5.0f),
+            ForceMode2D.Impulse);
+        }
+
+        yield return new WaitForSeconds(0.25f);
+
+        _shouldMove = true;
     }
 
     private void InitiateRoll()
@@ -233,47 +225,34 @@ public class PlayerController : MonoBehaviour
         }
     }
     
-    public void TakeDamage()
+    public void TakeDamage(Vector2 enemyPos)
     {
         currentHearts -= 1;
 
         Debug.Log("[PlayerController]: Took damage.\nRemaining health: " + currentHearts);
 
+        StartCoroutine(AppleKnockback(enemyPos));
+
         if (currentHearts >= 0)
         {
-            Invulnerability();
-        }
-        else
-        {
-            FindObjectOfType<GameManager>().EndGame();
+            StartCoroutine(Invulnerability());
         }
     }
 
-    private IEnumerator Invulnerability()                                               // will want to turn this on when I take damage
+    private IEnumerator Invulnerability() // will want to turn this on when I take damage
     {
         Physics.IgnoreLayerCollision(10, 11, true);
         
         //flash red a few times
         for (int i = 0; i < numFlashes; i++)
         {
-            spriteRenderer.color = new Color(1, 0, 0, 0.5f);
+            _spriteRenderer.color = new Color(1, 0, 0, 0.5f);
             yield return new WaitForSeconds(iFramesDuration / (numFlashes * 2));
-            spriteRenderer.color = Color.white;
+            _spriteRenderer.color = Color.white;
             yield return new WaitForSeconds(iFramesDuration / (numFlashes * 2));
         }
         Physics.IgnoreLayerCollision(10, 11, false);
     }
-    
-    // if we want the character to face the mouse
-    //void FaceMouse()
-    //{
-    //    Vector3 mousePosition = Input.mousePosition;
-    //    mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-
-    //    Vector2 direction = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
-
-    //    transform.up = direction;
-    //}
 
     private void Respawn()
     {
@@ -284,7 +263,7 @@ public class PlayerController : MonoBehaviour
 
     private void CheckGrounded()
     {
-        _isGrounded = Physics.Raycast(transform.position, Vector3.down, _groundCheckLength);
+        _isGrounded = Physics2D.Raycast(transform.position, Vector2.down, _groundCheckLength, _floorLayer);
 
         if (!_isGrounded)
         {
@@ -296,12 +275,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool IsGrounded() => _isGrounded;
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.magenta;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
-
-        Gizmos.color = Color.blue;
-        Gizmos.DrawRay(transform.position, Vector3.down * _groundCheckLength);
+        Gizmos.DrawRay(transform.position, Vector2.down * _groundCheckLength);
     }
 } 

@@ -18,7 +18,7 @@ public class MiningNode : MonoBehaviour
 
     private void Mined()
     {
-        // ...
+        Destroy(gameObject);
         Debug.Log("[MineralNode]: Mineral Mined.");
     }
 }
