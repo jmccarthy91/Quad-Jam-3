@@ -31,11 +31,10 @@ public class ThrusterHUDController : MonoBehaviour
                 isFilling = false;
             }
         }
-
-        if (isDraining)
+        else if (isDraining)
         {
             isFilling = false;
-            EmptyFuel(3000);
+            DrainFuel(3000);
             if (tankFill <= 0f)
             {
                 tankFill = 0f;
@@ -56,8 +55,8 @@ public class ThrusterHUDController : MonoBehaviour
     {
         thrusterMeter.localScale = new Vector3(tankFill, 1f, 1f);
     }
-    
-    void EmptyFuel(int timeMs)
+
+    void DrainFuel(int timeMs)
     {
         // Calculate how much fuel to remove to empty the tank from 1 to 0 in n milliseconds inside FixedUpdate
         tankFill -= ( 1f / (timeMs / (Time.fixedDeltaTime * 1000)) );
