@@ -7,23 +7,21 @@ using UnityEngine;
 public class HealthHUDController : MonoBehaviour
 {
     public RectTransform heathBar;
+    public int startingHealth = 5;
     private RectTransform[] healthUnits;
-
-    // For testing 
-    public PlayerController playerController;
 
     void Start()
     {
         healthUnits = heathBar.GetComponentsInChildren<RectTransform>(true);
 
-        // Initialize health bar
-        UpdateHealthBar(playerController.currentHearts);
+        HUDEventsManager.EventsHUD.onHealthChange += onHealthChange;
+
+        UpdateHealthBar(startingHealth);
     }
     
-    
-    void Update() // For testing
+    void onHealthChange(int currentHealth)
     {
-        UpdateHealthBar(playerController.currentHearts);
+        UpdateHealthBar(currentHealth);
     }
 
     void UpdateHealthBar(float health)
@@ -39,5 +37,9 @@ public class HealthHUDController : MonoBehaviour
                 healthUnits[i].gameObject.SetActive(false);
             }
         }
+    }
+
+    void OnDestroy() {
+        HUDEventsManager.EventsHUD.onHealthChange -= onHealthChange;
     }
 }
