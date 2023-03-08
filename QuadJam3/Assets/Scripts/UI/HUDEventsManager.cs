@@ -28,5 +28,23 @@ public class HUDEventsManager : MonoBehaviour
       }
     }
 
+    public event Action<float> onJetpackStarted;
+    public void OnJetpackStarted(float maxFlightTime)
+    {
+      if (onJetpackStarted != null)
+      {
+        onJetpackStarted(maxFlightTime);
+      }
+    }
+
+    public event Action<float> onJetpackEnded;
+    public void OnJetpackEnded(float refillTime)
+    {
+      if (onJetpackEnded != null)
+      {
+        onJetpackEnded(refillTime);
+      }
+    }
+
 
 }
