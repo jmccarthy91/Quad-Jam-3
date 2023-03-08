@@ -14,12 +14,12 @@ public class HealthHUDController : MonoBehaviour
     {
         healthUnits = heathBar.GetComponentsInChildren<RectTransform>(true);
 
-        HUDEventsManager.EventsHUD.onHealthChange += onHealthChange;
+        HUDEventsManager.EventsHUD.onHealthChange += OnHealthChange;
 
         UpdateHealthBar(startingHealth);
     }
     
-    void onHealthChange(int currentHealth)
+    void OnHealthChange(int currentHealth)
     {
         UpdateHealthBar(currentHealth);
     }
@@ -40,6 +40,6 @@ public class HealthHUDController : MonoBehaviour
     }
 
     void OnDestroy() {
-        HUDEventsManager.EventsHUD.onHealthChange -= onHealthChange;
+        HUDEventsManager.EventsHUD.onHealthChange -= OnHealthChange;
     }
 }

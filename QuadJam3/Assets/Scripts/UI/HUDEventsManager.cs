@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class HUDEventsManager : MonoBehaviour
 {
-    public static EventManager EventsHUD;
+    public static HUDEventsManager EventsHUD;
 
     void Awake()
     {
@@ -20,11 +20,11 @@ public class HUDEventsManager : MonoBehaviour
     }
 
     public event Action<int> onHealthChange;
-    public void onHealthChange(int newHealth)
+    public void OnHealthChange(int newHealth)
     {
       if (onHealthChange != null)
       {
-        onHealthChange(int newHealth);
+        onHealthChange(newHealth);
       }
     }
 
