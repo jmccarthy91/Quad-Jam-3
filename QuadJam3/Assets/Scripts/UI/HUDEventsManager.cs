@@ -28,6 +28,15 @@ public class HUDEventsManager : MonoBehaviour
       }
     }
 
+    public event Action<int,int> onExpereinceChange;
+    public void OnExpereinceChange(int newExp, int maxExpLvl)
+    {
+      if (onExpereinceChange != null)
+      {
+        onExpereinceChange(newExp, maxExpLvl);
+      }
+    }
+
     public event Action<float> onJetpackStarted;
     public void OnJetpackStarted(float maxFlightTime)
     {

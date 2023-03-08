@@ -9,16 +9,18 @@ public class ExpHUDController : MonoBehaviour
 
     [Range(0f, 1f)]
     public float expFill;
+    public float expExponent = 1.5f;
 
     void Start()
     {
+        HUDEventsManager.EventsHUD.onExpereinceChange += OnExpereinceChange;
         // Init Full
         expFill = 0f;
     }
     
-    // for testing
-    void Update()
+    void OnExpereinceChange(int newExp, int maxExpLvl)
     {
+        AddExp(newExp, maxExpLvl);
         UpdateExpBar();
     }
 
@@ -40,8 +42,13 @@ public class ExpHUDController : MonoBehaviour
         {   
             int excedent = Mathf.RoundToInt(expFill * maxExp - maxExp);
             // Trigger level up event?
-            int newMaxExp = Mathf.RoundToInt(maxExp * 2); // TODO: Change this
+            int newMaxExp = Mathf.RoundToInt(maxExp * expExponent);
             expFill = excedent / newMaxExp;
         }
+    }
+
+    private void OnDestroy()
+    {
+        HUDEventsManager.EventsHUD.onExpereinceChange -= OnExpereinceChange;
     }
 }
