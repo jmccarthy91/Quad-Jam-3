@@ -231,7 +231,7 @@ public class PlayerController : MonoBehaviour
 
     private void InitiateRoll()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && IsGrounded())
         {
             rollDirection = lastMoveDirection;
             rollSpeed = rollSpeedMax;
