@@ -19,6 +19,14 @@ public class HUDEventsManager : MonoBehaviour
         }
     }
 
+    void OnDestroy()
+    {
+        if (EventsHUD == this)
+        {
+            EventsHUD = null;
+        }
+    }
+
     public event Action<int> onHealthChange;
     public void OnHealthChange(int newHealth)
     {
