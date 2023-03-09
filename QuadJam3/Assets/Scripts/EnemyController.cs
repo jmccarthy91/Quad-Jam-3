@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemyController : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float _moveSpeed = 0.0f;
     [SerializeField] private float _stoppingDistance = 0.0f;
     [SerializeField] private float _knockbackUp = 0.0f;
+    [SerializeField] private float _deathDepth = 0.0f;
 
     [Header("Stats")]
     [SerializeField] private int _health = 0;
@@ -54,6 +56,10 @@ public class EnemyController : MonoBehaviour
         _playerDistance = CalculatePlayerDistance();
         _attackTimer += Time.deltaTime;
 
+        int yAttackDepth = Mathf.CeilToInt(transform.position.y) - Mathf.CeilToInt(_player.transform.position.y);
+
+        HandleDeath();
+
         if (Mathf.Sign(_moveDirection.x) == -1)
             _spriteRenderer.flipX = true;
         else
@@ -62,7 +68,7 @@ public class EnemyController : MonoBehaviour
         if (!_attacking)
             _animator.Play(ENEMY_WALK);
 
-        if (_playerDistance <= _stoppingDistance)
+        if (_playerDistance <= _stoppingDistance && yAttackDepth == 0)
         {
             HandleAttack();
         }
@@ -171,5 +177,11 @@ public class EnemyController : MonoBehaviour
     private void DropHeart()
     {
         Instantiate(_heartObject, transform.position, transform.rotation);
+    }
+
+    private void HandleDeath()
+    {
+        if (transform.position.y < _deathDepth)
+            Destroy(gameObject);
     }
 }
