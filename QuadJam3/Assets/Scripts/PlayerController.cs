@@ -169,6 +169,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             _pickaxeAnimator.Play(PLAYER_ATTACK);
+            FindObjectOfType<AudioManager>().Play("PickSwing");
 
             Vector3 attackDir = new(_cachedDirection * _attackRange, 0.0f, 0.0f);
 
@@ -182,11 +183,13 @@ public class PlayerController : MonoBehaviour
         if (enemyCol)
         {
             enemyCol.GetComponent<EnemyController>().TakeDamage(_attackKnockback);
+            FindObjectOfType<AudioManager>().Play("SlimeHit");
         }
 
         if (mineralCol)
         {
             mineralCol.GetComponent<MiningNode>().Hit();
+            FindObjectOfType<AudioManager>().Play("MineralHit");
         }
     }
 
@@ -195,6 +198,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && _jetpackTimer < _bootUseLimit)
         {
             engineIsOn = true;
+            FindObjectOfType<AudioManager>().Play("RocketBoots");
 
             _jetpackTimer += Time.deltaTime;
 
@@ -238,7 +242,8 @@ public class PlayerController : MonoBehaviour
     private void Roll()
     {
         _isInvulnerable = true;
-        
+        FindObjectOfType<AudioManager>().Play("Roll");
+
         //degrade roll speed
         rollSpeed -= rollSpeed * rollSpeedDropMultiplier * Time.deltaTime;
 
@@ -256,6 +261,8 @@ public class PlayerController : MonoBehaviour
         
         currentHearts -= 1;
         StartCoroutine(AppleKnockback(enemyPos));
+        FindObjectOfType<AudioManager>().Play("PlayerHit1");
+        FindObjectOfType<AudioManager>().Play("PlayerHit2");
 
         if (currentHearts >= 0)
         {
@@ -283,6 +290,7 @@ public class PlayerController : MonoBehaviour
     {
         gameObject.SetActive(false);
         transform.position = _spawnPoint.position;
+        FindObjectOfType<AudioManager>().Play("Respawn");
         gameObject.SetActive(true);
     }
 

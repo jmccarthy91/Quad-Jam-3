@@ -19,6 +19,7 @@ public class MiningNode : MonoBehaviour
     private void Mined()
     {
         Destroy(gameObject);
+        FindObjectOfType<AudioManager>().Play("MineralFinish");
         Debug.Log("[MineralNode]: Mineral Mined.");
     }
 }
