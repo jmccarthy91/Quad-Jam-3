@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour
     private bool _isGrounded = false;
     private bool _shouldMove = true;
     private bool _isRolling = false;
+    private bool _isInvulnerable = false;
 
     private int currentHearts;
 
@@ -236,24 +237,24 @@ public class PlayerController : MonoBehaviour
 
     private void Roll()
     {
-        //set invulnerable
-        Physics.IgnoreLayerCollision(10, 11, true);
+        _isInvulnerable = true;
         
         //degrade roll speed
         rollSpeed -= rollSpeed * rollSpeedDropMultiplier * Time.deltaTime;
 
         if(rollSpeed < rollSpeedMinimum)
         {
-            //remove invulnerable
-            Physics.IgnoreLayerCollision(10, 11, false);
+            _isInvulnerable = false;
             _currentState = State.Normal;
         }
     }
     
     public void TakeDamage(Vector2 enemyPos)
     {
+        if (_isInvulnerable)
+            return;
+        
         currentHearts -= 1;
-
         StartCoroutine(AppleKnockback(enemyPos));
 
         if (currentHearts >= 0)
@@ -264,8 +265,8 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator Invulnerability() // will want to turn this on when I take damage
     {
-        Physics.IgnoreLayerCollision(10, 11, true);
-        
+        _isInvulnerable = true;
+
         //flash red a few times
         for (int i = 0; i < numFlashes; i++)
         {
@@ -274,7 +275,8 @@ public class PlayerController : MonoBehaviour
             _spriteRenderer.color = Color.white;
             yield return new WaitForSeconds(iFramesDuration / (numFlashes * 2));
         }
-        Physics.IgnoreLayerCollision(10, 11, false);
+
+        _isInvulnerable = false;
     }
 
     private void Respawn()
