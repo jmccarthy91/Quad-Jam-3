@@ -21,7 +21,6 @@ public class CameraController : MonoBehaviour
 
     private void OffsetPosition()
     {
-        transform.position = Vector3.Lerp(
-            transform.position, _player.position + _offset, _dampSpeed);
+        transform.position = _player.position + _offset;
     }
 }

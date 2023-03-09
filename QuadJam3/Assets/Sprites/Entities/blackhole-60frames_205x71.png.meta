@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,7 +103,1267 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 426
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7156f69f0e4a0ee41a0da91b98e0e1de
+      internalID: 830876575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_1
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 426
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3b9bb8debdfa946ab969a2d316a95c
+      internalID: 1290352997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_2
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 426
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902822444e7819b47a520a29f49298a3
+      internalID: 1820213245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_3
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 426
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caeb8c0b59c44f04abe33d01213cc817
+      internalID: -1951417615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_4
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 426
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e17f780e374aa46418c302d5452ace2e
+      internalID: 61241316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_5
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 426
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a832c2b9b3c6a488d6507bf21f5a1e
+      internalID: -1034576163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_6
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 426
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c17378254c8814992f291ac170f02d
+      internalID: -442408177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_7
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 426
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f742609448ed8418ed43d1f0c1805d
+      internalID: -405703683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_8
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 426
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818e55bf26e0b964795af0b661dd3fcc
+      internalID: -642871337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 355
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708c94417464c6545b9405f0658b0c08
+      internalID: -1559900589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_10
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 355
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3399e6e2e32cdb04baabd433dd20e51a
+      internalID: 1270143483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_11
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 355
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9aab09505a08e248a48fe86afc7ee82
+      internalID: 786289540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_12
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 355
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486b06e5bbf96904780976d51e0aaaac
+      internalID: -152885483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_13
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 355
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dbaab1ba1de3e94eb296a7e5519eead
+      internalID: 1363258017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_14
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 355
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7568b5e2f81324db9ca7fb4eedb3f5
+      internalID: 1922608629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_15
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 355
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6396e5ac534ebeb46919032f6211cc38
+      internalID: 1241149923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_16
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 355
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af1a2bd13837d448a1a564823a18356
+      internalID: -449392189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_17
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 355
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4fd4f6da813f3642b35c02aa09c4102
+      internalID: -43953635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 284
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d982e73c50cc5b74da4357364e7b41cc
+      internalID: -1083852791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_19
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 284
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14240e686b28274fbed679f9d24701c
+      internalID: -382112707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_20
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 284
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba2a659866e339468ed343b76aa1d21
+      internalID: -888261747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_21
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 284
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2e24f90c28b714089e2d07a3573502
+      internalID: 1863080278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_22
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 284
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cdec27bfe524ac46b9600e3ca1c500c
+      internalID: 173236727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_23
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 284
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56cbd83d58b11a04f851f50bca775e79
+      internalID: -990585933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_24
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 284
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f016fd2e3aca58941983ae44b961ba46
+      internalID: 1862304294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_25
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 284
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba92e8925c78de45904d4546a6bdbad
+      internalID: -1913392586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_26
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 284
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b378557253a654294e351d2c935ee9
+      internalID: 241783786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 213
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6050c0147c6c7b49998c8ad5e123b4e
+      internalID: 1614342590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_28
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 213
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a74c4398ef6cf4bb5aa37dd288de01
+      internalID: 41315793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_29
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 213
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a64986965f414e42b1679748dd8eed2
+      internalID: 293185468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_30
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 213
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2194b2611b10854f943a18071773d6a
+      internalID: 1032595526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_31
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 213
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26237b9e596b75e4283170f5828d5d48
+      internalID: 985544069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_32
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 213
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee8f029672d9394e951cfd366a40b8f
+      internalID: 1423228537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_33
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 213
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7686d1aaf9aff924fb4e571589c11c93
+      internalID: -412519049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_34
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 213
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2137fc6d664f5094abf59831a9935f77
+      internalID: -918314764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_35
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 213
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c1f4d8f1c1627545abda354377dedc2
+      internalID: 1146358595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 142
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55449fccb1e90e7429df73cab70c7c2e
+      internalID: 593811947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_37
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 142
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c5ebc7c8033f24b98e67114ce99e1c
+      internalID: -1570043443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_38
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 142
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cb81fd2cadcb8e448fc1d2ea280ee7a
+      internalID: 1249131817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_39
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 142
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 164601fc3e334e442b0450fc3b84f584
+      internalID: 350515463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_40
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 142
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332fc070c0a34c1488d174d5b5fd42b2
+      internalID: -214642512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_41
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 142
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c29f375a802f1594da4b6910799ead35
+      internalID: 1908737378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_42
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 142
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17bab563585ce4f41914fe0efb7304e4
+      internalID: -1280219382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_43
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 142
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01205f7ab7f23fa4aa60cc06dc0e0a3d
+      internalID: 1864950412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_44
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 142
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4cece76b0b5904981e4a029dc28906
+      internalID: 875448768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 71
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c86a9cf448c56e4db4f404b0d81d095
+      internalID: 1432549340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_46
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 71
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee75ad05e665eba4c928aec213c58355
+      internalID: -656068987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_47
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 71
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c67b896b190e4e4ab92f12c350480ce
+      internalID: 1454235224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_48
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 71
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528aa800a55652741ad48ac133344878
+      internalID: 1215074677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_49
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 71
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ebe3415df469a44b3a0dc01433ef89
+      internalID: -1027011123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_50
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 71
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb4f2925120ff3d4a984c497ad7d1b6c
+      internalID: -1479496297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_51
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 71
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e082c7aea95750544b1716f1d4e3959d
+      internalID: -1911351899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_52
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 71
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fed3ba1b1cc72a469bf9d8de1cd5967
+      internalID: -933363183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_53
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 71
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0046b466645be543a213cd3596583a7
+      internalID: -1102456888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 388c29c079c7b4a4abc242b47b620d48
+      internalID: 1907409781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_55
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 0
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fc395ff46ef2da42a68f990eddc6379
+      internalID: 1380464496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_56
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 0
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19e34829c968d24a8e78f83ac94c842
+      internalID: 443518501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_57
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 0
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521c359f57c8a024b9fb9db451e5c25c
+      internalID: -1060560250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_58
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 0
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d91f970f3a8907428505e130431f0d6
+      internalID: -395825502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackhole-60frames_205x71_59
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 0
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94daf9014718a344995ba6e0fa2a122
+      internalID: 528103543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +1374,67 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      blackhole-60frames_205x71_58: -395825502
+      blackhole-60frames_205x71_42: -1280219382
+      blackhole-60frames_205x71_43: 1864950412
+      blackhole-60frames_205x71_34: -918314764
+      blackhole-60frames_205x71_8: -642871337
+      blackhole-60frames_205x71_30: 1032595526
+      blackhole-60frames_205x71_12: -152885483
+      blackhole-60frames_205x71_16: -449392189
+      blackhole-60frames_205x71_31: 985544069
+      blackhole-60frames_205x71_57: -1060560250
+      blackhole-60frames_205x71_52: -933363183
+      blackhole-60frames_205x71_32: 1423228537
+      blackhole-60frames_205x71_47: 1454235224
+      blackhole-60frames_205x71_33: -412519049
+      blackhole-60frames_205x71_59: 528103543
+      blackhole-60frames_205x71_51: -1911351899
+      blackhole-60frames_205x71_54: 1907409781
+      blackhole-60frames_205x71_48: 1215074677
+      blackhole-60frames_205x71_24: 1862304294
+      blackhole-60frames_205x71_19: -382112707
+      blackhole-60frames_205x71_21: 1863080278
+      blackhole-60frames_205x71_2: 1820213245
+      blackhole-60frames_205x71_3: -1951417615
+      blackhole-60frames_205x71_45: 1432549340
+      blackhole-60frames_205x71_22: 173236727
+      blackhole-60frames_205x71_37: -1570043443
+      blackhole-60frames_205x71_29: 293185468
+      blackhole-60frames_205x71_40: -214642512
+      blackhole-60frames_205x71_36: 593811947
+      blackhole-60frames_205x71_53: -1102456888
+      blackhole-60frames_205x71_39: 350515463
+      blackhole-60frames_205x71_41: 1908737378
+      blackhole-60frames_205x71_27: 1614342590
+      blackhole-60frames_205x71_4: 61241316
+      blackhole-60frames_205x71_56: 443518501
+      blackhole-60frames_205x71_1: 1290352997
+      blackhole-60frames_205x71_20: -888261747
+      blackhole-60frames_205x71_0: 830876575
+      blackhole-60frames_205x71_49: -1027011123
+      blackhole-60frames_205x71_28: 41315793
+      blackhole-60frames_205x71_38: 1249131817
+      blackhole-60frames_205x71_7: -405703683
+      blackhole-60frames_205x71_15: 1241149923
+      blackhole-60frames_205x71_50: -1479496297
+      blackhole-60frames_205x71_11: 786289540
+      blackhole-60frames_205x71_18: -1083852791
+      blackhole-60frames_205x71_9: -1559900589
+      blackhole-60frames_205x71_35: 1146358595
+      blackhole-60frames_205x71_13: 1363258017
+      blackhole-60frames_205x71_14: 1922608629
+      blackhole-60frames_205x71_25: -1913392586
+      blackhole-60frames_205x71_46: -656068987
+      blackhole-60frames_205x71_26: 241783786
+      blackhole-60frames_205x71_5: -1034576163
+      blackhole-60frames_205x71_17: -43953635
+      blackhole-60frames_205x71_44: 875448768
+      blackhole-60frames_205x71_6: -442408177
+      blackhole-60frames_205x71_10: 1270143483
+      blackhole-60frames_205x71_55: 1380464496
+      blackhole-60frames_205x71_23: -990585933
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
