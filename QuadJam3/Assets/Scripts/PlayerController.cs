@@ -124,7 +124,7 @@ public class PlayerController : MonoBehaviour
 
                 if (engineIsOn)
                 {
-                    _rb.AddForce(new Vector3(0f, _bootForce), ForceMode2D.Force);
+                    _rb.AddForce(Vector2.up * _bootForce * Time.fixedDeltaTime, ForceMode2D.Force);
                 }
                 break;
 
