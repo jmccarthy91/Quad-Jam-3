@@ -177,23 +177,15 @@ MonoBehaviour:
   attackOffset: 3
   _knockbackAmount: 10
   _attackKnockback: 10
-  rollSpeedMax: 2000
+  rollSpeedMax: 1250
   _bootForce: 20
-  _bootUseForce: 0
   _bootUseLimit: 0.5
   iFramesDuration: 1
   numFlashes: 3
-  _animator: {fileID: 924788054}
-  _pickaxe: {fileID: 1679258356}
-  attackPoint: {fileID: 0}
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  mineralLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  _spawnPoint: {fileID: 0}
   _spriteRenderer: {fileID: 924788053}
+  _animator: {fileID: 924788054}
+  _pickaxeAnimator: {fileID: 1679258356}
+  _spawnPoint: {fileID: 0}
   _groundCheckLength: 0.75
   _floorLayer:
     serializedVersion: 2
@@ -263,26 +255,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 5616992071250834504, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 5616992071250834505, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
+      propertyPath: _health
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 5616992071250834505, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
       propertyPath: _player
       value: 
       objectReference: {fileID: 234598904}
-    - target: {fileID: 5616992071250834505, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
-      propertyPath: _moveSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616992071250834505, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
-      propertyPath: _knockbackUp
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616992071250834505, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
-      propertyPath: _attackCooldown
-      value: 1e+11
-      objectReference: {fileID: 0}
     - target: {fileID: 5616992071250834506, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -326,10 +306,6 @@ PrefabInstance:
     - target: {fileID: 5616992071250834506, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6743488981222649793, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
-      propertyPath: m_Constraints
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}

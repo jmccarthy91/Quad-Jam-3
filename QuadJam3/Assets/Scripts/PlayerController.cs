@@ -9,12 +9,13 @@ public class PlayerController : MonoBehaviour
     [Header("Stats")]
     [SerializeField] private float moveSpeed = 15f;
     [SerializeField] private int maxHearts = 5;
+
+    [Header("Combat")]
     [SerializeField] private float attackRange = 3f;
     [SerializeField] private float attackOffset = 3f;
     [SerializeField] private float _knockbackAmount = 1f;
     [SerializeField] private float _attackKnockback = 0.0f;
-    private int currentHearts;
-
+    
     [Header("Roll")]
     [SerializeField] private float rollSpeedMax = 150f;
     private float rollSpeedMinimum = 50f;
@@ -23,7 +24,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("Boots")]
     [SerializeField] private float _bootForce = 40f;      //jetpack tutorials https://www.youtube.com/watch?v=gJilpepn3gw
-    [SerializeField] private float _bootUseForce = 0.0f;
     [SerializeField] private float _bootUseLimit = 0.0f;
     private bool engineIsOn; 
         
@@ -32,13 +32,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int numFlashes = 3;
     
     [Header("Components")]
-    [SerializeField] private Animator _animator;
-    [SerializeField] private Animator _pickaxe;
-    [SerializeField] private Transform attackPoint;       //Callum, this is the part I can't figure out
-    [SerializeField] private LayerMask enemyLayers;
-    [SerializeField] private LayerMask mineralLayers;
-    [SerializeField] private Transform _spawnPoint;
     [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private Animator _pickaxeAnimator;
+    [SerializeField] private Transform _spawnPoint;
 
     [Header("Other")]
     [SerializeField] private float _groundCheckLength = 0.0f;
@@ -46,6 +43,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask _enemyLayer;
     [SerializeField] private LayerMask _mineralLayer;
     [SerializeField] private float _attackOffset = 0.0f;
+
+    private const string PLAYER_IDLE = "PlayerIdle";
+    private const string PLAYER_WALK = "PlayerWalk";
+    private const string PLAYER_DASH = "PlayerDash";
+    private const string PLAYER_JUMP = "PlayerJump";
+    private const string PLAYER_FALL = "PlayerFall";
+    private const string PLAYER_ATTACK = "Pickaxe";
 
     private enum State
     {
@@ -55,26 +59,32 @@ public class PlayerController : MonoBehaviour
     }
 
     private Rigidbody2D _rb = null;
+    private Camera _camera = null;
 
     private Vector2 moveDirection;
     private Vector2 rollDirection;
     private Vector2 lastMoveDirection;
-    private State state;
+    private State _currentState;
 
     private float _jetpackTimer = 0.0f;
-    private float _cachedDir = 0.0f;
 
     private bool _isGrounded = false;
     private bool _shouldMove = true;
+    private bool _isRolling = false;
 
+    private int currentHearts;
+
+    private string _currentAnimationState = "";
 
     private void Awake()
     {
         currentHearts = maxHearts;
         
         _rb = GetComponent<Rigidbody2D>();
+        _camera = Camera.main;
 
-        state = State.Normal;
+        _currentState = State.Normal;
+        _currentAnimationState = PLAYER_IDLE;
 
         engineIsOn = false;
     }
@@ -84,13 +94,11 @@ public class PlayerController : MonoBehaviour
         CheckGrounded();
         HandleAttack();
 
-        switch (state)
+        switch (_currentState)
         {
             case State.Normal:
                 // move WASD
                 HandleMovement();
-                // attack on mouse
-                
                 // jetpack on spacebar
                 HandleJetpack();
                 // initiate roll on left shift
@@ -99,6 +107,7 @@ public class PlayerController : MonoBehaviour
                         
                 // roll & end roll
             case State.Rolling:
+                _animator.Play(PLAYER_DASH);
                 Roll();
                 break;
         }
@@ -106,7 +115,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        switch (state)
+        switch (_currentState)
         {
             case State.Normal:
                 Move();
@@ -128,14 +137,14 @@ public class PlayerController : MonoBehaviour
         float xDirection = Input.GetAxisRaw("Horizontal");
         moveDirection = new Vector2(xDirection, 0f).normalized;
 
-        if (xDirection == -1f)
-            _cachedDir = -1f;
-        else if (xDirection == 1)
-            _cachedDir = 1f;
-
         Vector3 scale = transform.localScale;
-        scale.x = Mathf.Sign(Camera.main.ScreenToWorldPoint(Input.mousePosition).x);
+        scale.x = Mathf.Sign(_camera.ScreenToWorldPoint(Input.mousePosition).x);
         transform.localScale = scale;
+
+        if (xDirection == 0)
+            _animator.Play(PLAYER_IDLE);
+        else if (xDirection != 0 && !_isRolling)
+            _animator.Play(PLAYER_WALK);
 
         //set a last move direction so we roll even when no directions are pressed
         if (xDirection != 0)
@@ -148,7 +157,6 @@ public class PlayerController : MonoBehaviour
     {
         if (_shouldMove)
         {
-            _animator.SetBool("Move", true);
             _rb.velocity = new Vector2(moveDirection.x * moveSpeed * Time.fixedDeltaTime, _rb.velocity.y);
         }
     }
@@ -160,9 +168,9 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            _pickaxe.SetTrigger("Attack");
+            _pickaxeAnimator.Play(PLAYER_ATTACK);
 
-            float attackDir = Mathf.Sign(Camera.main.ScreenToWorldPoint(Input.mousePosition).x);
+            float attackDir = Mathf.Sign(_camera.ScreenToWorldPoint(Input.mousePosition).x);
             _attackOffset = attackDir;
 
             enemyCol = Physics2D.OverlapBox(transform.position + new Vector3(_attackOffset, 0.0f, 0.0f), 
@@ -224,7 +232,7 @@ public class PlayerController : MonoBehaviour
         {
             rollDirection = lastMoveDirection;
             rollSpeed = rollSpeedMax;
-            state = State.Rolling;
+            _currentState = State.Rolling;
         }
     }
 
@@ -240,7 +248,7 @@ public class PlayerController : MonoBehaviour
         {
             //remove invulnerable
             Physics.IgnoreLayerCollision(10, 11, false);
-            state = State.Normal;
+            _currentState = State.Normal;
         }
     }
     
@@ -288,24 +296,31 @@ public class PlayerController : MonoBehaviour
 
             if (_rb.velocity.y > 0)
             {
-                _animator.SetBool("Move", false);
-                _animator.SetBool("Jump", true);
+
             }
             else
             {
-                _animator.SetBool("Jump", false);
-                _animator.SetBool("Falling", true);
+
             }
         }
         else
         {
-            _animator.SetBool("Falling", false);
-            _animator.SetBool("Move", true);
+
             _jetpackTimer = 0.0f;
         }
     }
 
     public bool IsGrounded() => _isGrounded;
+
+    private void SetAnimationState(string newState)
+    {
+        if (_currentAnimationState == newState)
+            return;
+
+        _currentAnimationState = newState;
+
+        _animator.Play(newState);
+    }
 
     private void OnDrawGizmos()
     {

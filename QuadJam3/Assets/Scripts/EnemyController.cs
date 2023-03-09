@@ -1,7 +1,6 @@
-using System;
 using System.Collections;
-using UnityEditor.Build;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemyController : MonoBehaviour
 {
@@ -9,18 +8,24 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float _moveSpeed = 0.0f;
     [SerializeField] private float _stoppingDistance = 0.0f;
     [SerializeField] private float _knockbackUp = 0.0f;
+    [SerializeField] private float _deathDepth = 0.0f;
 
     [Header("Stats")]
     [SerializeField] private int _health = 0;
     [SerializeField] private float _attackCooldown = 0.0f;
 
     [Header("Other")]
+    [SerializeField] private SpriteRenderer _spriteRenderer = null;
+    [SerializeField] private Animator _animator = null;
     [SerializeField] private GameObject _heartObject = null;
     [SerializeField] private GameObject _player = null;
 
     [Header("Debug")]
     [SerializeField] private bool _enableDebug = false;
     [SerializeField] private float _gizmoDirectionLength = 0.0f;
+
+    private const string ENEMY_WALK = "EnemyWalk";
+    private const string ENEMY_ATTACK = "EnemyAttack";
 
     // Dependencies
     private Rigidbody2D _rb = null;
@@ -33,6 +38,7 @@ public class EnemyController : MonoBehaviour
 
     private bool _shouldMove = true;
     private bool _beingAttacked = false;
+    private bool _attacking = false;
 
     private void Awake()
     {
@@ -50,7 +56,19 @@ public class EnemyController : MonoBehaviour
         _playerDistance = CalculatePlayerDistance();
         _attackTimer += Time.deltaTime;
 
-        if (_playerDistance <= _stoppingDistance)
+        int yAttackDepth = Mathf.CeilToInt(transform.position.y) - Mathf.CeilToInt(_player.transform.position.y);
+
+        HandleDeath();
+
+        if (Mathf.Sign(_moveDirection.x) == -1)
+            _spriteRenderer.flipX = true;
+        else
+            _spriteRenderer.flipX = false;
+
+        if (!_attacking)
+            _animator.Play(ENEMY_WALK);
+
+        if (_playerDistance <= _stoppingDistance && yAttackDepth == 0)
         {
             HandleAttack();
         }
@@ -97,9 +115,17 @@ public class EnemyController : MonoBehaviour
         if (_attackTimer < _attackCooldown || !_pController.IsGrounded())
             return;
 
+        _attacking = true;
+
+        _animator.Play(ENEMY_ATTACK);
+
         _pController.TakeDamage(transform.position);
         _attackTimer = 0.0f;
+
+        Invoke(nameof(StopAttacking), 0.45f);
     }
+
+    private void StopAttacking() => _attacking = false;
 
     private void GetDependencies()
     {
@@ -151,5 +177,11 @@ public class EnemyController : MonoBehaviour
     private void DropHeart()
     {
         Instantiate(_heartObject, transform.position, transform.rotation);
+    }
+
+    private void HandleDeath()
+    {
+        if (transform.position.y < _deathDepth)
+            Destroy(gameObject);
     }
 }
