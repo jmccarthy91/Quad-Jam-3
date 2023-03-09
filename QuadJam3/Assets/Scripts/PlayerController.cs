@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case State.Rolling:
-                _rb.velocity = rollDirection * rollSpeed * Time.fixedDeltaTime;
+                _rb.velocity = new Vector2(rollDirection.x * rollSpeed * Time.fixedDeltaTime, _rb.velocity.y);
                 break;
         }
     }
@@ -290,7 +290,7 @@ public class PlayerController : MonoBehaviour
     {
         gameObject.SetActive(false);
         transform.position = _spawnPoint.position;
-        // FindObjectOfType<AudioManager>().Play("Respawn");
+        //  FindObjectOfType<AudioManager>().Play("Respawn");
         gameObject.SetActive(true);
     }
 

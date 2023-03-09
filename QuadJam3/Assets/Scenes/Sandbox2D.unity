@@ -177,7 +177,7 @@ MonoBehaviour:
   _knockbackAmount: 10
   _attackKnockback: 5
   rollSpeedMax: 1250
-  _bootForce: 10
+  _bootForce: 75
   _bootUseLimit: 0.5
   iFramesDuration: 1
   numFlashes: 3
