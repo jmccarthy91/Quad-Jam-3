@@ -259,6 +259,14 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 234598904}
+    - target: {fileID: 5616992071250834505, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 1004440663}
+    - target: {fileID: 5616992071250834505, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
+      propertyPath: _attackCooldown
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5616992071250834506, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -410,6 +418,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &1004440663 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1004440663, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
+  m_PrefabInstance: {fileID: 566317302}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1007066176
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,12 +14,16 @@ public class EnemyController : MonoBehaviour
 
     [Header("Other")]
     [SerializeField] private SpriteRenderer _spriteRenderer = null;
+    [SerializeField] private Animator _animator = null;
     [SerializeField] private GameObject _heartObject = null;
     [SerializeField] private GameObject _player = null;
 
     [Header("Debug")]
     [SerializeField] private bool _enableDebug = false;
     [SerializeField] private float _gizmoDirectionLength = 0.0f;
+
+    private const string ENEMY_WALK = "EnemyWalk";
+    private const string ENEMY_ATTACK = "EnemyAttack";
 
     // Dependencies
     private Rigidbody2D _rb = null;
@@ -32,6 +36,7 @@ public class EnemyController : MonoBehaviour
 
     private bool _shouldMove = true;
     private bool _beingAttacked = false;
+    private bool _attacking = false;
 
     private void Awake()
     {
@@ -53,6 +58,9 @@ public class EnemyController : MonoBehaviour
             _spriteRenderer.flipX = true;
         else
             _spriteRenderer.flipX = false;
+
+        if (!_attacking)
+            _animator.Play(ENEMY_WALK);
 
         if (_playerDistance <= _stoppingDistance)
         {
@@ -101,9 +109,17 @@ public class EnemyController : MonoBehaviour
         if (_attackTimer < _attackCooldown || !_pController.IsGrounded())
             return;
 
+        _attacking = true;
+
+        _animator.Play(ENEMY_ATTACK);
+
         _pController.TakeDamage(transform.position);
         _attackTimer = 0.0f;
+
+        Invoke(nameof(StopAttacking), 0.45f);
     }
+
+    private void StopAttacking() => _attacking = false;
 
     private void GetDependencies()
     {
