@@ -1977,7 +1977,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45eb238b4882f9d4ea4644c745cee5e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: GameOver
+    clip: {fileID: 8300000, guid: d88978d9b78e8ae4b8996f9139025292, type: 3}
+    volume: 0.1
+    loop: 1
+    source: {fileID: 0}
+  - name: Theme
+    clip: {fileID: 8300000, guid: 7ab7a7fd765bb92408f9f72918ed7664, type: 3}
+    volume: 0.1
+    loop: 1
+    source: {fileID: 0}
+  - name: MineralFinish
+    clip: {fileID: 8300000, guid: 808b1c1bb474b2e4e81f482b61c5af1f, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MineralHit
+    clip: {fileID: 8300000, guid: d493dd2a37bcd2142b7fcac02471c02c, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PickSwing
+    clip: {fileID: 8300000, guid: 179e9576f8fff35479e955f1ff275fd2, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerHit1
+    clip: {fileID: 8300000, guid: 1340ba1fa579f674ab71453241682a8a, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerHit2
+    clip: {fileID: 8300000, guid: 6750af2302e06a04283ea472a5321419, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Respawn
+    clip: {fileID: 8300000, guid: f10e7ff812627164fa39911459400577, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: RocketBoots
+    clip: {fileID: 8300000, guid: 0f96deb48e4061f438665f9eb9926040, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SlimeHit
+    clip: {fileID: 8300000, guid: 580c45279e0bb9b4fb35e5a97282e87f, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UpgradeBoots
+    clip: {fileID: 8300000, guid: e759c65f76c80834abc572593f946008, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UpgradePick
+    clip: {fileID: 8300000, guid: e8af9035f5758f44da37af4225a02619, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1518857546
 Transform:
   m_ObjectHideFlags: 0
