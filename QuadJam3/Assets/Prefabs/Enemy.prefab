@@ -98,12 +98,16 @@ MonoBehaviour:
   _stoppingDistance: 1.5
   _knockbackUp: 25
   _deathDepth: -20
-  _health: 5
+  _groundCheckLength: 0.75
+  _health: 99
   _attackCooldown: 2
   _spriteRenderer: {fileID: 5616992071322683484}
   _animator: {fileID: 1004440663}
   _heartObject: {fileID: 8929101529272512117, guid: a302fd6713b105340a94e7ef4e1a9dc6, type: 3}
   _player: {fileID: 0}
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
   _enableDebug: 1
   _gizmoDirectionLength: 5
 --- !u!1 &5616992071322683459

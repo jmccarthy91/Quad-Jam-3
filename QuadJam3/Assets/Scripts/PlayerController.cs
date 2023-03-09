@@ -85,6 +85,8 @@ public class PlayerController : MonoBehaviour
         _currentState = State.Normal;
         _currentAnimationState = PLAYER_IDLE;
 
+        _cachedDirection = 1;
+
         engineIsOn = false;
     }
 

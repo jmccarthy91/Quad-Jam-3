@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float _stoppingDistance = 0.0f;
     [SerializeField] private float _knockbackUp = 0.0f;
     [SerializeField] private float _deathDepth = 0.0f;
+    [SerializeField] private float _groundCheckLength = 0.0f;
 
     [Header("Stats")]
     [SerializeField] private int _health = 0;
@@ -19,6 +20,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private Animator _animator = null;
     [SerializeField] private GameObject _heartObject = null;
     [SerializeField] private GameObject _player = null;
+    [SerializeField] private LayerMask _groundLayer;
 
     [Header("Debug")]
     [SerializeField] private bool _enableDebug = false;
@@ -56,8 +58,6 @@ public class EnemyController : MonoBehaviour
         _playerDistance = CalculatePlayerDistance();
         _attackTimer += Time.deltaTime;
 
-        int yAttackDepth = Mathf.CeilToInt(transform.position.y) - Mathf.CeilToInt(_player.transform.position.y);
-
         HandleDeath();
 
         if (Mathf.Sign(_moveDirection.x) == -1)
@@ -68,6 +68,7 @@ public class EnemyController : MonoBehaviour
         if (!_attacking)
             _animator.Play(ENEMY_WALK);
 
+        int yAttackDepth = Mathf.CeilToInt(transform.position.y) - Mathf.CeilToInt(_player.transform.position.y);
         if (_playerDistance <= _stoppingDistance && yAttackDepth == 0)
         {
             HandleAttack();
@@ -85,7 +86,7 @@ public class EnemyController : MonoBehaviour
 
     private void HandleMovement()
     {
-        if (_playerDistance > _stoppingDistance && _shouldMove)
+        if (_playerDistance > _stoppingDistance && _shouldMove && IsGrounded())
         {
             _rb.velocity = new Vector2(_moveDirection.x * _moveSpeed * Time.fixedDeltaTime, _rb.velocity.y);
         }
@@ -159,6 +160,9 @@ public class EnemyController : MonoBehaviour
 
         Gizmos.color = Color.blue;
         Gizmos.DrawRay(transform.position, _moveDirection.normalized * _stoppingDistance);
+
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawRay(transform.position, Vector2.down * _groundCheckLength);
     }
 
     public void TakeDamage(float knockbackAmount)
@@ -183,5 +187,12 @@ public class EnemyController : MonoBehaviour
     {
         if (transform.position.y < _deathDepth)
             Destroy(gameObject);
+    }
+
+    private bool IsGrounded()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, _groundCheckLength, _groundLayer);
+
+        return hit;
     }
 }
