@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,7 +103,427 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 117
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.592612, y: 0.50205797}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514153ef5a5b2a54fabfff76b285f903
+      internalID: 949008164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 117
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.46501327, y: 0.5288125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4a0c3b160369f4282aedd2dce4cd75
+      internalID: -184829657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 117
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.46501318, y: 0.5185222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505ecc1d947437342b33fd56bd2a0ae9
+      internalID: -1757529271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 117
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.45472288, y: 0.5329289}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ca3b6df4838f44dad2948e61900d8d
+      internalID: 1634706725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 117
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.46501318, y: 0.54116076}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df9ff5e01e0c235418e0d2cc9a4be046
+      internalID: -1766265812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 78
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.53910285, y: 0.5041162}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aff2358af6dd424880fb79e9fde688c
+      internalID: 1476087382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 78
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.45472297, y: 0.48353556}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff6c818b310266478a9532d90c1a209
+      internalID: 148786709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 78
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.47530344, y: 0.48559356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39a901f5ec1f714684e0c2f4884645e
+      internalID: 1854861504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 78
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.4814778, y: 0.49176767}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a26f296a353dd64bb5ce40b84bfabd4
+      internalID: 756805424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 78
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.4814778, y: 0.48765174}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed308712ced4bb640829404c72e21790
+      internalID: -933792355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-attack-20frames_39x39_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 39
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.4825796, y: 0.49128976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d07e329becac74783243bf4d9e1405
+      internalID: 1934536413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-attack-20frames_39x39_11
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 39
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.48451507, y: 0.4903219}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f3480e0a7ff4a848aa87dab01c6a292
+      internalID: 385240040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-attack-20frames_39x39_12
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 39
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.47870833, y: 0.48741853}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e759bf325789e3a4eb44e20f1bbf23c7
+      internalID: 8366852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-attack-20frames_39x39_13
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 39
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.4819207, y: 0.49042833}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487c0e302a64e694ab7a966550840fce
+      internalID: 1689751121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-attack-20frames_39x39_14
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 39
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.43366888, y: 0.46612883}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f63a7eb05e5aff4aa40b295bb794bf4
+      internalID: 948631814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-attack-20frames_39x39_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5308707, y: 0.59878623}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865a4399e6c99c44db1fcd9c159c6c53
+      internalID: 192787686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-attack-20frames_39x39_16
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 0
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.46501327, y: 0.5205805}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e885453316dcf6c4eba2bfdce903fe7f
+      internalID: 560349263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-attack-20frames_39x39_17
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.46707115, y: 0.5123483}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5ee89bd328df140b5af842c88e764e
+      internalID: -1166148768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-attack-20frames_39x39_18
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 0
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.4711875, y: 0.5144063}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7afe25fd1a8ffb844a83ab306d089384
+      internalID: 1754177384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickaxe-attack-20frames_39x39_19
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 39
+        height: 39
+      alignment: 9
+      pivot: {x: 0.46707153, y: 0.5123483}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0542f4780191f9146ac8765f76477185
+      internalID: 852398601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +534,27 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      3: -1757529271
+      8: 1854861504
+      pickaxe-attack-20frames_39x39_12: 8366852
+      2: -184829657
+      pickaxe-attack-20frames_39x39_13: 1689751121
+      pickaxe-attack-20frames_39x39_19: 852398601
+      9: 756805424
+      4: 1634706725
+      5: -1766265812
+      6: 1476087382
+      pickaxe-attack-20frames_39x39_14: 948631814
+      pickaxe-attack-20frames_39x39_15: 192787686
+      pickaxe-attack-20frames_39x39_10: 1934536413
+      pickaxe-attack-20frames_39x39_11: 385240040
+      pickaxe-attack-20frames_39x39_16: 560349263
+      1: 949008164
+      7: 148786709
+      pickaxe-attack-20frames_39x39_17: -1166148768
+      pickaxe-attack-20frames_39x39_18: 1754177384
+      10: -933792355
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

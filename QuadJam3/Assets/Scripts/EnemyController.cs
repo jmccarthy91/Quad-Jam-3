@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using UnityEditor.Build;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -30,6 +32,7 @@ public class EnemyController : MonoBehaviour
     private float _attackTimer = 0.0f;
 
     private bool _shouldMove = true;
+    private bool _beingAttacked = false;
 
     private void Awake()
     {
@@ -51,13 +54,6 @@ public class EnemyController : MonoBehaviour
         {
             HandleAttack();
         }
-
-        // This is just for testing
-        // Applying knockback should be done from the player script
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            TakeDamage(500.0f);
-        }
     }
 
     private void FixedUpdate() => HandleMovement();
@@ -75,23 +71,25 @@ public class EnemyController : MonoBehaviour
         {
             _rb.velocity = new Vector2(_moveDirection.x * _moveSpeed * Time.fixedDeltaTime, _rb.velocity.y);
         }
-        else if (_playerDistance <= _stoppingDistance)
+        else if (_playerDistance <= _stoppingDistance && !_beingAttacked)
         {
             _rb.velocity = Vector2.zero;
         }
     }
 
-    private IEnumerator AppleKnockback(float amount)
+    private IEnumerator AppleKnockback(float amount)    
     {
+        _beingAttacked = true;
         _shouldMove = false;
 
         _rb.velocity = Vector2.zero;
-        _rb.AddForce(new Vector2(-_moveDirection.x * amount * Time.fixedDeltaTime, _knockbackUp),
+        _rb.AddForce(new Vector2(-Mathf.Sign(_moveDirection.x) * amount, 5.0f),
             ForceMode2D.Impulse);
 
         yield return new WaitForSeconds(0.25f);
 
         _shouldMove = true;
+        _beingAttacked = false;
     }
 
     private void HandleAttack()
@@ -101,8 +99,6 @@ public class EnemyController : MonoBehaviour
 
         _pController.TakeDamage(transform.position);
         _attackTimer = 0.0f;
-
-        // Debug.Log("[EnemyController]: Attacked player");
     }
 
     private void GetDependencies()
@@ -144,7 +140,6 @@ public class EnemyController : MonoBehaviour
         StartCoroutine(AppleKnockback(knockbackAmount));
 
         _health--;
-        // Debug.Log("[EnemyController]: Damage Taken\nCurrent Health: " + _health);
 
         if (_health < 1)
         {

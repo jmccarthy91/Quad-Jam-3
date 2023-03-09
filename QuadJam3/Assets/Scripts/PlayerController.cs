@@ -1,8 +1,5 @@
 using System.Collections;
-using System.IO;
-using UnityEditor.Timeline;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
@@ -14,7 +11,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int maxHearts = 5;
     [SerializeField] private float attackRange = 3f;
     [SerializeField] private float attackOffset = 3f;
-    [SerializeField] public float _knockbackAmount = 1f;
+    [SerializeField] private float _knockbackAmount = 1f;
+    [SerializeField] private float _attackKnockback = 0.0f;
     private int currentHearts;
 
     [Header("Roll")]
@@ -28,13 +26,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _bootUseForce = 0.0f;
     [SerializeField] private float _bootUseLimit = 0.0f;
     private bool engineIsOn; 
-
+        
     [Header("iframes")]
     [SerializeField] private float iFramesDuration = 1f;
     [SerializeField] private int numFlashes = 3;
     
     [Header("Components")]
-    [SerializeField] private Animator animator;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private Animator _pickaxe;
     [SerializeField] private Transform attackPoint;       //Callum, this is the part I can't figure out
     [SerializeField] private LayerMask enemyLayers;
     [SerializeField] private LayerMask mineralLayers;
@@ -44,6 +43,9 @@ public class PlayerController : MonoBehaviour
     [Header("Other")]
     [SerializeField] private float _groundCheckLength = 0.0f;
     [SerializeField] private LayerMask _floorLayer;
+    [SerializeField] private LayerMask _enemyLayer;
+    [SerializeField] private LayerMask _mineralLayer;
+    [SerializeField] private float _attackOffset = 0.0f;
 
     private enum State
     {
@@ -80,6 +82,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         CheckGrounded();
+        HandleAttack();
 
         switch (state)
         {
@@ -87,7 +90,7 @@ public class PlayerController : MonoBehaviour
                 // move WASD
                 HandleMovement();
                 // attack on mouse
-                HandleAttack();
+                
                 // jetpack on spacebar
                 HandleJetpack();
                 // initiate roll on left shift
@@ -110,7 +113,7 @@ public class PlayerController : MonoBehaviour
 
                 if (engineIsOn)
                 {
-                        _rb.AddForce(new Vector3(0f, _bootForce), ForceMode2D.Force);
+                    _rb.AddForce(new Vector3(0f, _bootForce), ForceMode2D.Force);
                 }
                 break;
 
@@ -130,7 +133,9 @@ public class PlayerController : MonoBehaviour
         else if (xDirection == 1)
             _cachedDir = 1f;
 
-        _spriteRenderer.flipX = moveDirection.x < 0;
+        Vector3 scale = transform.localScale;
+        scale.x = Mathf.Sign(Camera.main.ScreenToWorldPoint(Input.mousePosition).x);
+        transform.localScale = scale;
 
         //set a last move direction so we roll even when no directions are pressed
         if (xDirection != 0)
@@ -142,17 +147,39 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         if (_shouldMove)
+        {
+            _animator.SetBool("Move", true);
             _rb.velocity = new Vector2(moveDirection.x * moveSpeed * Time.fixedDeltaTime, _rb.velocity.y);
+        }
     }
 
     private void HandleAttack()
     {
+        Collider2D enemyCol = null;
+        Collider2D mineralCol = null;
+
         if (Input.GetMouseButtonDown(0))
         {
-            // play attack animation and set state to attacking until animation finishes
-            // animator.SetTrigger("Attack");
-            //state = State.Attacking;
-            //characterBase.PlayAttackAnimation(attackDirection, () => state = State.Normal);
+            _pickaxe.SetTrigger("Attack");
+
+            float attackDir = Mathf.Sign(Camera.main.ScreenToWorldPoint(Input.mousePosition).x);
+            _attackOffset = attackDir;
+
+            enemyCol = Physics2D.OverlapBox(transform.position + new Vector3(_attackOffset, 0.0f, 0.0f), 
+                Vector2.one, 0.0f, _enemyLayer);
+
+            mineralCol = Physics2D.OverlapBox(transform.position + new Vector3(_attackOffset, 0.0f, 0.0f),
+                Vector2.one, 0.0f, _mineralLayer);
+        }
+
+        if (enemyCol)
+        {
+            enemyCol.GetComponent<EnemyController>().TakeDamage(_attackKnockback);
+        }
+
+        if (mineralCol)
+        {
+            mineralCol.GetComponent<MiningNode>().Hit();
         }
     }
 
@@ -221,8 +248,6 @@ public class PlayerController : MonoBehaviour
     {
         currentHearts -= 1;
 
-        // Debug.Log("[PlayerController]: Took damage.\nRemaining health: " + currentHearts);
-
         StartCoroutine(AppleKnockback(enemyPos));
 
         if (currentHearts >= 0)
@@ -260,9 +285,22 @@ public class PlayerController : MonoBehaviour
         if (!_isGrounded)
         {
             _jetpackTimer += Time.deltaTime;
+
+            if (_rb.velocity.y > 0)
+            {
+                _animator.SetBool("Move", false);
+                _animator.SetBool("Jump", true);
+            }
+            else
+            {
+                _animator.SetBool("Jump", false);
+                _animator.SetBool("Falling", true);
+            }
         }
         else
         {
+            _animator.SetBool("Falling", false);
+            _animator.SetBool("Move", true);
             _jetpackTimer = 0.0f;
         }
     }
@@ -273,5 +311,11 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.color = Color.magenta;
         Gizmos.DrawRay(transform.position, Vector2.down * _groundCheckLength);
+
+        if (Input.GetMouseButton((int)MouseButton.LeftMouse))
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireCube(transform.position + new Vector3(_attackOffset, 0.0f, 0.0f), Vector2.one);
+        }
     }
 } 
