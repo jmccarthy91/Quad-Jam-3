@@ -3,10 +3,29 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
 
     bool gameHasEnded = false;
     public float inGameTime;
     float gameTimeToRealTime = 525600;      // # of minutes in a year, 1 minute of real time = 1 year of in game time
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnDestroy() {
+        if (Instance == this) {
+            Instance = null;
+        }
+    }
 
     public void EndGame()
     {
@@ -24,7 +43,8 @@ public class GameManager : MonoBehaviour
     }
 
     void Restart()
-    {
-        SceneManager.LoadScene("Sandbox");               //may need to rename this or move to scene manager
+    {    
+        inGameTime = 0.0f;
+        SceneManager.LoadScene("Sandbox"); //may need to rename this or move to scene manager
     }
 }
