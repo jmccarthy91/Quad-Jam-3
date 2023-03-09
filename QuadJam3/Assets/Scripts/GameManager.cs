@@ -9,11 +9,14 @@ public class GameManager : MonoBehaviour
     public float inGameTime;
     float gameTimeToRealTime = 525600;      // # of minutes in a year, 1 minute of real time = 1 year of in game time
 
+    private bool isInGame = false;
+
     private void Awake()
-    {
+    {   
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -30,21 +33,28 @@ public class GameManager : MonoBehaviour
     public void EndGame()
     {
         if(gameHasEnded == false)
-        {
+        {   
+            isInGame = false;
             gameHasEnded = true;
             Debug.Log("GAME OVER");
-            //show game over screen
+            ScenesManager.Instance.LoadGameOver();
         }
     }
 
     public void Update()
-    {
-        inGameTime = Time.time * gameTimeToRealTime;
+    {   
+        if(isInGame)
+        {
+          inGameTime = Time.time * gameTimeToRealTime;
+        }
     }
 
-    void Restart()
-    {    
+    public void Restart()
+    {   
+        gameHasEnded = false;
         inGameTime = 0.0f;
-        SceneManager.LoadScene("Sandbox"); //may need to rename this or move to scene manager
+        isInGame = true;
+        
+        
     }
 }
