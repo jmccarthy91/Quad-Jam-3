@@ -198,6 +198,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && _jetpackTimer < _bootUseLimit)
         {
             engineIsOn = true;
+            FindObjectOfType<AudioManager>().Play("RocketBoots");
 
             _jetpackTimer += Time.deltaTime;
 
