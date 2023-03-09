@@ -157,7 +157,7 @@ Transform:
   - {fileID: 924788052}
   - {fileID: 1679258354}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &234598906
 MonoBehaviour:
@@ -351,7 +351,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 3.762, y: 1.359, z: 109.883}
 --- !u!1001 &367685175
 PrefabInstance:
@@ -370,7 +370,7 @@ PrefabInstance:
       objectReference: {fileID: 234598904}
     - target: {fileID: 5616992071250834506, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5616992071250834506, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -431,7 +431,7 @@ PrefabInstance:
       objectReference: {fileID: 234598904}
     - target: {fileID: 5616992071250834506, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5616992071250834506, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -593,7 +593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3011023498713807951, guid: 43733637b2a8dc9489294bd82019d692, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3011023498713807951, guid: 43733637b2a8dc9489294bd82019d692, type: 3}
       propertyPath: m_LocalPosition.x
@@ -746,8 +746,118 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 3.598, y: -1.75, z: 64.039}
+--- !u!1 &1086193125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1086193127}
+  - component: {fileID: 1086193126}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1086193126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086193125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45eb238b4882f9d4ea4644c745cee5e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 7ab7a7fd765bb92408f9f72918ed7664, type: 3}
+    volume: 0.44
+    loop: 1
+    source: {fileID: 0}
+  - name: GameOver
+    clip: {fileID: 8300000, guid: d88978d9b78e8ae4b8996f9139025292, type: 3}
+    volume: 0.44
+    loop: 1
+    source: {fileID: 0}
+  - name: MineralFinish
+    clip: {fileID: 8300000, guid: 808b1c1bb474b2e4e81f482b61c5af1f, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MineralHit
+    clip: {fileID: 8300000, guid: d493dd2a37bcd2142b7fcac02471c02c, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PickSwing
+    clip: {fileID: 8300000, guid: 179e9576f8fff35479e955f1ff275fd2, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerHit1
+    clip: {fileID: 8300000, guid: 1340ba1fa579f674ab71453241682a8a, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerHit2
+    clip: {fileID: 8300000, guid: 6750af2302e06a04283ea472a5321419, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Respawn
+    clip: {fileID: 8300000, guid: f10e7ff812627164fa39911459400577, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: RocketBoots
+    clip: {fileID: 8300000, guid: 262fddb214621db43bb76fbc3988ba23, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Roll
+    clip: {fileID: 8300000, guid: 6cf2e77ce831b7e4eb2109cd94dec2e3, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SlimeHit
+    clip: {fileID: 8300000, guid: 580c45279e0bb9b4fb35e5a97282e87f, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UpgradeBoots
+    clip: {fileID: 8300000, guid: e759c65f76c80834abc572593f946008, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UpgradePick
+    clip: {fileID: 8300000, guid: e8af9035f5758f44da37af4225a02619, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &1086193127
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086193125}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6720634, y: 2.8223665, z: 17.850546}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1679258353
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,7 +1046,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1774354597
 BoxCollider2D:
@@ -1111,7 +1221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3011023498713807951, guid: 43733637b2a8dc9489294bd82019d692, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3011023498713807951, guid: 43733637b2a8dc9489294bd82019d692, type: 3}
       propertyPath: m_LocalPosition.x
