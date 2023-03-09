@@ -173,8 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 250
   maxHearts: 5
-  attackRange: 3
-  attackOffset: 3
+  _attackRange: 1.5
   _knockbackAmount: 10
   _attackKnockback: 10
   rollSpeedMax: 1250
@@ -196,7 +195,6 @@ MonoBehaviour:
   _mineralLayer:
     serializedVersion: 2
     m_Bits: 4096
-  _attackOffset: 2
 --- !u!50 &234598907
 Rigidbody2D:
   serializedVersion: 4
@@ -254,6 +252,10 @@ PrefabInstance:
     - target: {fileID: 5616992071250834504, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616992071250834504, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5616992071250834505, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
       propertyPath: _health

@@ -11,8 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int maxHearts = 5;
 
     [Header("Combat")]
-    [SerializeField] private float attackRange = 3f;
-    [SerializeField] private float attackOffset = 3f;
+    [SerializeField] private float _attackRange = 3f;
     [SerializeField] private float _knockbackAmount = 1f;
     [SerializeField] private float _attackKnockback = 0.0f;
     
@@ -42,7 +41,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask _floorLayer;
     [SerializeField] private LayerMask _enemyLayer;
     [SerializeField] private LayerMask _mineralLayer;
-    [SerializeField] private float _attackOffset = 0.0f;
 
     private const string PLAYER_IDLE = "PlayerIdle";
     private const string PLAYER_WALK = "PlayerWalk";
@@ -67,6 +65,7 @@ public class PlayerController : MonoBehaviour
     private State _currentState;
 
     private float _jetpackTimer = 0.0f;
+    private float _cachedDirection = 0.0f;
 
     private bool _isGrounded = false;
     private bool _shouldMove = true;
@@ -137,9 +136,7 @@ public class PlayerController : MonoBehaviour
         float xDirection = Input.GetAxisRaw("Horizontal");
         moveDirection = new Vector2(xDirection, 0f).normalized;
 
-        Vector3 scale = transform.localScale;
-        scale.x = Mathf.Sign(_camera.ScreenToWorldPoint(Input.mousePosition).x);
-        transform.localScale = scale;
+        HandlePlayerFlip(xDirection);
 
         if (xDirection == 0)
             _animator.Play(PLAYER_IDLE);
@@ -170,14 +167,13 @@ public class PlayerController : MonoBehaviour
         {
             _pickaxeAnimator.Play(PLAYER_ATTACK);
 
-            float attackDir = Mathf.Sign(_camera.ScreenToWorldPoint(Input.mousePosition).x);
-            _attackOffset = attackDir;
+            Vector3 attackDir = new(_cachedDirection * _attackRange, 0.0f, 0.0f);
 
-            enemyCol = Physics2D.OverlapBox(transform.position + new Vector3(_attackOffset, 0.0f, 0.0f), 
-                Vector2.one, 0.0f, _enemyLayer);
+            enemyCol = Physics2D.OverlapBox(transform.position + attackDir, Vector2.one,
+                angle: 0.0f, _enemyLayer);
 
-            mineralCol = Physics2D.OverlapBox(transform.position + new Vector3(_attackOffset, 0.0f, 0.0f),
-                Vector2.one, 0.0f, _mineralLayer);
+            mineralCol = Physics2D.OverlapBox(transform.position + attackDir, Vector2.one,
+                angle: 0.0f, _mineralLayer);
         }
 
         if (enemyCol)
@@ -322,6 +318,24 @@ public class PlayerController : MonoBehaviour
         _animator.Play(newState);
     }
 
+    private void HandlePlayerFlip(float dir)
+    {
+        Vector3 scale = transform.localScale;
+
+        if (dir == -1)
+        {
+            _cachedDirection = -1;
+            scale.x = -1;
+        }
+        else if (dir == 1)
+        {
+            _cachedDirection = 1;
+            scale.x = 1;
+        }
+
+        transform.localScale = scale;
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.magenta;
@@ -330,7 +344,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButton((int)MouseButton.LeftMouse))
         {
             Gizmos.color = Color.green;
-            Gizmos.DrawWireCube(transform.position + new Vector3(_attackOffset, 0.0f, 0.0f), Vector2.one);
+            Gizmos.DrawWireCube(transform.position + new Vector3(_cachedDirection * _attackRange, 0.0f, 0.0f),
+                Vector2.one);
         }
     }
 } 
