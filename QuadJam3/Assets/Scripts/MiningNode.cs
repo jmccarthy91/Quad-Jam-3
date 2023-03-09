@@ -8,7 +8,7 @@ public class MiningNode : MonoBehaviour
     public void Hit()
     {
         _health--;
-        Debug.Log("[MiningNode]: Mineral hit\tRemaining health: " + _health);
+        // Debug.Log("[MiningNode]: Mineral hit\tRemaining health: " + _health);
 
         if (_health < 1)
         {

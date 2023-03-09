@@ -88,7 +88,8 @@ public class EnemyController : MonoBehaviour
     {
         if (_playerDistance > _stoppingDistance && _shouldMove && IsGrounded())
         {
-            _rb.velocity = new Vector2(_moveDirection.x * _moveSpeed * Time.fixedDeltaTime, _rb.velocity.y);
+            Vector2 dir = _moveDirection.normalized;
+            _rb.velocity = new Vector2(dir.x * _moveSpeed * Time.fixedDeltaTime, _rb.velocity.y);
         }
         else if (_playerDistance <= _stoppingDistance && !_beingAttacked)
         {
@@ -191,8 +192,6 @@ public class EnemyController : MonoBehaviour
 
     private bool IsGrounded()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, _groundCheckLength, _groundLayer);
-
-        return hit;
+        return Physics2D.Raycast(transform.position, Vector2.down, _groundCheckLength, _groundLayer);
     }
 }
