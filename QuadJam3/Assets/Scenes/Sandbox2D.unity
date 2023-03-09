@@ -780,12 +780,12 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 7ab7a7fd765bb92408f9f72918ed7664, type: 3}
-    volume: 0.44
+    volume: 0.05
     loop: 1
     source: {fileID: 0}
   - name: GameOver
     clip: {fileID: 8300000, guid: d88978d9b78e8ae4b8996f9139025292, type: 3}
-    volume: 0.44
+    volume: 0.05
     loop: 1
     source: {fileID: 0}
   - name: MineralFinish
