@@ -197,6 +197,10 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) && _jetpackTimer < _bootUseLimit)
         {
+            if(!engineIsOn)
+            {
+              HUDEventsManager.EventsHUD.OnJetpackStarted(0.5f);
+            }
             engineIsOn = true;
             // FindObjectOfType<AudioManager>().Play("RocketBoots");
 
@@ -261,6 +265,7 @@ public class PlayerController : MonoBehaviour
         
         currentHearts -= 1;
         StartCoroutine(AppleKnockback(enemyPos));
+        HUDEventsManager.EventsHUD.OnHealthChange(currentHearts);
         // FindObjectOfType<AudioManager>().Play("PlayerHit1");
         // FindObjectOfType<AudioManager>().Play("PlayerHit2");
 
@@ -315,6 +320,7 @@ public class PlayerController : MonoBehaviour
         {
 
             _jetpackTimer = 0.0f;
+            HUDEventsManager.EventsHUD.OnJetpackEnded(0.5f);
         }
     }
 
