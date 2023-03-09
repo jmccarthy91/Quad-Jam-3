@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7a5d4fe56c5fe0c49ae1dc1cd9217897
+guid: 5c0f7478099266243a1df9048317d293
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,53 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: slime-walk-5frames_0
+      name: pickaxe-adjusted-attack-5frames_39x39_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 20
-        height: 16
+        y: 39
+        width: 39
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3376989b2f87314584389a3fb34c2c0
-      internalID: -873905917
+      spriteID: 53d3152e805ed0a47a4afe469e7e78f6
+      internalID: 1715480883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime-walk-5frames_1
+      name: pickaxe-adjusted-attack-5frames_39x39_1
       rect:
         serializedVersion: 2
-        x: 20
-        y: 16
-        width: 20
-        height: 16
+        x: 39
+        y: 39
+        width: 39
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ee79a4762c928e4aa41c286e4790a81
-      internalID: 1588754709
+      spriteID: b5b01470beb559e4fb8070b63be0ef2e
+      internalID: -1405730260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime-walk-5frames_2
+      name: pickaxe-adjusted-attack-5frames_39x39_2
       rect:
         serializedVersion: 2
-        x: 40
-        y: 16
-        width: 20
-        height: 16
+        x: 78
+        y: 39
+        width: 39
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2796138daec7fee478d7c7123587f7f5
-      internalID: -778530008
+      spriteID: ff95c82b64b77c84d97e87500993deeb
+      internalID: -1372405460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime-walk-5frames_3
+      name: pickaxe-adjusted-attack-5frames_39x39_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 20
-        height: 16
+        width: 39
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8da0805efcfe2946b85de9428a0906e
-      internalID: 964817933
+      spriteID: 8c9e9b07efdfad446908378a7ddbd332
+      internalID: -1416128129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime-walk-5frames_4
+      name: pickaxe-adjusted-attack-5frames_39x39_4
       rect:
         serializedVersion: 2
-        x: 20
+        x: 39
         y: 0
-        width: 20
-        height: 16
+        width: 39
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8587b57ba029a14e8dc48da8ce60c79
-      internalID: 768543578
+      spriteID: 3f005fd76c60c5143a2c09dafba355c0
+      internalID: -1811293863
       vertices: []
       indices: 
       edges: []
@@ -256,11 +220,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      slime-walk-5frames_2: -778530008
-      slime-walk-5frames_3: 964817933
-      slime-walk-5frames_4: 768543578
-      slime-walk-5frames_0: -873905917
-      slime-walk-5frames_1: 1588754709
+      pickaxe-adjusted-attack-5frames_39x39_4: -1811293863
+      pickaxe-adjusted-attack-5frames_39x39_1: -1405730260
+      pickaxe-adjusted-attack-5frames_39x39_2: -1372405460
+      pickaxe-adjusted-attack-5frames_39x39_3: -1416128129
+      pickaxe-adjusted-attack-5frames_39x39_0: 1715480883
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

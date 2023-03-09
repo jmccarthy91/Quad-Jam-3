@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using UnityEditor.Build;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -15,6 +13,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float _attackCooldown = 0.0f;
 
     [Header("Other")]
+    [SerializeField] private SpriteRenderer _spriteRenderer = null;
     [SerializeField] private GameObject _heartObject = null;
     [SerializeField] private GameObject _player = null;
 
@@ -49,6 +48,11 @@ public class EnemyController : MonoBehaviour
         _moveDirection = new Vector2(CalculateMoveDirection().x, 0.0f);
         _playerDistance = CalculatePlayerDistance();
         _attackTimer += Time.deltaTime;
+
+        if (Mathf.Sign(_moveDirection.x) == -1)
+            _spriteRenderer.flipX = true;
+        else
+            _spriteRenderer.flipX = false;
 
         if (_playerDistance <= _stoppingDistance)
         {
