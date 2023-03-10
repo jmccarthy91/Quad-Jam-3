@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -139,7 +139,1267 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 609
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be06edb32d01a4fdd9b838831d5830ac
+      internalID: 694279013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 609
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb9914a684834a95bff965a14dc0782
+      internalID: -1987886607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 609
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489a5bd3a0bce4e9689327acf3ae91fe
+      internalID: -363232097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_3
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 609
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9866610241b374da590d4416444818b9
+      internalID: 482061276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_4
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 609
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0560c29cf1684130a2842386648dbe3
+      internalID: 25236955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_5
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 609
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879d7611f0090452c9a35b6e4dc1dce1
+      internalID: 1998912927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_6
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 609
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b290ae55cad48f5a59c9f0757ef105
+      internalID: -443719684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_7
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 609
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b6a3d089058490195341567084227c
+      internalID: -2038446614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_8
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 609
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0985a8f7f48e648cd9ae2efdd8b6bcbe
+      internalID: 459750075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_9
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 508
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d69ec83414c774faabee583edde33226
+      internalID: -1229952969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_10
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 508
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f892a308b5ed4eca876bf1d002017df
+      internalID: 1904614991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_11
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 508
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca421d60e30c84fe2bd2173813964c6d
+      internalID: 492392761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_12
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 508
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d757ca5ff497f4261acbe0281841ea8e
+      internalID: -746986446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_13
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 508
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a920dce06ca496a981945cda339fb8
+      internalID: -2022439950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_14
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 508
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eadf255d0a6b4499a969ade778c6c79
+      internalID: -683162266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_15
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 508
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99edf03dd88249bba372b7068be57e5
+      internalID: 512713944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_16
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 508
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cdea20251e934914a9729c251e3b874
+      internalID: -690317684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_17
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 508
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f430e5d30404e4ab47b4c096032552
+      internalID: -531823553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 407
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fbee9533b8ca4727a662e8aa0260708
+      internalID: 735710608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_19
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 407
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f6148bea2094ae1b4056e3d63debb4
+      internalID: 131116612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_20
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 407
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82055230bfcfc4068895d9c6efc172c4
+      internalID: -1706021203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_21
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 407
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277a8f9895d6e477fbaf8243b24348f5
+      internalID: -649508221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_22
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 407
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd8195fe4ee9843d4a24f24bf5496546
+      internalID: -2038034180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_23
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 407
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd7f8319c0814f1e8fd73935b157544
+      internalID: -2068227070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_24
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 407
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00910fd464c76451fba93053b5f7cd5a
+      internalID: -152345178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_25
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 407
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 401fec1f2349741568212124690c967a
+      internalID: 421274814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_26
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 407
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4ff9c75bed44940a82789ca535a9d7
+      internalID: -1582322571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_27
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 306
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b996fe7e461ad45a7911a948ce062a05
+      internalID: -812208860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_28
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 306
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 895a6bb11eed84ab3a76a119f18e024d
+      internalID: -96563087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_29
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 306
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d36ee13ed6694574b34cff22fe93ff7
+      internalID: -480777677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_30
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 306
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9907b15b0ee646708d3f2d87065732e
+      internalID: -440196846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_31
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 306
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4d4ba5fe5e94dd6b3d6084e915bcb8
+      internalID: 1196578930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_32
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 306
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d1ce7eae28940678ec9ef7d4550765
+      internalID: -1120228255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_33
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 306
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63db6cbccc3fe47f7b3ac7b53962f7ca
+      internalID: 1231488842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_34
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 306
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b1b7ff172c34b54b738bae2411f75b
+      internalID: -1996269794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_35
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 306
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e327a75a3714cf1a39f98a85b0200e
+      internalID: 1768352532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_36
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 205
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ed50052c5d6b4fc9ba1f50ce1c7f36a
+      internalID: -1047229502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_37
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 205
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d312641f5c474adf9865e837b637415
+      internalID: -168118949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_38
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 205
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2b6782b26314c8e9f2abff62029647
+      internalID: -171410570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_39
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 205
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213504ab8724d40dfab72dc1a7e5385a
+      internalID: -1475200773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_40
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 205
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e752098f6fbf4faeb93fc76072c7b0c
+      internalID: -239178332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_41
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 205
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df9877efb0884853bc3b92fccdc962e
+      internalID: -1658293945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_42
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 205
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc0325eae638428eb9ecb6ec4c50f0f
+      internalID: 1817719777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_43
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 205
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f71fcdfc8654bf29762577354d7131
+      internalID: 1079420576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_44
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 205
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe7f45869dfe449d8dce5ffd5535ba4
+      internalID: -1618832498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_45
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 242f48f1f07664cd49e51448061ef0b1
+      internalID: -1531725215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_46
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 104
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df50633dc5146443188cbc526d48fb97
+      internalID: -334308714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_47
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 104
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c697a92cce38f4f52aef07d9b05868af
+      internalID: -1886099903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_48
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 104
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d203fa06764409f92a5b47d03125ae
+      internalID: 704900603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_49
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 104
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba485eae353a4a549d44752897d4452
+      internalID: 1623826639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_50
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 104
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c374f44848ec948b3bd508c4e43f9a06
+      internalID: -907606703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_51
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 104
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db198bf92eb5d4b27b247035ed37235e
+      internalID: -157185738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_52
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 104
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2665cb8d74b4db9aba75cbcd8e5d5d
+      internalID: -226932139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_53
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 104
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847ff498d018847608f3e08adde07f90
+      internalID: -681103952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_54
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3f9e2e5ce7247bb81184fed84cc822
+      internalID: 1103763817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_55
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 3
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd98c02c711ff4204b9f62d9ea31790a
+      internalID: -1265151506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_56
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 3
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db70ff1c40989403ca851aa255d42805
+      internalID: 1578886532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_57
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 3
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efabecbc4fe4e4d388b2e12dbd22fdf5
+      internalID: -1638731743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_58
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 3
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3bb84d2690e545cf9ff2c76cc63533b
+      internalID: -293068502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-pickaxe-20exp-60frames_59
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 3
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6067177b55b9f4810b6b72fac0e50dc2
+      internalID: -821351121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -150,7 +1410,67 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      card-pickaxe-20exp-60frames_1: -1987886607
+      card-pickaxe-20exp-60frames_55: -1265151506
+      card-pickaxe-20exp-60frames_23: -2068227070
+      card-pickaxe-20exp-60frames_52: -226932139
+      card-pickaxe-20exp-60frames_39: -1475200773
+      card-pickaxe-20exp-60frames_44: -1618832498
+      card-pickaxe-20exp-60frames_59: -821351121
+      card-pickaxe-20exp-60frames_14: -683162266
+      card-pickaxe-20exp-60frames_12: -746986446
+      card-pickaxe-20exp-60frames_42: 1817719777
+      card-pickaxe-20exp-60frames_27: -812208860
+      card-pickaxe-20exp-60frames_43: 1079420576
+      card-pickaxe-20exp-60frames_21: -649508221
+      card-pickaxe-20exp-60frames_2: -363232097
+      card-pickaxe-20exp-60frames_30: -440196846
+      card-pickaxe-20exp-60frames_20: -1706021203
+      card-pickaxe-20exp-60frames_5: 1998912927
+      card-pickaxe-20exp-60frames_58: -293068502
+      card-pickaxe-20exp-60frames_4: 25236955
+      card-pickaxe-20exp-60frames_7: -2038446614
+      card-pickaxe-20exp-60frames_46: -334308714
+      card-pickaxe-20exp-60frames_6: -443719684
+      card-pickaxe-20exp-60frames_11: 492392761
+      card-pickaxe-20exp-60frames_16: -690317684
+      card-pickaxe-20exp-60frames_26: -1582322571
+      card-pickaxe-20exp-60frames_35: 1768352532
+      card-pickaxe-20exp-60frames_29: -480777677
+      card-pickaxe-20exp-60frames_45: -1531725215
+      card-pickaxe-20exp-60frames_36: -1047229502
+      card-pickaxe-20exp-60frames_10: 1904614991
+      card-pickaxe-20exp-60frames_9: -1229952969
+      card-pickaxe-20exp-60frames_33: 1231488842
+      card-pickaxe-20exp-60frames_48: 704900603
+      card-pickaxe-20exp-60frames_40: -239178332
+      card-pickaxe-20exp-60frames_34: -1996269794
+      card-pickaxe-20exp-60frames_51: -157185738
+      card-pickaxe-20exp-60frames_31: 1196578930
+      card-pickaxe-20exp-60frames_19: 131116612
+      card-pickaxe-20exp-60frames_41: -1658293945
+      card-pickaxe-20exp-60frames_37: -168118949
+      card-pickaxe-20exp-60frames_49: 1623826639
+      card-pickaxe-20exp-60frames_22: -2038034180
+      card-pickaxe-20exp-60frames_13: -2022439950
+      card-pickaxe-20exp-60frames_0: 694279013
+      card-pickaxe-20exp-60frames_53: -681103952
+      card-pickaxe-20exp-60frames_3: 482061276
+      card-pickaxe-20exp-60frames_17: -531823553
+      card-pickaxe-20exp-60frames_57: -1638731743
+      card-pickaxe-20exp-60frames_18: 735710608
+      card-pickaxe-20exp-60frames_56: 1578886532
+      card-pickaxe-20exp-60frames_50: -907606703
+      card-pickaxe-20exp-60frames_25: 421274814
+      card-pickaxe-20exp-60frames_38: -171410570
+      card-pickaxe-20exp-60frames_32: -1120228255
+      card-pickaxe-20exp-60frames_8: 459750075
+      card-pickaxe-20exp-60frames_15: 512713944
+      card-pickaxe-20exp-60frames_28: -96563087
+      card-pickaxe-20exp-60frames_24: -152345178
+      card-pickaxe-20exp-60frames_54: 1103763817
+      card-pickaxe-20exp-60frames_47: -1886099903
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

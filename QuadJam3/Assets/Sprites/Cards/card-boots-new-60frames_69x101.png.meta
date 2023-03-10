@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -101,9 +101,1281 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 609
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202010b01db214d2fbe35e2cb7755a39
+      internalID: 1779625163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 609
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8585d4c59247c4b589fcee168e460461
+      internalID: -932071127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 609
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b09302916963c4485bd469fcb4512f2c
+      internalID: 1206796667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_3
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 609
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb955af8d9e374722a218b1a2dfa659d
+      internalID: -1743978954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_4
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 609
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaa4481486a034d3f82a41ac0d3577ba
+      internalID: 323310405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_5
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 609
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d93187c3dfa4c1ca44575e5a186308
+      internalID: -1445888533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_6
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 609
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6242654bf2ec84000b361c581b2333ac
+      internalID: 1214399208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_7
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 609
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dcdd26662e804db4837ddbdb05ebc1c
+      internalID: 148945736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_8
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 609
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60898c0d557664a3781f440a1b321909
+      internalID: 1387107785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_9
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 508
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082967e191366473db5004d2d57ce596
+      internalID: -1889932603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_10
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 508
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee8e6b5e02ab45cfa81ffbf4f73a723
+      internalID: -1874140430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_11
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 508
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa79bc92df1c54ad097bb27f37758339
+      internalID: -909463532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_12
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 508
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23a577b66d614bdf8248c90daf01247
+      internalID: -1238856226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_13
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 508
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aac242ab9301460591399bca0904d30
+      internalID: 2026279966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_14
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 508
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995cf4c9e1d634e70be90901df9bcfec
+      internalID: -2038232930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_15
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 508
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4110264548624a98abce2e2e2139c0d
+      internalID: -1731148532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_16
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 508
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f72839fd292a41ec9bd61965b1b3298
+      internalID: -1609507095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_17
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 508
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e13fcc09041441c8dd1116edbe4cfb
+      internalID: -52138175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 407
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11aed7301f9b1424188465c309123186
+      internalID: -437558263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_19
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 407
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a236c3c5f024e208b3cff6e02af64f
+      internalID: -1936220351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_20
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 407
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcdfbc3ed4ce24c5eaaa24959eaecffa
+      internalID: -1961917363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_21
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 407
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 042d75e40229b4e07a72de9c98540cdd
+      internalID: -147575918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_22
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 407
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e9c750e89c24cfdbc16e287b36d2af
+      internalID: 2130481149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_23
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 407
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 019b5f5ec3d24444fa5fc77218db97bf
+      internalID: 1784370486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_24
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 407
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4582c4e3c370e4354ba77e723c7d4402
+      internalID: 234559615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_25
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 407
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1c7028cb70b412bbd333d1adad01b1
+      internalID: 1530959563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_26
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 407
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3654168a2d0b46409b39196da2b1e7d
+      internalID: 2072751478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_27
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 306
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e81d6e5f15834fde8f41f0dfa320069
+      internalID: 143118478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_28
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 306
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81ab3cd77d4247aeb113bf216c1ca81
+      internalID: -102034801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_29
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 306
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ff0b0aafd42435ea39eca1cf7fcee3
+      internalID: -1940327712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_30
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 306
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75c7e3e5763843d4b22d88fcb08bb0e
+      internalID: 509670367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_31
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 306
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 768f45a980f074c7e92c0464f87f8eca
+      internalID: -433256582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_32
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 306
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9bc3f5c59e84289a1d3d893b9191c3
+      internalID: -799945843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_33
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 306
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58200bcd673454cc9b4d58b82bd5fcea
+      internalID: 1134091000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_34
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 306
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f7a89e53fbe43c3ace9d72c64df991
+      internalID: 2114685943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_35
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 306
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f0ba00b5c81d41a1905b2628726cf75
+      internalID: -145270515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_36
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 205
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f394adbd46a484e52b736dca46d6b6d3
+      internalID: -1388696607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_37
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 205
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be0edf7c1b7804f3c9718b25ad5035ff
+      internalID: -1324660792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_38
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 205
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28430d765dc54862a638ff0f4fd6205
+      internalID: -1057915116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_39
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 205
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45bd6bab914af462cb557c627b781d1a
+      internalID: 635176438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_40
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 205
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5aa3918c8944a6ab76a09fe20ce9a5
+      internalID: -1113763985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_41
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 205
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2956e65ec00ff4a7089bcd75292cedd6
+      internalID: 669920068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_42
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 205
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb9e85b7c0b74ffea2d69d097e1b8ba
+      internalID: 1234494887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_43
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 205
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3a41c17867d04e0696bf4c63033b39c
+      internalID: 184460954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_44
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 205
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0062eeabe4d67436eb591e37c8c6acff
+      internalID: -1427071708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_45
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67cbda15af6164f28af16de577393cfd
+      internalID: -1485024869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_46
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 104
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f9e7fae03bd45e8915ee25053e5448
+      internalID: 1849464359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_47
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 104
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39188f20293a64b47a1aec4feac369b9
+      internalID: 900886496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_48
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 104
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b37d8e38508147438fb70249c4eafee
+      internalID: 1633153738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_49
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 104
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eaa779113b3d41518af6945689b3b77
+      internalID: 1589058967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_50
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 104
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 004fc8debc86141b7a29d22cbc8b3a7b
+      internalID: 92450179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_51
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 104
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b068a74c9bb2941d2a10787a072c5038
+      internalID: -786684260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_52
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 104
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424810962558e459993b87845d9594e0
+      internalID: 149634366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_53
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 104
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13234dd701e5e47308a81bc596bcd8a2
+      internalID: -1106756964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_54
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf8f05ce724874fb5b5d3d8cfb142477
+      internalID: 988826646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_55
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 3
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3609bada5d1c44a38b625eafc84b8bdf
+      internalID: -1818018842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_56
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 3
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c374e4e01317423bb9cf0125abc0167
+      internalID: -949807871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_57
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 3
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b91f4246ca36453da955efc5c6a5c30
+      internalID: 390357368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_58
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 3
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd05f1ba7f054bf0bfb079da4ae835b
+      internalID: 529357511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card-boots-new-60frames_69x101_59
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 3
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257a9783359f84d19a592d6ce6768019
+      internalID: -1126827278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +1386,67 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      card-boots-new-60frames_69x101_10: -1874140430
+      card-boots-new-60frames_69x101_40: -1113763985
+      card-boots-new-60frames_69x101_4: 323310405
+      card-boots-new-60frames_69x101_19: -1936220351
+      card-boots-new-60frames_69x101_9: -1889932603
+      card-boots-new-60frames_69x101_27: 143118478
+      card-boots-new-60frames_69x101_22: 2130481149
+      card-boots-new-60frames_69x101_34: 2114685943
+      card-boots-new-60frames_69x101_26: 2072751478
+      card-boots-new-60frames_69x101_11: -909463532
+      card-boots-new-60frames_69x101_15: -1731148532
+      card-boots-new-60frames_69x101_21: -147575918
+      card-boots-new-60frames_69x101_17: -52138175
+      card-boots-new-60frames_69x101_36: -1388696607
+      card-boots-new-60frames_69x101_38: -1057915116
+      card-boots-new-60frames_69x101_42: 1234494887
+      card-boots-new-60frames_69x101_12: -1238856226
+      card-boots-new-60frames_69x101_18: -437558263
+      card-boots-new-60frames_69x101_30: 509670367
+      card-boots-new-60frames_69x101_28: -102034801
+      card-boots-new-60frames_69x101_47: 900886496
+      card-boots-new-60frames_69x101_1: -932071127
+      card-boots-new-60frames_69x101_51: -786684260
+      card-boots-new-60frames_69x101_33: 1134091000
+      card-boots-new-60frames_69x101_55: -1818018842
+      card-boots-new-60frames_69x101_23: 1784370486
+      card-boots-new-60frames_69x101_32: -799945843
+      card-boots-new-60frames_69x101_59: -1126827278
+      card-boots-new-60frames_69x101_53: -1106756964
+      card-boots-new-60frames_69x101_24: 234559615
+      card-boots-new-60frames_69x101_3: -1743978954
+      card-boots-new-60frames_69x101_57: 390357368
+      card-boots-new-60frames_69x101_20: -1961917363
+      card-boots-new-60frames_69x101_8: 1387107785
+      card-boots-new-60frames_69x101_14: -2038232930
+      card-boots-new-60frames_69x101_52: 149634366
+      card-boots-new-60frames_69x101_6: 1214399208
+      card-boots-new-60frames_69x101_13: 2026279966
+      card-boots-new-60frames_69x101_50: 92450179
+      card-boots-new-60frames_69x101_48: 1633153738
+      card-boots-new-60frames_69x101_0: 1779625163
+      card-boots-new-60frames_69x101_2: 1206796667
+      card-boots-new-60frames_69x101_25: 1530959563
+      card-boots-new-60frames_69x101_43: 184460954
+      card-boots-new-60frames_69x101_45: -1485024869
+      card-boots-new-60frames_69x101_31: -433256582
+      card-boots-new-60frames_69x101_44: -1427071708
+      card-boots-new-60frames_69x101_46: 1849464359
+      card-boots-new-60frames_69x101_49: 1589058967
+      card-boots-new-60frames_69x101_58: 529357511
+      card-boots-new-60frames_69x101_56: -949807871
+      card-boots-new-60frames_69x101_29: -1940327712
+      card-boots-new-60frames_69x101_39: 635176438
+      card-boots-new-60frames_69x101_54: 988826646
+      card-boots-new-60frames_69x101_16: -1609507095
+      card-boots-new-60frames_69x101_35: -145270515
+      card-boots-new-60frames_69x101_37: -1324660792
+      card-boots-new-60frames_69x101_41: 669920068
+      card-boots-new-60frames_69x101_5: -1445888533
+      card-boots-new-60frames_69x101_7: 148945736
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
