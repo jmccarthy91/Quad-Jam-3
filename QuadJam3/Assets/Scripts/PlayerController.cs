@@ -383,6 +383,7 @@ public class PlayerController : MonoBehaviour
     {
         _currentHearts = _maxHearts;
         transform.position = _spawnPoint.position;
+        _rb.velocity = Vector2.zero;
         StartCoroutine(Respawn());
     }
 
