@@ -63,5 +63,14 @@ public class HUDEventsManager : MonoBehaviour
       }
     }
 
+    public event Action<float> onTimeUpdate;
+    public void OnTimeUpdate(float currentTime)
+    {
+      if (onTimeUpdate != null)
+      {
+        onTimeUpdate(currentTime);
+      }
+    }
+
 
 }

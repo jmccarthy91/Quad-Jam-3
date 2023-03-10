@@ -11,18 +11,33 @@ public class TimeHUDController : MonoBehaviour
     private int month = 1;
     private int day = 1;
 
-    public float timeScale = 100f;
+    private float timeScale = 0.00001f;
 
-    void FixedUpdate()
+    void Start()
     {
-        UpdateHomeDate();
-        
+        HUDEventsManager.EventsHUD.onTimeUpdate += OnTimeUpdate;
     }
 
-    void UpdateHomeDate()
+    void OnDestroy()
     {
-        float time = Time.fixedDeltaTime * timeScale;
-        day = day + (int)time;
+        HUDEventsManager.EventsHUD.onTimeUpdate -= OnTimeUpdate;
+    }
+
+    // void FixedUpdate()
+    // {
+    //     UpdateHomeDate();
+    // }
+
+    void OnTimeUpdate(float newTime)
+    { 
+        UpdateHomeDate(newTime);
+    }
+
+    void UpdateHomeDate( float time )
+    {
+        //time = Time.fixedDeltaTime * timeScale;
+        time = time * timeScale;
+        day = day + (int)(time);
         if (day > 30) // skip 30/31 variation
         {
             month++;

@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 8288658196991933644}
-  timeScale: 100
+  timeScale: 1
 --- !u!114 &5318700577989541171
 MonoBehaviour:
   m_ObjectHideFlags: 0

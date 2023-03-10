@@ -41,11 +41,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Update()
+    void Update()
     {   
+      Debug.Log(isInGame);
         if(isInGame)
         {
-            inGameTime = Time.time * gameTimeToRealTime;
+            inGameTime += Time.time * gameTimeToRealTime;
+            HUDEventsManager.EventsHUD.OnTimeUpdate(inGameTime);
+            Debug.Log(inGameTime);
         }
     }
 

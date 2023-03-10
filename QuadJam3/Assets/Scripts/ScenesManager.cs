@@ -37,6 +37,7 @@ public class ScenesManager : MonoBehaviour
     public static void LoadGame()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(gameSceneName);
+        GameManager.Instance.Restart();
     }
 
     public static void LoadGameOver()
