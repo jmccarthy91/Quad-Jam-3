@@ -944,7 +944,6 @@ GameObject:
   m_Component:
   - component: {fileID: 263840399}
   - component: {fileID: 263840398}
-  - component: {fileID: 263840400}
   m_Layer: 0
   m_Name: Plateau 2
   m_TagString: Untagged
@@ -1035,79 +1034,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &263840400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263840397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ef5ad446719eda48919e89281d54cda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enemySpawnPoints:
-  - {fileID: 441572821}
-  - {fileID: 538857927}
-  - {fileID: 1906554393}
-  - {fileID: 2113230133}
-  - {fileID: 1780092413}
-  - {fileID: 1317268992}
-  - {fileID: 1953437349}
-  - {fileID: 991268279}
-  - {fileID: 1264446472}
-  - {fileID: 1452120934}
-  - {fileID: 817881434}
-  - {fileID: 272367755}
-  - {fileID: 1351202964}
-  - {fileID: 1666232452}
-  - {fileID: 1067708421}
-  - {fileID: 1032826720}
-  - {fileID: 1696255509}
-  - {fileID: 623845388}
-  - {fileID: 1914574365}
-  - {fileID: 667934793}
-  - {fileID: 97036214}
-  - {fileID: 1133678219}
-  - {fileID: 1089646300}
-  - {fileID: 548422327}
-  - {fileID: 1601388017}
-  - {fileID: 2017426325}
-  - {fileID: 2125709874}
-  - {fileID: 33540193}
-  - {fileID: 1849240130}
-  - {fileID: 1151878224}
-  - {fileID: 322802120}
-  - {fileID: 152884913}
-  - {fileID: 22375879}
-  - {fileID: 971884027}
-  - {fileID: 731260346}
-  - {fileID: 177228327}
-  - {fileID: 1920556847}
-  - {fileID: 1900831934}
-  - {fileID: 2053859717}
-  - {fileID: 1736700510}
-  - {fileID: 2045725498}
-  - {fileID: 2094988891}
-  - {fileID: 69413596}
-  - {fileID: 731298958}
-  - {fileID: 944221799}
-  - {fileID: 59728197}
-  - {fileID: 806613310}
-  _miningNodeSpawnPoints:
-  - {fileID: 969950320}
-  - {fileID: 987838931}
-  - {fileID: 380195630}
-  - {fileID: 684697280}
-  - {fileID: 1068994746}
-  - {fileID: 17148983}
-  - {fileID: 2002329652}
-  - {fileID: 1117437631}
-  - {fileID: 2018035872}
-  - {fileID: 317491415}
-  _miningNodeObject: {fileID: 3011023498713807936, guid: 43733637b2a8dc9489294bd82019d692, type: 3}
-  _enemyObject: {fileID: 5616992071250834504, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
 --- !u!1001 &265291582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19704,8 +19630,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemySpawnPoints:
   - {fileID: 1306158944}
+  - {fileID: 441572821}
+  - {fileID: 538857927}
+  - {fileID: 1906554393}
+  - {fileID: 2113230133}
+  - {fileID: 1780092413}
+  - {fileID: 1317268992}
+  - {fileID: 1953437349}
+  - {fileID: 991268279}
+  - {fileID: 1264446472}
+  - {fileID: 1452120934}
+  - {fileID: 817881434}
+  - {fileID: 272367755}
+  - {fileID: 1351202964}
+  - {fileID: 1666232452}
+  - {fileID: 1067708421}
+  - {fileID: 1032826720}
+  - {fileID: 1696255509}
+  - {fileID: 623845388}
+  - {fileID: 1914574365}
+  - {fileID: 667934793}
+  - {fileID: 97036214}
+  - {fileID: 1133678219}
+  - {fileID: 1089646300}
+  - {fileID: 548422327}
+  - {fileID: 1601388017}
+  - {fileID: 2017426325}
+  - {fileID: 2125709874}
+  - {fileID: 33540193}
+  - {fileID: 1849240130}
+  - {fileID: 1151878224}
+  - {fileID: 322802120}
+  - {fileID: 152884913}
+  - {fileID: 22375879}
+  - {fileID: 971884027}
+  - {fileID: 731260346}
+  - {fileID: 177228327}
+  - {fileID: 1920556847}
+  - {fileID: 1900831934}
+  - {fileID: 2053859717}
+  - {fileID: 1736700510}
+  - {fileID: 2045725498}
+  - {fileID: 2094988891}
+  - {fileID: 69413596}
+  - {fileID: 731298958}
+  - {fileID: 944221799}
+  - {fileID: 59728197}
+  - {fileID: 806613310}
   _miningNodeSpawnPoints:
   - {fileID: 1828714421}
+  - {fileID: 969950320}
+  - {fileID: 987838931}
+  - {fileID: 380195630}
+  - {fileID: 684697280}
+  - {fileID: 1068994746}
+  - {fileID: 17148983}
+  - {fileID: 2002329652}
+  - {fileID: 1117437631}
+  - {fileID: 2018035872}
+  - {fileID: 317491415}
   _miningNodeObject: {fileID: 3011023498713807936, guid: 43733637b2a8dc9489294bd82019d692, type: 3}
   _enemyObject: {fileID: 5616992071250834504, guid: 84b2276dabc7b2e44afa03b3024322f3, type: 3}
 --- !u!1001 &1528666497
