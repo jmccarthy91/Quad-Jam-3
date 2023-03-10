@@ -10,8 +10,6 @@ public class Plateau : MonoBehaviour
 
     private void Awake()
     {
-        SpawnObjects();
-
         PlayerDeathTrigger.OnDeathTrigger += SpawnObjects;
     }
 
@@ -26,14 +24,14 @@ public class Plateau : MonoBehaviour
         foreach (GameObject o in minerals)
             Destroy(o);
 
-        foreach (Transform t in _miningNodeSpawnPoints)
+        for (int i = 0; i < _miningNodeSpawnPoints.Length; i++)
         {
-            Instantiate(_miningNodeObject, t.position, t.rotation);
+            Instantiate(_miningNodeObject, _miningNodeSpawnPoints[i].position, _miningNodeSpawnPoints[i].rotation);
         }
 
-        foreach (Transform t in _enemySpawnPoints)
+        for (int i = 0; i < _enemySpawnPoints.Length; i++)
         {
-            Instantiate(_enemyObject, t.position, t.rotation);
+            Instantiate(_enemyObject, _enemySpawnPoints[i].position, _enemySpawnPoints[i].rotation);
         }
     }
 }
