@@ -17,7 +17,6 @@ public class MiningNode : MonoBehaviour
 
     private void Mined()
     {
-        HUDEventsManager.EventsHUD.OnExpereinceChange(25, 100);
         EventManager.Current.MineralMined();
         FindObjectOfType<AudioManager>().Play("MineralFinish");
         Debug.Log("[MineralNode]: Mineral Mined.");

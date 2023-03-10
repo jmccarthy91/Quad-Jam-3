@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2627361365791269211}
   - component: {fileID: 2627361365791269212}
   - component: {fileID: 2627361365791269208}
-  - component: {fileID: 2235628878722659054}
   m_Layer: 5
   m_Name: InGameUI
   m_TagString: Untagged
@@ -116,18 +115,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6365c571bbadc4c759e133ed82412540, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2235628878722659054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2627361365791269213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb5c481ed9ad843cf844dcb04dae407c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &3503871979985997217
