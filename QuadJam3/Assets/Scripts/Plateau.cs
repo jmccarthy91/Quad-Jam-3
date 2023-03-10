@@ -11,6 +11,8 @@ public class Plateau : MonoBehaviour
     private void Awake()
     {
         SpawnObjects();
+
+        PlayerDeathTrigger.OnDeathTrigger += SpawnObjects;
     }
 
     private void SpawnObjects()
