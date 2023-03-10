@@ -7,7 +7,10 @@ public class PlayerDeathTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("[Death Trigger]: Entered.");
-        OnDeathTrigger?.Invoke();
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("[Death Trigger]: Entered.");
+            OnDeathTrigger?.Invoke();
+        }
     }
 }

@@ -92,7 +92,7 @@ public class EnemyController : MonoBehaviour
         }
         else if (_playerDistance <= _stoppingDistance && !_beingAttacked)
         {
-            _rb.velocity = Vector2.zero;
+            _rb.velocity = new Vector2(0.0f, _rb.velocity.y);
         }
     }
 
