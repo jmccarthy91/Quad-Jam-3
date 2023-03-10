@@ -3339,30 +3339,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2627361364649436407, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2627361365422218202, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2627361365727536708, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2627361365727536708, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2627361365727536709, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1338103198}
-    - target: {fileID: 2627361365727536709, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpgradePickaxe
-      objectReference: {fileID: 0}
     - target: {fileID: 2627361365791269209, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3451,49 +3427,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 561800908}
-    - target: {fileID: 2627361365791269210, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2627361365791269210, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 764438689
-      objectReference: {fileID: 0}
     - target: {fileID: 2627361365791269213, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
       propertyPath: m_Name
       value: InGameUI
       objectReference: {fileID: 0}
-    - target: {fileID: 2627361365791269213, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2627361365848695136, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2627361365848695136, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2627361365848695137, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1338103198}
-    - target: {fileID: 2627361365848695137, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpgradeBoots
-      objectReference: {fileID: 0}
-    - target: {fileID: 3753954442895703488, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4390839627684580935, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1451719829941898385, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
-    - {fileID: 7340536064779922501, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
 --- !u!1001 &984431627
 PrefabInstance:
@@ -4845,18 +4783,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2627361365422218202, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
   m_PrefabInstance: {fileID: 983303458}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1338103198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338103194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cc12cad080e90742a19f49d4d2b03f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1347217538
 GameObject:
   m_ObjectHideFlags: 0
