@@ -27,6 +27,24 @@ public class MainMenuUIManager : MonoBehaviour
         }
     }
 
+    public event Action onMainOpen;
+    public void OnMainOpen()
+    {
+      if (onMainOpen != null)
+      {
+        onMainOpen();
+      }
+    }
+
+    public event Action onMainClose;
+    public void OnMainClose()
+    {
+      if (onMainClose != null)
+      {
+        onMainClose();
+      }
+    }
+
     public event Action onSettingsOpen;
     public void OnSettingsOpen()
     {
