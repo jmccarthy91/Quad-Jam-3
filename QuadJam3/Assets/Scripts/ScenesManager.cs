@@ -1,15 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class ScenesManager : MonoBehaviour
 {
     public static ScenesManager Instance;
 
-    public string mainMenuSceneName = "MainMenu";
-    public string gameSceneName = "Sandbox";
-    public string gameOverSceneName = "GameOver";
+    public const string mainMenuSceneName = "MainMenu";
+    public const string gameSceneName = "Main";
+    public const string gameOverSceneName = "GameOver";
 
     void Awake()
     {
@@ -32,17 +29,17 @@ public class ScenesManager : MonoBehaviour
         }
     }
 
-    public void LoadMainMenu()
+    public static void LoadMainMenu()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(mainMenuSceneName);
     }
 
-    public void LoadGame()
+    public static void LoadGame()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(gameSceneName);
     }
 
-    public void LoadGameOver()
+    public static void LoadGameOver()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(gameOverSceneName);
     }
@@ -51,6 +48,4 @@ public class ScenesManager : MonoBehaviour
     {
         Application.Quit();
     }
-
-
 }

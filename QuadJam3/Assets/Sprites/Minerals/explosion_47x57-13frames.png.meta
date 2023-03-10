@@ -115,7 +115,280 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: explosion_47x57-13frames_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 171
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b0f123d1e36fee40a923bff1ba55b04
+      internalID: -466479130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_47x57-13frames_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 171
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b661aa3944b6b84fbe8cf3a1e7d8cf4
+      internalID: 743966021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_47x57-13frames_2
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 171
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24322f45f44b10344ab163b6e9a846a9
+      internalID: -2110803281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_47x57-13frames_3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 171
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b92588594f31c42ba41f8fe4fb7a24
+      internalID: 390330439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_47x57-13frames_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73cdb3bf506faff4c831c37e1be5b096
+      internalID: -683945085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_47x57-13frames_5
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 114
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4a375f0db39724bbf38224c059cc19
+      internalID: 618526140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_47x57-13frames_6
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 114
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 647711bc86c2671438ea42dabad8bfb6
+      internalID: -27327646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_47x57-13frames_7
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 114
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8173c37babc1ab8438397e76d6db1311
+      internalID: -1587693144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_47x57-13frames_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 57
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d93806924031bc41ab4c4a6bd9285b4
+      internalID: 1855290104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_47x57-13frames_9
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 57
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08498f53ff0530e469ff1d0bc9f7af1c
+      internalID: -1353019843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_47x57-13frames_10
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 57
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eeeffb5e839b774b918244a674f4a32
+      internalID: -1199257377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_47x57-13frames_11
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 57
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8169da52804942c449b1c52463344508
+      internalID: 787018914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_47x57-13frames_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d57b10f439a22364c97083aaf30c4ba9
+      internalID: 84379417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +399,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      explosion_47x57-13frames_8: 1855290104
+      explosion_47x57-13frames_9: -1353019843
+      explosion_47x57-13frames_3: 390330439
+      explosion_47x57-13frames_0: -466479130
+      explosion_47x57-13frames_1: 743966021
+      explosion_47x57-13frames_10: -1199257377
+      explosion_47x57-13frames_2: -2110803281
+      explosion_47x57-13frames_6: -27327646
+      explosion_47x57-13frames_5: 618526140
+      explosion_47x57-13frames_4: -683945085
+      explosion_47x57-13frames_11: 787018914
+      explosion_47x57-13frames_12: 84379417
+      explosion_47x57-13frames_7: -1587693144
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

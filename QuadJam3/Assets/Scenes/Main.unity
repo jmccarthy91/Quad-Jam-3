@@ -1712,8 +1712,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 0}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2381,7 +2381,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2627361364649436407, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2627361365791269209, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
       propertyPath: m_Pivot.x
@@ -2482,6 +2482,10 @@ PrefabInstance:
     - target: {fileID: 2627361365791269213, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
       propertyPath: m_Name
       value: InGameUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627361365791269213, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3753954442895703488, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
       propertyPath: m_SortingOrder
@@ -3571,8 +3575,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 0}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -19100,9 +19104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a497943ef3a345bba24248370dba457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuSceneName: MainMenu
-  gameSceneName: Main
-  gameOverSceneName: EndMenu
 --- !u!4 &1909625195
 Transform:
   m_ObjectHideFlags: 0

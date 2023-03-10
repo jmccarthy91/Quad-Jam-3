@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
             isInGame = false;
             gameHasEnded = true;
             Debug.Log("GAME OVER");
-            ScenesManager.Instance.LoadGameOver();
+            ScenesManager.LoadGameOver();
         }
     }
 

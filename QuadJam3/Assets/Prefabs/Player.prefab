@@ -307,7 +307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 250
   _maxHearts: 5
-  _attackRange: 1
+  _attackRange: 0.5
   _knockbackAmount: 10
   _attackKnockback: 5
   rollSpeedMax: 1250
@@ -321,6 +321,7 @@ MonoBehaviour:
   _animator: {fileID: 8690519420507858637}
   _pickaxeAnimator: {fileID: 8690519419183001967}
   _spawnPoint: {fileID: 0}
+  _upgradeCanvas: {fileID: 0}
   _groundCheckLength: 0.65
   _floorLayer:
     serializedVersion: 2
