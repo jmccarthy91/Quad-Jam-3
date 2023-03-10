@@ -89,6 +89,8 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _audioManager = FindObjectOfType<AudioManager>();
 
+        PlayerDeathTrigger.OnDeathTrigger += KillPlayer;
+
         _currentState = State.Normal;
 
         _cachedDirection = 1;
@@ -369,6 +371,11 @@ public class PlayerController : MonoBehaviour
             transform.position = _spawnPoint.position;
             StartCoroutine(Respawn());
         }
+    }
+
+    private void KillPlayer()
+    {
+        _currentHearts = 0;
     }
 
     private void ProvideUpgrades()
