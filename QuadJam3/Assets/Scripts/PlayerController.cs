@@ -211,7 +211,7 @@ public class PlayerController : MonoBehaviour
                 angle: 0.0f, _mineralLayer);
         }
 
-        if (enemyCol.Length > 0)
+        if (enemyCol != null && enemyCol.Length > 0)
         {
             foreach (var e in enemyCol)
             {
