@@ -1813,6 +1813,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1811205486}
+    - target: {fileID: 2627361365791269210, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627361365791269210, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 764438689
+      objectReference: {fileID: 0}
     - target: {fileID: 2627361365791269213, guid: 227d7a077b9b5433a9b5bfb4124289e7, type: 3}
       propertyPath: m_Name
       value: InGameUI
