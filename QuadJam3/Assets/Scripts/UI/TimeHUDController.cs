@@ -7,7 +7,7 @@ public class TimeHUDController : MonoBehaviour
 {
     public Text timer;
 
-    private int year = 2023; // start year is now?
+    private int year = 0; // start year is now?
     private int month = 1;
     private int day = 1;
 
