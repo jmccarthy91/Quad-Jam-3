@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator _animator;
     [SerializeField] private Animator _pickaxeAnimator;
     [SerializeField] private Transform _spawnPoint;
+    [SerializeField] private GameObject _upgradeCanvas;
 
     [Header("Other")]
     [SerializeField] private float _groundCheckLength = 0.0f;
@@ -100,6 +101,9 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         EventManager.Current.OnMineralMined += ProvideUpgrades;
+
+        _upgradeCanvas.GetComponent<DebugUpgradeUI>().OnUpgradeBoots += UpgradeBoots;
+        _upgradeCanvas.GetComponent<DebugUpgradeUI>().OnUpgradePickaxe += UpgradePickaxe;
     }
 
     private void Update()
@@ -362,14 +366,22 @@ public class PlayerController : MonoBehaviour
     private void ProvideUpgrades()
     {
         // Need UI to implement the upgrades
-
-        // Knockback upgrade template
-        // _knockbackAmount += _knockbackUpgrade;
-
-        // Boot force upgrade template
-        // _bootForce += _bootForceUpgrade;
-
+        _upgradeCanvas.SetActive(true);
         Debug.Log("Can upgrade");
+    }
+
+    private void UpgradeBoots()
+    {
+        Debug.Log("Boots Upgraded!");
+        _bootForce += _bootForceUpgrade;
+        _upgradeCanvas.SetActive(false);
+    }
+
+    private void UpgradePickaxe()
+    {
+        Debug.Log("Pickaxe Upgraded!");
+        _knockbackAmount += _knockbackUpgrade;
+        _upgradeCanvas.SetActive(false);
     }
 
     private void OnDrawGizmos()
