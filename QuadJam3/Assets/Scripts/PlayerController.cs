@@ -381,7 +381,8 @@ public class PlayerController : MonoBehaviour
 
     private void KillPlayer()
     {
-        _currentHearts = 0;
+        _currentHearts = _maxHearts;
+        StartCoroutine(Respawn());
     }
 
     private void ProvideUpgrades()
