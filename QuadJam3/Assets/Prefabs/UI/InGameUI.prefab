@@ -62,8 +62,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 1238259039
-  m_SortingOrder: 10
+  m_SortingLayerID: 764438689
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &2627361365791269211
 MonoBehaviour:
@@ -127,7 +127,7 @@ PrefabInstance:
     - target: {fileID: 1501389989026786276, guid: 9405d0b23432b41398745f150d254090, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1451719829941898385}
+      objectReference: {fileID: 1338103198}
     - target: {fileID: 1501389989026786276, guid: 9405d0b23432b41398745f150d254090, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UpgradePickaxe
@@ -137,13 +137,17 @@ PrefabInstance:
       value: DebugUpgradeUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1501389989026786277, guid: 9405d0b23432b41398745f150d254090, type: 3}
-      propertyPath: m_Enabled
+      propertyPath: m_Color.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501389989026786277, guid: 9405d0b23432b41398745f150d254090, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1501389989114391744, guid: 9405d0b23432b41398745f150d254090, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 7340536064779922501}
+      objectReference: {fileID: 1338103198}
     - target: {fileID: 1501389989114391744, guid: 9405d0b23432b41398745f150d254090, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UpgradeBoots
@@ -151,6 +155,14 @@ PrefabInstance:
     - target: {fileID: 1501389989114391744, guid: 9405d0b23432b41398745f150d254090, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: DebugUpgradeUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501389989114391745, guid: 9405d0b23432b41398745f150d254090, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501389989114391745, guid: 9405d0b23432b41398745f150d254090, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1501389989795141191, guid: 9405d0b23432b41398745f150d254090, type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -244,6 +256,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModalUpgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 1501389989795141243, guid: 9405d0b23432b41398745f150d254090, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1501389990096103766, guid: 9405d0b23432b41398745f150d254090, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -255,35 +271,18 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1501389989795141240, guid: 9405d0b23432b41398745f150d254090, type: 3}
   m_PrefabInstance: {fileID: 3503871979985997217}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2627361365727536711 stripped
+--- !u!1 &2627361365422218202 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1501389989026786278, guid: 9405d0b23432b41398745f150d254090, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1501389989795141243, guid: 9405d0b23432b41398745f150d254090, type: 3}
   m_PrefabInstance: {fileID: 3503871979985997217}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1451719829941898385
+--- !u!114 &1338103198
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2627361365727536711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cc12cad080e90742a19f49d4d2b03f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &2627361365848695139 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1501389989114391746, guid: 9405d0b23432b41398745f150d254090, type: 3}
-  m_PrefabInstance: {fileID: 3503871979985997217}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7340536064779922501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2627361365848695139}
+  m_GameObject: {fileID: 2627361365422218202}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2cc12cad080e90742a19f49d4d2b03f9, type: 3}
