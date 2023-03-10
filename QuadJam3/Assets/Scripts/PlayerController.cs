@@ -382,6 +382,7 @@ public class PlayerController : MonoBehaviour
     private void KillPlayer()
     {
         _currentHearts = _maxHearts;
+        transform.position = _spawnPoint.position;
         StartCoroutine(Respawn());
     }
 
