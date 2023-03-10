@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 public class PlayerController : MonoBehaviour
 {
     // Used a lot of this guy's tutorials: https://www.youtube.com/watch?v=AXkaqW3E9OI4
-
+    public float drainTime = 3000.0f;
     [Header("Stats")]
     [SerializeField] private float _moveSpeed = 15f;
     [SerializeField] private int _maxHearts = 5;
@@ -227,6 +227,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             _canUseBoots = true;
+            
+            if (_isGrounded)
+            {
+                // Trigger only once (at the start of the jump) the 
+                // event for upgrade the HUD and activate the power bar
+                // animation
+                HUDEventsManager.EventsHUD.OnJetpackStarted(drainTime); // In milliseconds
+            }
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
@@ -295,7 +303,8 @@ public class PlayerController : MonoBehaviour
         
         _currentHearts -= 1;
         StartCoroutine(AppleKnockback(enemyPos));
-        // HUDEventsManager.EventsHUD.OnHealthChange(currentHearts);
+        // Triggers the HUD health bat to update with the new health value
+        HUDEventsManager.EventsHUD.OnHealthChange(_currentHearts);
         _audioManager.Play("PlayerHit1");
         _audioManager.Play("PlayerHit2");
 
@@ -339,7 +348,8 @@ public class PlayerController : MonoBehaviour
         else
         {
             _jetpackTimer = 0.0f;
-            //HUDEventsManager.EventsHUD.OnJetpackEnded(0.5f);
+            // Triggers the HUD bar to refill from wherever it is
+            HUDEventsManager.EventsHUD.OnJetpackEnded(0.5f);
         }
     }
 
@@ -380,8 +390,9 @@ public class PlayerController : MonoBehaviour
 
     private void ProvideUpgrades()
     {
-        // Need UI to implement the upgrades
-        _upgradeCanvas.SetActive(true);
+        
+        InGameUIManager.Instance.OnModalUpgradeOpen();
+        //_upgradeCanvas.SetActive(true);
         Debug.Log("Can upgrade");
     }
 

@@ -10,6 +10,7 @@ public class ExpHUDController : MonoBehaviour
     [Range(0f, 1f)]
     public float expFill;
     public float expExponent = 1.5f;
+    private float currentExp = 0.0f;
 
     void Start()
     {
@@ -41,7 +42,7 @@ public class ExpHUDController : MonoBehaviour
         if (expFill >= 1f)
         {   
             int excedent = Mathf.RoundToInt(expFill * maxExp - maxExp);
-            // Trigger level up event?
+            InGameUIManager.Instance.OnModalUpgradeOpen();
             int newMaxExp = Mathf.RoundToInt(maxExp * expExponent);
             expFill = excedent / newMaxExp;
         }
