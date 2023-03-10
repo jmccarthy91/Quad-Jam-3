@@ -47,7 +47,11 @@ public class GameManager : MonoBehaviour
         if(isInGame)
         {
             inGameTime += Time.time * gameTimeToRealTime;
-            HUDEventsManager.EventsHUD.OnTimeUpdate(inGameTime);
+            if(HUDEventsManager.EventsHUD != null)
+            {
+                HUDEventsManager.EventsHUD.OnTimeUpdate(inGameTime);
+            }
+            
             Debug.Log(inGameTime);
         }
     }
