@@ -327,6 +327,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator Respawn()
     {
+        GameManager.Instance.inGameTime += Random.Range(3000.0f, 5000.0f);
         _currentState = State.Respawning;
         yield return new WaitForSeconds(0.45f);
         _currentState = State.Normal;
