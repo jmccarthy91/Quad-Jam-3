@@ -194,7 +194,7 @@ public class PlayerController : MonoBehaviour
 
     private void HandleAttack()
     {
-        Collider2D enemyCol = null;
+        Collider2D[] enemyCol = null;
         Collider2D mineralCol = null;
 
         if (Input.GetMouseButtonDown(0))
@@ -204,17 +204,20 @@ public class PlayerController : MonoBehaviour
 
             Vector3 attackDir = new(_cachedDirection * _attackRange, 0.0f, 0.0f);
 
-            enemyCol = Physics2D.OverlapBox(transform.position + attackDir, Vector2.one,
-                angle: 0.0f, _enemyLayer);
+            enemyCol = Physics2D.OverlapBoxAll
+                (transform.position + attackDir, Vector2.one, angle: 0.0f, _enemyLayer);
 
             mineralCol = Physics2D.OverlapBox(transform.position + attackDir, Vector2.one,
                 angle: 0.0f, _mineralLayer);
         }
 
-        if (enemyCol)
+        if (enemyCol != null && enemyCol.Length > 0)
         {
-            enemyCol.GetComponent<EnemyController>().TakeDamage(_attackKnockback);
-            _audioManager.Play("SlimeHit");
+            foreach (var e in enemyCol)
+            {
+                e.GetComponent<EnemyController>().TakeDamage(_attackKnockback);
+                _audioManager.Play("SlimeHit");
+            }
         }
 
         if (mineralCol)
@@ -229,6 +232,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             HUDEventsManager.EventsHUD.OnJetpackStarted(_bootUseLimit);
+
+            _animator.Play(PLAYER_JUMP);
 
             _canUseBoots = true;
         }
