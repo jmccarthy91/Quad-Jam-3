@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
     private const string PLAYER_DASH = "PlayerDash";
     private const string PLAYER_JUMP = "PlayerJump";
     private const string PLAYER_FALL = "PlayerFall";
+    private const string PLAYER_RESPAWN = "PlayerRespawn";
     private const string PLAYER_ATTACK = "Pickaxe";
 
     private enum State
@@ -55,6 +56,7 @@ public class PlayerController : MonoBehaviour
         Normal,
         Rolling,
         Attacking,
+        Respawning
     }
 
     private Rigidbody2D _rb = null;
@@ -75,9 +77,8 @@ public class PlayerController : MonoBehaviour
     private bool _shouldMove = true;
     private bool _isRolling = false;
     private bool _isInvulnerable = false;
-    private bool _engineIsOn = false;
     private bool _canUseBoots = false;
-    private bool _inAir;
+    private bool _inAir = false;
 
     private int _currentHearts;
 
@@ -94,8 +95,6 @@ public class PlayerController : MonoBehaviour
         _currentAnimationState = PLAYER_IDLE;
 
         _cachedDirection = 1;
-
-        _engineIsOn = false;
     }
 
     private void Start()
@@ -111,8 +110,17 @@ public class PlayerController : MonoBehaviour
         CheckGrounded();
         HandleAttack();
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            StartCoroutine(Respawn());
+        }
+
         switch (_currentState)
         {
+            case State.Respawning:
+                _animator.Play(PLAYER_RESPAWN);
+                break;
+
             case State.Normal:
                 // move WASD
                 HandleMovement();
@@ -310,12 +318,14 @@ public class PlayerController : MonoBehaviour
         _isInvulnerable = false;
     }
 
-    private void Respawn()
+    private IEnumerator Respawn()
     {
-        gameObject.SetActive(false);
         transform.position = _spawnPoint.position;
         _audioManager.Play("Respawn");
-        gameObject.SetActive(true);
+
+        _currentState = State.Respawning;
+        yield return new WaitForSeconds(0.45f);
+        _currentState = State.Normal;
     }
 
     private void CheckGrounded()
