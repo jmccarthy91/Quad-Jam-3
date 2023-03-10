@@ -110,11 +110,6 @@ public class PlayerController : MonoBehaviour
         CheckGrounded();
         HandleAttack();
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            StartCoroutine(Respawn());
-        }
-
         CheckDeath();
 
         switch (_currentState)
@@ -332,7 +327,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator Respawn()
     {
-        GameManager.Instance.inGameTime += Random.Range(3000.0f, 5000.0f);
+        GameManager.Instance.inGameTime += Random.Range(12.0f, 20.0f);
         _currentState = State.Respawning;
         yield return new WaitForSeconds(0.45f);
         _currentState = State.Normal;
