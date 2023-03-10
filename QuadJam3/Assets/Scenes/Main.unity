@@ -18607,6 +18607,11 @@ MonoBehaviour:
     volume: 1
     loop: 0
     source: {fileID: 0}
+  - name: Roll
+    clip: {fileID: 8300000, guid: 128b372abb07c22498698984156261a3, type: 3}
+    volume: 0.05
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1699570602
 Transform:
   m_ObjectHideFlags: 0
