@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     {   
         if(isInGame)
         {
-          inGameTime = Time.time * gameTimeToRealTime;
+            inGameTime = Time.time * gameTimeToRealTime;
         }
     }
 
@@ -54,7 +54,5 @@ public class GameManager : MonoBehaviour
         gameHasEnded = false;
         inGameTime = 0.0f;
         isInGame = true;
-        
-        
     }
 }

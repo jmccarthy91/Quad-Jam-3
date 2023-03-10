@@ -212,6 +212,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModalUpgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 1501389990096103766, guid: 9405d0b23432b41398745f150d254090, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9405d0b23432b41398745f150d254090, type: 3}
 --- !u!224 &2627361365422218201 stripped
