@@ -4,7 +4,6 @@ public class CameraController : MonoBehaviour
 {
     [Header("Camera Data")]
     [SerializeField] private Vector3 _offset = Vector3.zero;
-    [SerializeField] private float _dampSpeed = 0.0f;
      
     [Header("Other")]
     [SerializeField] private Transform _player;

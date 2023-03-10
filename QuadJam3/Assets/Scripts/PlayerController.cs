@@ -82,8 +82,6 @@ public class PlayerController : MonoBehaviour
 
     private int _currentHearts;
 
-    private string _currentAnimationState = "";
-
     private void Awake()
     {
         _currentHearts = _maxHearts;
@@ -92,7 +90,6 @@ public class PlayerController : MonoBehaviour
         _audioManager = FindObjectOfType<AudioManager>();
 
         _currentState = State.Normal;
-        _currentAnimationState = PLAYER_IDLE;
 
         _cachedDirection = 1;
     }
@@ -115,9 +112,13 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(Respawn());
         }
 
+        CheckDeath();
+
         switch (_currentState)
         {
             case State.Respawning:
+                _currentHearts = _maxHearts;
+                _audioManager.Play("Respawn");
                 _animator.Play(PLAYER_RESPAWN);
                 break;
 
@@ -129,8 +130,8 @@ public class PlayerController : MonoBehaviour
                 // initiate roll on left shift
                 InitiateRoll();
                 break;
-                        
-                // roll & end roll
+
+            // roll & end roll
             case State.Rolling:
                 _animator.Play(PLAYER_DASH);
                 Roll();
@@ -320,9 +321,6 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator Respawn()
     {
-        transform.position = _spawnPoint.position;
-        _audioManager.Play("Respawn");
-
         _currentState = State.Respawning;
         yield return new WaitForSeconds(0.45f);
         _currentState = State.Normal;
@@ -345,16 +343,6 @@ public class PlayerController : MonoBehaviour
 
     public bool IsGrounded() => _isGrounded;
 
-    private void SetAnimationState(string newState)
-    {
-        if (_currentAnimationState == newState)
-            return;
-
-        _currentAnimationState = newState;
-
-        _animator.Play(newState);
-    }
-
     private void HandlePlayerFlip(float dir)
     {
         Vector3 scale = transform.localScale;
@@ -371,6 +359,16 @@ public class PlayerController : MonoBehaviour
         }
 
         transform.localScale = scale;
+    }
+
+    private void CheckDeath()
+    {
+        if (_currentHearts == 0)
+        {
+            _rb.velocity = Vector2.zero;
+            transform.position = _spawnPoint.position;
+            StartCoroutine(Respawn());
+        }
     }
 
     private void ProvideUpgrades()
