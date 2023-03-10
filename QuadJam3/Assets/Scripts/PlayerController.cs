@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
@@ -120,6 +121,7 @@ public class PlayerController : MonoBehaviour
         {
             case State.Respawning:
                 _currentHearts = _maxHearts;
+                HUDEventsManager.EventsHUD.OnHealthChange(_currentHearts);
                 _audioManager.Play("Respawn");
                 _animator.Play(PLAYER_RESPAWN);
                 break;
@@ -226,6 +228,8 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
+            HUDEventsManager.EventsHUD.OnJetpackStarted(_bootUseLimit);
+
             _canUseBoots = true;
         }
         else if (Input.GetKeyUp(KeyCode.Space))
@@ -295,7 +299,7 @@ public class PlayerController : MonoBehaviour
         
         _currentHearts -= 1;
         StartCoroutine(AppleKnockback(enemyPos));
-        // HUDEventsManager.EventsHUD.OnHealthChange(currentHearts);
+        HUDEventsManager.EventsHUD.OnHealthChange(_currentHearts);
         _audioManager.Play("PlayerHit1");
         _audioManager.Play("PlayerHit2");
 
@@ -339,7 +343,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             _jetpackTimer = 0.0f;
-            //HUDEventsManager.EventsHUD.OnJetpackEnded(0.5f);
+            HUDEventsManager.EventsHUD.OnJetpackEnded(0.5f);
         }
     }
 
@@ -367,9 +371,11 @@ public class PlayerController : MonoBehaviour
     {
         if (_currentHearts == 0)
         {
-            _rb.velocity = Vector2.zero;
-            transform.position = _spawnPoint.position;
-            StartCoroutine(Respawn());
+            //_rb.velocity = Vector2.zero;
+            //transform.position = _spawnPoint.position;
+            //StartCoroutine(Respawn());
+
+            ScenesManager.LoadGameOver();
         }
     }
 

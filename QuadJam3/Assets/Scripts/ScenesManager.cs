@@ -6,7 +6,7 @@ public class ScenesManager : MonoBehaviour
 
     public const string mainMenuSceneName = "MainMenu";
     public const string gameSceneName = "Main";
-    public const string gameOverSceneName = "GameOver";
+    public const string gameOverSceneName = "EndMenu";
 
     void Awake()
     {

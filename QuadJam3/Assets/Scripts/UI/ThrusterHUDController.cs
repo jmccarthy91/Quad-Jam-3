@@ -25,7 +25,7 @@ public class ThrusterHUDController : MonoBehaviour
         if (isFilling)
         {
             isDraining = false;
-            RefillFuel(maxFlightTime * 1000); // I had it 1500 miliseconds. Check values
+            RefillFuel(maxFlightTime * 1500); // I had it 1500 miliseconds. Check values
             if (tankFill >= 1f)
             {
                 tankFill = 1f;
@@ -35,7 +35,7 @@ public class ThrusterHUDController : MonoBehaviour
         else if (isDraining)
         {
             isFilling = false;
-            DrainFuel(refillTime);
+            DrainFuel(refillTime * 2000);
             if (tankFill <= 0f)
             {
                 tankFill = 0f;
