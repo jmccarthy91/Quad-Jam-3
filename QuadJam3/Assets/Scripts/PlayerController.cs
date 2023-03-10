@@ -395,7 +395,7 @@ public class PlayerController : MonoBehaviour
     private void UpgradePickaxe()
     {
         Debug.Log("Pickaxe Upgraded!");
-        _knockbackAmount += _knockbackUpgrade;
+        _attackKnockback += _knockbackUpgrade;
         _upgradeCanvas.SetActive(false);
     }
 
