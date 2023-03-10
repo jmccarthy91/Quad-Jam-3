@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,7 +103,1057 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_0
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 906
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f966899b04c638c4885b5f36ceba9427
+      internalID: -1433398817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_1
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 906
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658d4382008a9434081c94623ed7580e
+      internalID: -1381839251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_2
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 906
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b261b29c7ff2854cad9d746e0e78bda
+      internalID: 1232399140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_3
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 906
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a025e5d7b64fead40815ebcfe93604dd
+      internalID: -829058353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_4
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 906
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3377217c8f259ea478dd693c84c9250a
+      internalID: -489681252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_5
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 906
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313dba36f0f6cdd4ca995f4f423978b2
+      internalID: -2037406720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_6
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 906
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a1d911b1b871c40866b48cb0ce749e
+      internalID: 18751934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_7
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 906
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be91aea03eae9244a6ad1e77d73b2da
+      internalID: -1032888789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 755
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a1fc328f0e85ab4f90471ffc6e265b2
+      internalID: 1161025677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_9
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 755
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc4ad61d01fd65b44a8995d6b4adb029
+      internalID: 489353798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_10
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 755
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2465d40a4be65b4c8bb0e591f87cb61
+      internalID: 1089593272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_11
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 755
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f9aa076704b2a041adc86144c9dbe29
+      internalID: 54153770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_12
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 755
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607bcf5797245ee47b376e85f49b4faf
+      internalID: 1319681923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_13
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 755
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d07c6af0acf15ed409a20847319e0ff6
+      internalID: -1141377736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_14
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 755
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6823bd4332b86394ca90c7eb14278f17
+      internalID: 320043808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_15
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 755
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9938f88736ce37d4f978d4e4f6162425
+      internalID: -447487662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_16
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 755
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94649df2eb3a29a47903fe9eeaacd33f
+      internalID: -1845004650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 604
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d4d196783449c4faa6a79cbc9ad7f0
+      internalID: -349148818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_18
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 604
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d933cabc3caa0b46a6e25e77ebf413e
+      internalID: -156851570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_19
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 604
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20eeb93698b9ac4fa3c4a4a4706c37d
+      internalID: -946573770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_20
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 604
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55c7d4211df55a4698781aac2b3f00d
+      internalID: -1099713553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_21
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 604
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 939e4268c46d1ab4abc1b3b79715dd9a
+      internalID: 988189594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_22
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 604
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e0890523d62d0e42b474919f44f61df
+      internalID: -2075170601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_23
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 604
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2d5f8fbb91758478923b4e9dec55a8
+      internalID: 1974347408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_24
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 604
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301f8220b2e6d1f43907ef69e25a9b18
+      internalID: -157999891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_25
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 604
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c58b3b7c33fa442b8b46ae82d80b0b
+      internalID: -1461862467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 453
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dab2e1eec3ea9204cb971f7323af715d
+      internalID: -754644261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_27
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 453
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c45c4d560b0cdf04da17720b68b05c1c
+      internalID: -1212529765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_28
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 453
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3bc76160385120488979a3802683a72
+      internalID: -1699992529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_29
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 453
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3ab6efa93c7b44089f69211aaae5bc
+      internalID: -803342808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_30
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 453
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8f46ceab5432a49a347f7ff8a331f9
+      internalID: 101540464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_31
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 453
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ace728905557547aa8885196ddb9a2
+      internalID: -569079858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_32
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 453
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801f9df7a1e43df4fba032c816c0c05d
+      internalID: 91901456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_33
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 453
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa12cde0eb7ac6b4b962aca57a0d60aa
+      internalID: -906364131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_34
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 453
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c29b2b262b8d54395055d3a3d74ed2
+      internalID: 270575964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 302
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b43406c9811e3bf4098f71813e4ed6f1
+      internalID: 482695772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_36
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 302
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1744f92448300554c9cd13861939f957
+      internalID: 298133044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_37
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 302
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd8e66d3517baa43af8a0bcc8c3e273
+      internalID: -1246038406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_38
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 302
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4fbf9abc1b609c46b54cd420703661a
+      internalID: 1855337280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_39
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 302
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7189b45a746df8f4ca2784c9f16b784c
+      internalID: 1847567887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_40
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 302
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8d0c12e8d7af14397f4acfce913e84
+      internalID: -1806534614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_41
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 302
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17966973e342ddd4db8638172a28e03f
+      internalID: -1119910160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_42
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 302
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4be13d199bec64a4581ae36ef562f27e
+      internalID: 1628091283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_43
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 302
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d58de5944e805e41848b89fecb89c7f
+      internalID: 316479353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 151
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39aba721f5f88f4d91a3c322c80bc78
+      internalID: 833210515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_45
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 151
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b446e4318519741bcd960bb2ebc1d1
+      internalID: 1824582675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_46
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 151
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d68007c8be96847aca509d171c15ec
+      internalID: -286107053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_47
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 151
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a7658f7a62c954c8eecae38c9df126
+      internalID: 2002811372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 906
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038db83925ec49844b152c9e6caf427d
+      internalID: -769501072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spark-60frame-player-left_111x151_49
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 151
+        width: 111
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2a40bab96bdf44bb89577e7d60fd87
+      internalID: 762785797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +1164,57 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spark-60frame-player-left_111x151_49: 762785797
+      spark-60frame-player-left_111x151_6: 18751934
+      spark-60frame-player-left_111x151_11: 54153770
+      spark-60frame-player-left_111x151_4: -489681252
+      spark-60frame-player-left_111x151_24: -157999891
+      spark-60frame-player-left_111x151_38: 1855337280
+      spark-60frame-player-left_111x151_0: -1433398817
+      spark-60frame-player-left_111x151_7: -1032888789
+      spark-60frame-player-left_111x151_32: 91901456
+      spark-60frame-player-left_111x151_27: -1212529765
+      spark-60frame-player-left_111x151_33: -906364131
+      spark-60frame-player-left_111x151_47: 2002811372
+      spark-60frame-player-left_111x151_16: -1845004650
+      spark-60frame-player-left_111x151_41: -1119910160
+      spark-60frame-player-left_111x151_35: 482695772
+      spark-60frame-player-left_111x151_3: -829058353
+      spark-60frame-player-left_111x151_10: 1089593272
+      spark-60frame-player-left_111x151_9: 489353798
+      spark-60frame-player-left_111x151_8: 1161025677
+      spark-60frame-player-left_111x151_29: -803342808
+      spark-60frame-player-left_111x151_42: 1628091283
+      spark-60frame-player-left_111x151_36: 298133044
+      spark-60frame-player-left_111x151_40: -1806534614
+      spark-60frame-player-left_111x151_23: 1974347408
+      spark-60frame-player-left_111x151_17: -349148818
+      spark-60frame-player-left_111x151_45: 1824582675
+      spark-60frame-player-left_111x151_48: -769501072
+      spark-60frame-player-left_111x151_39: 1847567887
+      spark-60frame-player-left_111x151_46: -286107053
+      spark-60frame-player-left_111x151_26: -754644261
+      spark-60frame-player-left_111x151_13: -1141377736
+      spark-60frame-player-left_111x151_28: -1699992529
+      spark-60frame-player-left_111x151_18: -156851570
+      spark-60frame-player-left_111x151_31: -569079858
+      spark-60frame-player-left_111x151_5: -2037406720
+      spark-60frame-player-left_111x151_2: 1232399140
+      spark-60frame-player-left_111x151_1: -1381839251
+      spark-60frame-player-left_111x151_12: 1319681923
+      spark-60frame-player-left_111x151_15: -447487662
+      spark-60frame-player-left_111x151_14: 320043808
+      spark-60frame-player-left_111x151_30: 101540464
+      spark-60frame-player-left_111x151_37: -1246038406
+      spark-60frame-player-left_111x151_21: 988189594
+      spark-60frame-player-left_111x151_19: -946573770
+      spark-60frame-player-left_111x151_20: -1099713553
+      spark-60frame-player-left_111x151_34: 270575964
+      spark-60frame-player-left_111x151_44: 833210515
+      spark-60frame-player-left_111x151_25: -1461862467
+      spark-60frame-player-left_111x151_43: 316479353
+      spark-60frame-player-left_111x151_22: -2075170601
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
