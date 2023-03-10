@@ -548,7 +548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &92236155206597520
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1565,10 +1565,21 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Theme music: by Kim Lightning at Pixabay
+  m_Text: 'Programming: Callum
 
-    Game Over music: by Kim
-    Lightning at Pixabay
+    Art: TheAtrxcity
+
+    UI: Serlecu
+
+    Production
+    & Design: Lfnt
+
+
+
+    Theme music: by Kim Lightning at Pixabay
+
+    Game Over
+    music: by Kim Lightning at Pixabay
 
     SFX: by SwishSwoosh on Unity Asset Store
 

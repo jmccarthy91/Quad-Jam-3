@@ -367,9 +367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a497943ef3a345bba24248370dba457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuSceneName: MainMenu
-  gameSceneName: Main
-  gameOverSceneName: EndMenu
 --- !u!1 &2075926397
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,8 +479,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 21999903536221569, guid: ce980430e00904dbeaffb33aa7d04afa, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 499.15
+      objectReference: {fileID: 0}
     - target: {fileID: 1893206044878207798, guid: ce980430e00904dbeaffb33aa7d04afa, type: 3}
       propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4134267908268011052, guid: ce980430e00904dbeaffb33aa7d04afa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276856185703133123, guid: ce980430e00904dbeaffb33aa7d04afa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733219742893567832, guid: ce980430e00904dbeaffb33aa7d04afa, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4957628086505143619, guid: ce980430e00904dbeaffb33aa7d04afa, type: 3}
@@ -493,6 +506,10 @@ PrefabInstance:
     - target: {fileID: 4957628086505143619, guid: ce980430e00904dbeaffb33aa7d04afa, type: 3}
       propertyPath: m_SortingLayerID
       value: 730046175
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985600673307321147, guid: ce980430e00904dbeaffb33aa7d04afa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 8192744716951157850, guid: ce980430e00904dbeaffb33aa7d04afa, type: 3}
       propertyPath: m_Name
