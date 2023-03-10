@@ -390,8 +390,9 @@ public class PlayerController : MonoBehaviour
 
     private void ProvideUpgrades()
     {
-        // Need UI to implement the upgrades
-        _upgradeCanvas.SetActive(true);
+        
+        InGameUIManager.Instance.OnModalUpgradeOpen();
+        //_upgradeCanvas.SetActive(true);
         Debug.Log("Can upgrade");
     }
 
