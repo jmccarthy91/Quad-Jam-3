@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 50
   _stoppingDistance: 0.75
-  _knockbackUp: 25
+  _knockbackUp: 5
   _deathDepth: -20
   _groundCheckLength: 0.75
   _health: 99

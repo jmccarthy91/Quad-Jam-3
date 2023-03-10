@@ -287,7 +287,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 5
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -305,21 +305,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b302a56f31e4f6c4b9cb5d426da9c752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 250
-  maxHearts: 5
+  _moveSpeed: 250
+  _maxHearts: 5
   _attackRange: 1
   _knockbackAmount: 10
   _attackKnockback: 5
   rollSpeedMax: 1250
-  _bootForce: 75
-  _bootUseLimit: 0.5
-  iFramesDuration: 1
-  numFlashes: 3
+  _bootForce: 25
+  _bootUseLimit: 1
+  _bootForceUpgrade: 0
+  _knockbackUpgrade: 0
+  _iFramesDuration: 1
+  _numFlashes: 3
   _spriteRenderer: {fileID: 8690519420507858638}
   _animator: {fileID: 8690519420507858637}
   _pickaxeAnimator: {fileID: 8690519419183001967}
   _spawnPoint: {fileID: 0}
-  _groundCheckLength: 0.75
+  _groundCheckLength: 0.65
   _floorLayer:
     serializedVersion: 2
     m_Bits: 128

@@ -8,7 +8,6 @@ public class MiningNode : MonoBehaviour
     public void Hit()
     {
         _health--;
-        // Debug.Log("[MiningNode]: Mineral hit\tRemaining health: " + _health);
 
         if (_health < 1)
         {
@@ -18,8 +17,9 @@ public class MiningNode : MonoBehaviour
 
     private void Mined()
     {
-        Destroy(gameObject);
+        EventManager.Current.MineralMined();
         FindObjectOfType<AudioManager>().Play("MineralFinish");
         Debug.Log("[MineralNode]: Mineral Mined.");
+        Destroy(gameObject);
     }
 }

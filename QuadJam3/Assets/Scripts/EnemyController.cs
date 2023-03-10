@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class EnemyController : MonoBehaviour
 {
@@ -103,7 +102,7 @@ public class EnemyController : MonoBehaviour
         _shouldMove = false;
 
         _rb.velocity = Vector2.zero;
-        _rb.AddForce(new Vector2(-Mathf.Sign(_moveDirection.x) * amount, 5.0f),
+        _rb.AddForce(new Vector2(-Mathf.Sign(_moveDirection.x) * amount, _knockbackUp),
             ForceMode2D.Impulse);
 
         yield return new WaitForSeconds(0.25f);

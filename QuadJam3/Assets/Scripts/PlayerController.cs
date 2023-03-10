@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour
     // Used a lot of this guy's tutorials: https://www.youtube.com/watch?v=AXkaqW3E9OI4
 
     [Header("Stats")]
-    [SerializeField] private float moveSpeed = 15f;
-    [SerializeField] private int maxHearts = 5;
+    [SerializeField] private float _moveSpeed = 15f;
+    [SerializeField] private int _maxHearts = 5;
 
     [Header("Combat")]
     [SerializeField] private float _attackRange = 3f;
@@ -17,18 +17,18 @@ public class PlayerController : MonoBehaviour
     
     [Header("Roll")]
     [SerializeField] private float rollSpeedMax = 150f;
-    private float rollSpeedMinimum = 50f;
-    private float rollSpeedDropMultiplier = 5f;
-    private float rollSpeed = 0.0f;
-
+    
     [Header("Boots")]
     [SerializeField] private float _bootForce = 40f;      //jetpack tutorials https://www.youtube.com/watch?v=gJilpepn3gw
     [SerializeField] private float _bootUseLimit = 0.0f;
-    private bool engineIsOn; 
+
+    [Header("Upgrades")]
+    [SerializeField] private float _bootForceUpgrade = 0.0f;
+    [SerializeField] private float _knockbackUpgrade = 0.0f;
         
     [Header("iframes")]
-    [SerializeField] private float iFramesDuration = 1f;
-    [SerializeField] private int numFlashes = 3;
+    [SerializeField] private float _iFramesDuration = 1f;
+    [SerializeField] private int _numFlashes = 3;
     
     [Header("Components")]
     [SerializeField] private SpriteRenderer _spriteRenderer;
@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private Rigidbody2D _rb = null;
-    private Camera _camera = null;
+    private AudioManager _audioManager = null;
 
     private Vector2 moveDirection;
     private Vector2 rollDirection;
@@ -66,29 +66,40 @@ public class PlayerController : MonoBehaviour
 
     private float _jetpackTimer = 0.0f;
     private float _cachedDirection = 0.0f;
+    private float _rollSpeedMinimum = 50f;
+    private float _rollSpeedDropMultiplier = 5f;
+    private float _rollSpeed = 0.0f;
 
     private bool _isGrounded = false;
     private bool _shouldMove = true;
     private bool _isRolling = false;
     private bool _isInvulnerable = false;
+    private bool _engineIsOn = false;
+    private bool _canUseBoots = false;
+    private bool _inAir;
 
-    private int currentHearts;
+    private int _currentHearts;
 
     private string _currentAnimationState = "";
 
     private void Awake()
     {
-        currentHearts = maxHearts;
+        _currentHearts = _maxHearts;
         
         _rb = GetComponent<Rigidbody2D>();
-        _camera = Camera.main;
+        _audioManager = FindObjectOfType<AudioManager>();
 
         _currentState = State.Normal;
         _currentAnimationState = PLAYER_IDLE;
 
         _cachedDirection = 1;
 
-        engineIsOn = false;
+        _engineIsOn = false;
+    }
+
+    private void Start()
+    {
+        EventManager.Current.OnMineralMined += ProvideUpgrades;
     }
 
     private void Update()
@@ -122,14 +133,17 @@ public class PlayerController : MonoBehaviour
             case State.Normal:
                 Move();
 
-                if (engineIsOn)
+                if (_canUseBoots && _jetpackTimer <= _bootUseLimit)
                 {
-                    _rb.AddForce(Vector2.up * _bootForce * Time.fixedDeltaTime, ForceMode2D.Force);
+                    _jetpackTimer += Time.deltaTime;
+
+                    //_rb.velocity += new Vector2(0.0f, 1.0f * _bootForce * Time.fixedDeltaTime);
+                    _rb.AddForce(Vector2.up * _bootForce, ForceMode2D.Force);
                 }
                 break;
 
             case State.Rolling:
-                _rb.velocity = new Vector2(rollDirection.x * rollSpeed * Time.fixedDeltaTime, _rb.velocity.y);
+                _rb.velocity = new Vector2(rollDirection.x * _rollSpeed * Time.fixedDeltaTime, _rb.velocity.y);
                 break;
         }
     }
@@ -157,7 +171,7 @@ public class PlayerController : MonoBehaviour
     {
         if (_shouldMove)
         {
-            _rb.velocity = new Vector2(moveDirection.x * moveSpeed * Time.fixedDeltaTime, _rb.velocity.y);
+            _rb.velocity = new Vector2(moveDirection.x * _moveSpeed * Time.fixedDeltaTime, _rb.velocity.y);
         }
     }
 
@@ -169,7 +183,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             _pickaxeAnimator.Play(PLAYER_ATTACK);
-            // FindObjectOfType<AudioManager>().Play("PickSwing");
+            _audioManager.Play("PickSwing");
 
             Vector3 attackDir = new(_cachedDirection * _attackRange, 0.0f, 0.0f);
 
@@ -183,38 +197,39 @@ public class PlayerController : MonoBehaviour
         if (enemyCol)
         {
             enemyCol.GetComponent<EnemyController>().TakeDamage(_attackKnockback);
-            // FindObjectOfType<AudioManager>().Play("SlimeHit");
+            _audioManager.Play("SlimeHit");
         }
 
         if (mineralCol)
         {
+            _audioManager.Play("MineralHit");
             mineralCol.GetComponent<MiningNode>().Hit();
-            // FindObjectOfType<AudioManager>().Play("MineralHit");
         }
     }
 
     private void HandleJetpack()
     {
-        if (Input.GetKey(KeyCode.Space) && _jetpackTimer < _bootUseLimit)
+        if (Input.GetKey(KeyCode.Space))
         {
-            if(!engineIsOn)
-            {
-                // HUDEventsManager.EventsHUD.OnJetpackStarted(0.5f);
-            }
-            engineIsOn = true;
-            // FindObjectOfType<AudioManager>().Play("RocketBoots");
-
-            _jetpackTimer += Time.deltaTime;
-
-            if (_jetpackTimer >= _bootUseLimit)
-            {
-                _jetpackTimer = 0.0f;
-            }
+            _canUseBoots = true;
         }
-        else
+        else if (Input.GetKeyUp(KeyCode.Space))
         {
-            engineIsOn = false;
+            _canUseBoots = false;
         }
+
+        if (_jetpackTimer >= _bootUseLimit && !_inAir)
+        {
+            if (!_isGrounded)
+            {
+                _inAir = true;
+            }
+
+            _jetpackTimer = 0.0f;
+        }
+
+        if (_isGrounded)
+            _inAir = false;
     }
 
     private IEnumerator AppleKnockback(Vector2 direction)
@@ -238,7 +253,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && IsGrounded())
         {
             rollDirection = lastMoveDirection;
-            rollSpeed = rollSpeedMax;
+            _rollSpeed = rollSpeedMax;
             _currentState = State.Rolling;
         }
     }
@@ -246,12 +261,12 @@ public class PlayerController : MonoBehaviour
     private void Roll()
     {
         _isInvulnerable = true;
-        // FindObjectOfType<AudioManager>().Play("Roll");
+        _audioManager.Play("Roll");
 
         //degrade roll speed
-        rollSpeed -= rollSpeed * rollSpeedDropMultiplier * Time.deltaTime;
+        _rollSpeed -= _rollSpeed * _rollSpeedDropMultiplier * Time.deltaTime;
 
-        if(rollSpeed < rollSpeedMinimum)
+        if(_rollSpeed < _rollSpeedMinimum)
         {
             _isInvulnerable = false;
             _currentState = State.Normal;
@@ -263,13 +278,13 @@ public class PlayerController : MonoBehaviour
         if (_isInvulnerable)
             return;
         
-        currentHearts -= 1;
+        _currentHearts -= 1;
         StartCoroutine(AppleKnockback(enemyPos));
         // HUDEventsManager.EventsHUD.OnHealthChange(currentHearts);
-        // FindObjectOfType<AudioManager>().Play("PlayerHit1");
-        // FindObjectOfType<AudioManager>().Play("PlayerHit2");
+        _audioManager.Play("PlayerHit1");
+        _audioManager.Play("PlayerHit2");
 
-        if (currentHearts >= 0)
+        if (_currentHearts >= 0)
         {
             StartCoroutine(Invulnerability());
         }
@@ -280,12 +295,12 @@ public class PlayerController : MonoBehaviour
         _isInvulnerable = true;
 
         //flash red a few times
-        for (int i = 0; i < numFlashes; i++)
+        for (int i = 0; i < _numFlashes; i++)
         {
             _spriteRenderer.color = new Color(1, 0, 0, 0.5f);
-            yield return new WaitForSeconds(iFramesDuration / (numFlashes * 2));
+            yield return new WaitForSeconds(_iFramesDuration / (_numFlashes * 2));
             _spriteRenderer.color = Color.white;
-            yield return new WaitForSeconds(iFramesDuration / (numFlashes * 2));
+            yield return new WaitForSeconds(_iFramesDuration / (_numFlashes * 2));
         }
 
         _isInvulnerable = false;
@@ -295,7 +310,7 @@ public class PlayerController : MonoBehaviour
     {
         gameObject.SetActive(false);
         transform.position = _spawnPoint.position;
-        //  FindObjectOfType<AudioManager>().Play("Respawn");
+        _audioManager.Play("Respawn");
         gameObject.SetActive(true);
     }
 
@@ -306,19 +321,9 @@ public class PlayerController : MonoBehaviour
         if (!_isGrounded)
         {
             _jetpackTimer += Time.deltaTime;
-
-            if (_rb.velocity.y > 0)
-            {
-
-            }
-            else
-            {
-
-            }
         }
         else
         {
-
             _jetpackTimer = 0.0f;
             //HUDEventsManager.EventsHUD.OnJetpackEnded(0.5f);
         }
@@ -352,6 +357,19 @@ public class PlayerController : MonoBehaviour
         }
 
         transform.localScale = scale;
+    }
+
+    private void ProvideUpgrades()
+    {
+        // Need UI to implement the upgrades
+
+        // Knockback upgrade template
+        // _knockbackAmount += _knockbackUpgrade;
+
+        // Boot force upgrade template
+        // _bootForce += _bootForceUpgrade;
+
+        Debug.Log("Can upgrade");
     }
 
     private void OnDrawGizmos()
