@@ -7,8 +7,7 @@ public class GameManager : MonoBehaviour
 
     bool gameHasEnded = false;
     public float inGameTime;
-    float gameTimeToRealTime = 525600;      // # of minutes in a year, 1 minute of real time = 1 year of in game time
-
+    [SerializeField]  float gameTimeToRealTime = 15;      // # of real seconds = 1 year in game
     private bool isInGame = false;
 
     private void Awake()
@@ -46,10 +45,10 @@ public class GameManager : MonoBehaviour
       Debug.Log(isInGame);
         if(isInGame)
         {
-            inGameTime += Time.time * gameTimeToRealTime;
+            inGameTime += Time.deltaTime;
             if(HUDEventsManager.EventsHUD != null)
             {
-                HUDEventsManager.EventsHUD.OnTimeUpdate(inGameTime);
+                HUDEventsManager.EventsHUD.OnTimeUpdate(inGameTime * gameTimeToRealTime);
             }
             
             Debug.Log(inGameTime);

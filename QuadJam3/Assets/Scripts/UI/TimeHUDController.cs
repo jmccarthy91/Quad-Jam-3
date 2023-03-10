@@ -11,8 +11,6 @@ public class TimeHUDController : MonoBehaviour
     private int month = 1;
     private int day = 1;
 
-    private float timeScale = 0.00001f;
-
     void Start()
     {
         HUDEventsManager.EventsHUD.onTimeUpdate += OnTimeUpdate;
@@ -36,18 +34,11 @@ public class TimeHUDController : MonoBehaviour
     void UpdateHomeDate( float time )
     {
         //time = Time.fixedDeltaTime * timeScale;
-        time = time * timeScale;
-        day = day + (int)(time);
-        if (day > 30) // skip 30/31 variation
-        {
-            month++;
-            day = 1;
-        }
-        if (month > 12)
-        {
-            year++;
-            month = 1;
-        }
+        day = (int)(time) % 30;
+        month = ((int)(time) / 30) % 12;
+        year = (int)(time) / 365;
+        Debug.Log(day);
+        
 
         timer.text = string.Format("{0:0000} {1:00} {2:00}", year, month, day);
     }
