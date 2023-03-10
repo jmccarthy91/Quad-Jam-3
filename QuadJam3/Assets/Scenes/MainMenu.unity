@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuSceneName: MainMenu
-  gameSceneName: GameLevel
+  gameSceneName: Sandbox2D
   gameOverSceneName: EndMenu
 --- !u!1 &2075926397
 GameObject:
