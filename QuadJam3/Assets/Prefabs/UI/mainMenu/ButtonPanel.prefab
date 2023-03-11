@@ -103,7 +103,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970828280361885781}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -204,7 +204,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 764438689
   m_SortingLayer: 5
-  m_SortingOrder: 2
+  m_SortingOrder: 3
 --- !u!1 &1970828280413202957
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,7 +363,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 764438689
   m_SortingLayer: 5
-  m_SortingOrder: 2
+  m_SortingOrder: 3
 --- !u!1 &1970828280431583133
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1970828280431583132
 RectTransform:
   m_ObjectHideFlags: 0
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970828280431583133}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -486,7 +486,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1970828280431583122}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
+        m_MethodName: OnMainClose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
+        m_MethodName: OnSettingsOpen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!210 &7258648287633608105
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -497,7 +521,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 764438689
   m_SortingLayer: 5
-  m_SortingOrder: 2
+  m_SortingOrder: 0
 --- !u!1 &1970828280524551474
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,6 +855,7 @@ GameObject:
   - component: {fileID: 1970828281989823661}
   - component: {fileID: 1970828281989823662}
   - component: {fileID: 5323933920355437386}
+  - component: {fileID: 2996898958892326209}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -874,7 +899,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970828281989823656}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -940,7 +965,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1970828281989823661}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
+        m_MethodName: OnMainClose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
+        m_MethodName: OnCreditsOpen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!210 &5323933920355437386
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -951,7 +1000,19 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 764438689
   m_SortingLayer: 5
-  m_SortingOrder: 2
+  m_SortingOrder: 3
+--- !u!114 &2996898958892326209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970828281989823656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df305a92fbae6448f9367f0658c7dfaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3117746927261132726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,7 +1151,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 764438689
   m_SortingLayer: 5
-  m_SortingOrder: 2
+  m_SortingOrder: 1
 --- !u!1 &6355730316583776936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,4 +1239,4 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 764438689
   m_SortingLayer: 5
-  m_SortingOrder: 1
+  m_SortingOrder: 0

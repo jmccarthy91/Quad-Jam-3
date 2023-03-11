@@ -42,7 +42,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {   
-      Debug.Log(isInGame);
         if(isInGame)
         {
             inGameTime += Time.deltaTime;
