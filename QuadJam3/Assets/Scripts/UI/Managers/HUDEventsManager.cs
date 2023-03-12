@@ -63,6 +63,15 @@ public class HUDEventsManager : MonoBehaviour
       }
     }
 
+    public event Action<float> onJetpackChanged;
+    public void OnJetpackChanged(float newValue)
+    {
+      if (onJetpackChanged != null)
+      {
+        onJetpackChanged(newValue);
+      }
+    }
+
     public event Action<float> onTimeUpdate;
     public void OnTimeUpdate(float currentTime)
     {
