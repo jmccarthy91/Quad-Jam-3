@@ -71,6 +71,7 @@ public class PlayerController : MonoBehaviour
     private float _jetpackTimer = 0.0f;
     private float _jetpackFuel = 1.5f; // seconds
     private float _jetpackMaxFuel = 1.5f; // seconds
+    private float _jetpackFuelUpgrade = 1.0f; // seconds
     private float _cachedDirection = 0.0f;
     private float _rollSpeedMinimum = 50f;
     private float _rollSpeedDropMultiplier = 5f;
@@ -451,7 +452,8 @@ public class PlayerController : MonoBehaviour
     private void UpgradeBoots()
     {
         Debug.Log("Boots Upgraded!");
-        _bootForce += _bootForceUpgrade;
+        //_bootForce += _bootForceUpgrade; // Using time instead of force
+        _jetpackMaxFuel += _jetpackFuelUpgrade;
         _upgradeCanvas.SetActive(false);
     }
 
