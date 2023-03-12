@@ -69,6 +69,8 @@ public class PlayerController : MonoBehaviour
     private State _currentState;
 
     private float _jetpackTimer = 0.0f;
+    private float _jetpackFuel = 1.5f; // seconds
+    private float _jetpackMaxFuel = 1.5f; // seconds
     private float _cachedDirection = 0.0f;
     private float _rollSpeedMinimum = 50f;
     private float _rollSpeedDropMultiplier = 5f;
@@ -78,8 +80,8 @@ public class PlayerController : MonoBehaviour
     private bool _shouldMove = true;
     private bool _isRolling = false;
     private bool _isInvulnerable = false;
-    private bool _canUseBoots = false;
-    private bool _inAir = false;
+    private bool _canUseBoots = false; // means using jetpack
+    private bool _inAir = false; // means falling or jumping
 
     private int _currentHearts;
 
@@ -145,6 +147,33 @@ public class PlayerController : MonoBehaviour
             case State.Normal:
                 Move();
 
+                if (_canUseBoots)
+                {
+                    _rb.AddForce(Vector2.up * _bootForce, ForceMode2D.Force);
+
+                    _jetpackFuel -= Time.fixedDeltaTime;
+
+                    if (_jetpackFuel <= 0)
+                    {
+                        _canUseBoots = false;
+                        _jetpackFuel = 0.0f;
+                    }
+                    Debug.Log("Fuel: " + _jetpackFuel);
+                    // HUDEventsManager.EventsHUD.OnJetpackChanged(_jetpackFuel / _jetpackMaxFuel);
+                }
+
+                if (_isGrounded && _jetpackFuel < _jetpackMaxFuel)
+                {
+                    _jetpackFuel += Time.fixedDeltaTime * 1.5f; // Refills faster
+
+                    if ( _jetpackFuel > _jetpackMaxFuel ) // Clamp
+                    {
+                        _jetpackFuel = _jetpackMaxFuel;
+                    }
+                    HUDEventsManager.EventsHUD.OnJetpackChanged(_jetpackFuel / _jetpackMaxFuel);
+                }
+
+                /* old jetpack code
                 if (_canUseBoots && _jetpackTimer <= _bootUseLimit)
                 {
                     _jetpackTimer += Time.deltaTime;
@@ -152,6 +181,7 @@ public class PlayerController : MonoBehaviour
                     //_rb.velocity += new Vector2(0.0f, 1.0f * _bootForce * Time.fixedDeltaTime);
                     _rb.AddForce(Vector2.up * _bootForce, ForceMode2D.Force);
                 }
+                */
                 break;
 
             case State.Rolling:
@@ -226,17 +256,40 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            HUDEventsManager.EventsHUD.OnJetpackStarted(_bootUseLimit);
+            if(_jetpackFuel > 0)
+            {
+                _canUseBoots = true;
+                _animator.Play(PLAYER_JUMP);
+            }
 
-            _animator.Play(PLAYER_JUMP);
+            HUDEventsManager.EventsHUD.OnJetpackChanged(_jetpackFuel / _jetpackMaxFuel);
 
-            _canUseBoots = true;
+            /* Old jetpack code
+                HUDEventsManager.EventsHUD.OnJetpackStarted(_bootUseLimit);
+                _animator.Play(PLAYER_JUMP);
+                _canUseBoots = true;
+            */
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
             _canUseBoots = false;
+            // stop jetpack animation
         }
 
+        if (!_canUseBoots)
+        {
+            if (!_isGrounded && !_inAir)
+            {
+                _inAir = true;
+            }
+            else if (_isGrounded && _inAir)
+            {
+                _inAir = false;
+                // Do refill jetpack
+            }
+        }
+
+        /* Old jetpack code
         if (_jetpackTimer >= _bootUseLimit && !_inAir)
         {
             if (!_isGrounded)
@@ -246,7 +299,7 @@ public class PlayerController : MonoBehaviour
 
             _jetpackTimer = 0.0f;
         }
-
+        */
         if (_isGrounded)
             _inAir = false;
     }
@@ -344,7 +397,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             _jetpackTimer = 0.0f;
-            HUDEventsManager.EventsHUD.OnJetpackEnded(0.5f);
+            //HUDEventsManager.EventsHUD.OnJetpackEnded(0.5f);
         }
     }
 

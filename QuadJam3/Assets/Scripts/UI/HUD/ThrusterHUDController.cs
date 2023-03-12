@@ -16,6 +16,8 @@ public class ThrusterHUDController : MonoBehaviour
     {
         HUDEventsManager.EventsHUD.onJetpackStarted += OnJetpackStarted;
         HUDEventsManager.EventsHUD.onJetpackEnded += OnJetpackEnded;
+
+        HUDEventsManager.EventsHUD.onJetpackChanged += OnJetpackChanged;
         // Init Full
         tankFill = 1f;
     }
@@ -81,10 +83,19 @@ public class ThrusterHUDController : MonoBehaviour
         isFilling = true;
     }
 
+    void OnJetpackChanged(float newFill)
+    {
+        Debug.Log("OnJetpackChanged: " + newFill);
+        tankFill = newFill;
+        UpdateThrusterBar();
+    }
+
     void OnDestroy()
     {
         HUDEventsManager.EventsHUD.onJetpackStarted -= OnJetpackStarted;
         HUDEventsManager.EventsHUD.onJetpackEnded -= OnJetpackEnded;
+
+        HUDEventsManager.EventsHUD.onJetpackChanged -= OnJetpackChanged;
     }
 
 }
