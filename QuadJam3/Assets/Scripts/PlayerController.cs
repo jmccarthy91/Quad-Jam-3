@@ -159,8 +159,7 @@ public class PlayerController : MonoBehaviour
                         _canUseBoots = false;
                         _jetpackFuel = 0.0f;
                     }
-                    Debug.Log("Fuel: " + _jetpackFuel);
-                    // HUDEventsManager.EventsHUD.OnJetpackChanged(_jetpackFuel / _jetpackMaxFuel);
+                    HUDEventsManager.EventsHUD.OnJetpackChanged(_jetpackFuel / _jetpackMaxFuel);
                 }
 
                 if (_isGrounded && _jetpackFuel < _jetpackMaxFuel)
@@ -262,8 +261,6 @@ public class PlayerController : MonoBehaviour
                 _canUseBoots = true;
                 _animator.Play(PLAYER_JUMP);
             }
-
-            HUDEventsManager.EventsHUD.OnJetpackChanged(_jetpackFuel / _jetpackMaxFuel);
 
             /* Old jetpack code
                 HUDEventsManager.EventsHUD.OnJetpackStarted(_bootUseLimit);

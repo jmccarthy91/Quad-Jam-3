@@ -85,7 +85,6 @@ public class ThrusterHUDController : MonoBehaviour
 
     void OnJetpackChanged(float newFill)
     {
-        Debug.Log("OnJetpackChanged: " + newFill);
         tankFill = newFill;
         UpdateThrusterBar();
     }
