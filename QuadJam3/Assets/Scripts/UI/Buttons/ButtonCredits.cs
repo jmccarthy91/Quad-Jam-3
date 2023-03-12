@@ -14,17 +14,18 @@ public class ButtonCredits : MonoBehaviour
         btn = GetComponent<Button>();
         btn.onClick.AddListener(OnClick);
 
-        //sm = ScenesManager.Instance;
         currentScene = SceneManager.GetActiveScene().name;
     }
 
     public void OnClick()
     {
-        
-        if(currentScene == ScenesManager.mainMenuSceneName )
-        {
+        if(currentScene == ScenesManager.mainMenuSceneName){
             MainMenuUIManager.Instance.OnCreditsOpen();
             MainMenuUIManager.Instance.OnMainClose();
+        }
+        else if (currentScene == ScenesManager.gameOverSceneName){
+            EndGameUIManager.Instance.OnCreditsOpen();
+            EndGameUIManager.Instance.OnMainClose();
         }
     }
 }
